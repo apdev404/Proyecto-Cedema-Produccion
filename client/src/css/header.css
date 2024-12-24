@@ -3,7 +3,16 @@
   background-color: var(--antiflash-white);
   
   .nav-link {
+    color: var(--space-cadet);
     font-size: 1.5rem;
+    border-radius: 10px;
+    &:hover {
+      opacity: .8;
+      background-color: #2b2d4222;
+    }
+  }
+  .disabled {
+    color: var(--cool-gray);
   }
 }
 .offcanvas-backdrop {

@@ -1,12 +1,12 @@
 .news-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .news-container{
-    margin: 5rem;
+    margin: 4rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;

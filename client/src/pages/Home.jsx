@@ -9,10 +9,10 @@ export const Home = () => {
     <>
       <Galery />
 
-      <section className='news-section'>
-        <div className='news-container'>
-          <Cards className='card-news'/>
-          <Cards className='card-news'/>
+      <section className='news-section container-fluid p-0'>
+        <div className='news-container row'>
+          <Cards className='card-news col'/>
+          <Cards className='card-news col'/>
         </div>
         <Button variant="primary" className='seeMoreBtn'>Ver mas</Button>
       </section>

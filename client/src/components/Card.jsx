@@ -5,7 +5,7 @@ import example from '../assets/example.png';
 
 function Cards() {
   return (
-    <Card style={{ width: '18rem' }} className='card-container'>
+    <Card style={{ width: '22rem' }} className='card-container'>
       <Card.Img variant="top" src={example} alt="imagen" className='card-image'/>
       <Card.Body>
         <Card.Title>Titulo</Card.Title>
