@@ -1,0 +1,21 @@
+/* Asegura que el carrusel ocupe el 100% de ancho y de altura */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 26rem; /* Ocupa toda la altura de la pantalla */
+    background-color: #000; /* Fondo oscuro opcional */
+  }
+  
+.carousel-item{
+    position: relative;
+    width: 100%;
+    height: auto; /* Ocupa toda la altura de la pantalla */
+}
+  /* Asegura que las imágenes ocupen todo el ancho del carrusel, se recorten verticalmente y se oscurezcan */
+  .carousel-image {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 26rem; /* Ocupa toda la altura de la pantalla */
+    object-fit: cover; /* Recorta la imagen verticalmente para que cubra el área */
+    filter: brightness(50%); /* Aplica un filtro para oscurecer la imagen */
+  }
+  

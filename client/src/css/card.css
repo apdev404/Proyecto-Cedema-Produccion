@@ -1,0 +1,14 @@
+.card-container{
+    margin: 10px 50px;
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover{
+    transform: translateY(-5px);
+}
+
+.card-image{
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+}
