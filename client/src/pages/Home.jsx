@@ -3,6 +3,8 @@ import Galery from '../components/Carousel.jsx';
 import Cards from '../components/Card.jsx';
 import CardAct from '../components/CardAct.jsx';
 import Button from 'react-bootstrap/Button';
+import Footer from '../components/Footer.jsx';
+
 
 export const Home = () => {
   return (
@@ -26,7 +28,9 @@ export const Home = () => {
         <Button variant="primary" className='seeMoreBtn'>Ver todas</Button>
       </section>
         
-      <h1>Homeeeeee</h1>
+      
+
+      <Footer />
     </>
   )
 };

@@ -1,0 +1,119 @@
+/* Estilo general del footer */
+.footer {
+    background-color: #0831aa; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    width: 100%; /* Ocupa todo el ancho */
+    position: relative; /* Se ajusta al flujo del contenido */
+  }
+  
+  /* Contenedor principal del footer */
+  .footer-container {
+    display: flex; /* Layout en filas */
+    flex-direction: column;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas en pantallas pequeñas */
+    justify-content: space-between; /* Distribución equitativa */
+    max-width: 1200px; /* Ancho máximo para centrado */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 0 20px; /* Margen interno */
+  }
+  
+  /* Secciones del footer */
+  .footer-section {
+    flex: 1 1 30%; /* Cada sección ocupa un 30% del ancho y se adapta a la pantalla */
+    margin-bottom: 20px; /* Espacio entre secciones */
+  }
+  
+  /* Estilo de los enlaces */
+  .footer-links {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px; /* Espacio entre los enlaces */
+  }
+  
+  .footer-links a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s; /* Efecto suave al pasar el mouse */
+  }
+  
+  .footer-links a:hover {
+    color: #00bcd4; /* Cambia el color al pasar el mouse */
+  }
+  
+  /* Estilo del texto inferior */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444; /* Línea superior */
+    padding-top: 10px;
+    font-size: 0.9em;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Las secciones se apilan verticalmente */
+      text-align: center; /* Centra el texto */
+    }
+  
+    .footer-section {
+      flex: 1 1 100%; /* Cada sección ocupa el 100% del ancho */
+      margin-bottom: 15px; /* Espaciado reducido */
+    }
+  }
+  
+
+.footer-section-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 4rem;
+}
+.elements-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 16rem;
+}
+
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.listElement{
+    list-style: none;
+}
+
+.icons{
+    color: white;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+.icons:hover{
+    color: #b9b9b9;
+}
+
+
+.cedemaFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.cedemaIcon{
+    width: 4rem;
+}
