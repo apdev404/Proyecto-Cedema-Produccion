@@ -1,12 +1,13 @@
-.news-section{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.section{
+    margin: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .news-container{
-    margin: 4rem 2rem;
+    margin: 2rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -16,4 +17,19 @@
     display: flex;
     justify-content: center;
     width: 6rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    background-color: var(--crimson);
+    border-color: var(--crimson);
+    &:hover{
+        background-color: #8f213bff;
+        border-color: #8f213bff;
+    }
+}
+
+.act-container{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
