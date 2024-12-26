@@ -2,6 +2,7 @@ import '../css/Home.css';
 import Galery from '../components/Carousel.jsx';
 import Cards from '../components/Card.jsx';
 import CardAct from '../components/CardAct.jsx';
+import Logo from '../components/Contactos.jsx';
 import Button from 'react-bootstrap/Button';
 
 export const Home = () => {
@@ -24,8 +25,11 @@ export const Home = () => {
           <CardAct className='card-act'/>
         </div>
         <Button variant="primary" className='seeMoreBtn'>Ver todas</Button>
+      </section >
+      <section className='section'>
+        <h2>Seguinos en nuestras Redes Sociales</h2>
+        <Logo/>
       </section>
-        
       <h1>Homeeeeee</h1>
     </>
   )
