@@ -1,6 +1,6 @@
+import '../css/cardAct.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import '../css/cardAct.css'
 import example from '../assets/example.png';
 
 function CardAct() {
