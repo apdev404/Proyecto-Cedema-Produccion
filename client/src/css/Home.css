@@ -17,3 +17,10 @@
     justify-content: center;
     width: 6rem;
 }
+
+.act-container{
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
