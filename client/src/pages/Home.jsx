@@ -1,8 +1,8 @@
 import '../css/Home.css';
 import Galery from '../components/Carousel.jsx';
-import Cards from '../components/Card.jsx';
-import CardAct from '../components/CardAct.jsx';
-import Logo from '../components/Contactos.jsx';
+import CardsAct from '../components/CardsAct.jsx';
+import CardsNews from '../components/CardsNews.jsx';
+import Redes from '../components/Contactos.jsx';
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/Footer.jsx';
 
@@ -14,30 +14,22 @@ export const Home = () => {
         <Galery />
         <section className='section container-fluid p-0'>
           <h2 className='row'>News</h2>
-          <div className='news-container row'>
-            <Cards className='card-news col'/>
-            <Cards className='card-news col'/>
-          </div>
+          <CardsNews/>
           <Button className='seeMoreBtn'>Ver todas</Button>
         </section>
 
         <section className='section container-fluid p-0'>
           <h2>Actividades</h2>
-          <div className='act-container row'>
-            <CardAct className='card-act col'/>
-            <CardAct className='card-act col'/>
-          </div>
+          <CardsAct/>
           <Button variant="primary" className='seeMoreBtn'>Ver todas</Button>
         </section >
 
         <section className='section'>
+          <h3>No te pierdas de nada</h3>
           <h2>Seguinos en nuestras Redes Sociales</h2>
-          <Logo/>
+          <Redes/>
         </section>
       </div>
-        
-      
-
       <Footer />
     </>
   )

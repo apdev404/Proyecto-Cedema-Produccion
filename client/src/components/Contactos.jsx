@@ -1,43 +1,17 @@
-import '../css/logo.css'
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+import '../css/logo.css';
 
-import facebook from '../assets/logoFacebook.png';
-import x from '../assets/logoX.png';
-import whatsapp from '../assets/logoWhatsapp.png';
-import instagram from '../assets/logoInstagram.png';
-import youtube from '../assets/logoYoutube.png';
-import linkedin from '../assets/logoLinkedin.png';
 
-function Logo() {
+function Redes() {
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <Image  src={facebook} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={x} alt="imagen" className='logo-social'/>
-                </Col>
-                {/* 
-                <Col>
-                    <Image  src={linkedin} alt="imagen" className='logo-social'/>
-                </Col>
-                */}
-                <Col>
-                    <Image  src={whatsapp} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={instagram} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={youtube} alt="imagen" className='logo-social'/>
-                </Col>
-            </Row>
-        </Container>
+        <div className="container-fluid">
+            <ul className='list-social'>
+                <li className='social-elements col'><a href='https://www.facebook.com/cedema.arg/'><i className="fa-brands fa-facebook-f social"></i></a></li>
+                <li className='social-elements col'><a href='https://chat.whatsapp.com/IDauAcD6Pmv5pzYhmyGvRP'><i className="fa-brands fa-whatsapp social"/></a></li>
+                <li className="social-elements col"><a href='https://www.youtube.com/@cedemaarg1850'><i className="fa-brands fa-youtube social"/></a></li>
+                <li className="social-elements col"><a href='https://www.instagram.com/cedema.arg/'><i className="fa-brands fa-instagram social"/></a></li>
+            </ul>
+        </div>  
     );
 }
 
-export default Logo;
+export default Redes;
