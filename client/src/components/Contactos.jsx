@@ -16,24 +16,24 @@ function Logo() {
         <Container>
             <Row>
                 <Col>
-                    <Image  src={facebook} alt="imagen" className='logo'/>
+                    <Image  src={facebook} alt="imagen" className='logo-social'/>
                 </Col>
                 <Col>
-                    <Image  src={x} alt="imagen" className='logo'/>
+                    <Image  src={x} alt="imagen" className='logo-social'/>
                 </Col>
                 {/* 
                 <Col>
-                    <Image  src={linkedin} alt="imagen" className='logo'/>
+                    <Image  src={linkedin} alt="imagen" className='logo-social'/>
                 </Col>
                 */}
                 <Col>
-                    <Image  src={whatsapp} alt="imagen" className='logo'/>
+                    <Image  src={whatsapp} alt="imagen" className='logo-social'/>
                 </Col>
                 <Col>
-                    <Image  src={instagram} alt="imagen" className='logo'/>
+                    <Image  src={instagram} alt="imagen" className='logo-social'/>
                 </Col>
                 <Col>
-                    <Image  src={youtube} alt="imagen" className='logo'/>
+                    <Image  src={youtube} alt="imagen" className='logo-social'/>
                 </Col>
             </Row>
         </Container>

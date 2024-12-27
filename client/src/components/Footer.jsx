@@ -6,16 +6,16 @@ import example from '../assets/example.png';
 
 const Footer = () => {
     return (
-      <footer className="footer">
-      <div className="footer-container">
+      <footer className="footer container-fluid text-center">
+        <div className="footer-container row">
             <div className='footer-section-top'>
-                <div className="footer-about elements-top">
+                <div className="footer-about elements-top col">
                     <div className='cedemaFooter'>
                         <h4>CEDEMA <img src={example} alt="CEDEMA" className="cedemaIcon"/></h4>
                     </div>
                     <p>Somos una empresa comprometida con ofrecer los mejores productos.</p>
                 </div>
-                <div className="footer-enlaces elements-top">
+                <div className="footer-enlaces elements-top col">
                     <h4>Enlaces</h4>
                     <ul className="footer-links">
                         <li><Link className="nav-link" to="/home">Inicio</Link></li>
@@ -24,7 +24,7 @@ const Footer = () => {
                         <li><Link className="nav-link" to="/contact">Contacto</Link></li>
                     </ul>
                 </div>
-                <div className="footer-contact elements-top">
+                <div className="footer-contact elements-top col">
                     <h4>Contacto:</h4>
                     <p>Email: </p>
                     <p>Teléfono: </p>
@@ -37,14 +37,9 @@ const Footer = () => {
                     <li className='listElement'><a href='https://www.twitter.com/'><i className="fa-brands fa-twitter icons"></i></a></li>
                 </ul>
             </div>    
-       
         </div>
         
-        
-
-      <div className="footer-bottom">
-        <p>&copy; 2024 CEDEMA. Todos los derechos reservados.</p>
-      </div>
+        {/* <p className="footer-bottom row">&copy; 2024 CEDEMA. Todos los derechos reservados.</p> */}
     </footer>
     )
   };

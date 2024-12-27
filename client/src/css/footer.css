@@ -1,9 +1,9 @@
 /* Estilo general del footer */
 .footer {
-    background-color: #0831aa; /* Fondo oscuro */
+    background-color: var(--space-cadet); /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     padding: 20px 0; /* Espaciado superior e inferior */
-    width: 100%; /* Ocupa todo el ancho */
+    /* width: 100%; Ocupa todo el ancho */
     position: relative; /* Se ajusta al flujo del contenido */
   }
   
@@ -13,7 +13,7 @@
     flex-direction: column;
     flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas en pantallas pequeñas */
     justify-content: space-between; /* Distribución equitativa */
-    max-width: 1200px; /* Ancho máximo para centrado */
+    /* max-width: 1200px; Ancho máximo para centrado */
     margin: 0 auto; /* Centrar horizontalmente */
     padding: 0 20px; /* Margen interno */
   }
