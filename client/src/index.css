@@ -1,11 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900");
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
 
 :root {
-  --space-cadet: #2b2d42ff;
-  --cool-gray: #8d99aeff;
-  --antiflash-white: #edf2f4ff;
-  --red-pantone: #ef233cff;
-  --crimson: #d80032ff;
+--space-cadet: #2b2d42ff;
+--savoy-blue: #3b60cdff;
+--cool-gray: #8398bcff;
+--antiflash-white: #edf2f4ff;
+--red-pantone: #ef233cff;
+--crimson: #d80032ff;
+--maroon: #810606ff;
 
   /* color-scheme: light dark; Para cambiar el tema
 
@@ -31,6 +34,7 @@ html, body, #root {
   animation: aparecer .5s;
 }
 
+/** ANIMACIONES */
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -40,7 +44,7 @@ html, body, #root {
   }
 }
 
-/* SCROLL */
+/** SCROLL */
 
 ::-webkit-scrollbar{
 	width: 10px;
@@ -68,3 +72,68 @@ html, body, #root {
     background-color: #f9f9f9;
   }
 } */
+
+/** CLASES PARA FUENTES */
+/* <uniquifier>: Use a unique and descriptive class name. (.montserrat-<uniquifier>) */
+/* <weight>: Use a value from 100 to 900 */
+.montserrat-400 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encode-sans-condensed-thin {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.encode-sans-condensed-extralight {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.encode-sans-condensed-light {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.encode-sans-condensed-regular {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.encode-sans-condensed-medium {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.encode-sans-condensed-semibold {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.encode-sans-condensed-bold {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.encode-sans-condensed-extrabold {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.encode-sans-condensed-black {
+  font-family: "Encode Sans Condensed", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
