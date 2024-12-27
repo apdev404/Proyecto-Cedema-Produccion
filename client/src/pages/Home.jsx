@@ -25,13 +25,11 @@ export const Home = () => {
         </section >
 
         <section className='section'>
+          <h3>No te pierdas de nada</h3>
           <h2>Seguinos en nuestras Redes Sociales</h2>
           <Redes/>
         </section>
       </div>
-        
-      
-
       <Footer />
     </>
   )

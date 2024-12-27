@@ -1,12 +1,14 @@
 import '../css/logo.css';
 
+
 function Redes() {
     return (
-        <div>
+        <div className="container-fluid">
             <ul className='list-social'>
-                <li className='social-elements'><a href='https://es-la.facebook.com/login/device-based/regular/login/'><i className="fa-brands fa-facebook-f"></i></a></li>
-                <li className='social-elements'><a href='https://www.whatsapp.com/'><i className="fa-brands fa-whatsapp"/></a></li>
-                <li className="social-elements"><a href='https://www.youtube.com/'><i className="fa-brands fa-youtube"/></a></li>
+                <li className='social-elements col'><a href='https://www.facebook.com/cedema.arg/'><i className="fa-brands fa-facebook-f social"></i></a></li>
+                <li className='social-elements col'><a href='https://chat.whatsapp.com/IDauAcD6Pmv5pzYhmyGvRP'><i className="fa-brands fa-whatsapp social"/></a></li>
+                <li className="social-elements col"><a href='https://www.youtube.com/@cedemaarg1850'><i className="fa-brands fa-youtube social"/></a></li>
+                <li className="social-elements col"><a href='https://www.instagram.com/cedema.arg/'><i className="fa-brands fa-instagram social"/></a></li>
             </ul>
         </div>  
     );
