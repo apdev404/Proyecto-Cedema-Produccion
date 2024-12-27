@@ -1,10 +1,12 @@
-import '../css/card.css';
+import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import '../css/card.css';
 
 function Cards({image, head, body, footer, buttonText}) {
     return (
         <Card style={{ width: '18rem' }} className='card-container'>
+          <Link to ='details'>
             <Card.Img variant="top" src={image} alt="imagen" className='card-image'/>
             <Card.ImgOverlay>
                 <Button variant="outline-danger" className='btn'>{buttonText}</Button>
@@ -16,6 +18,7 @@ function Cards({image, head, body, footer, buttonText}) {
                 </Card.Text>
             </Card.Body>
             <Card.Footer className="text-gray">{footer}</Card.Footer>
+          </Link>
         </Card>
     );
 }
