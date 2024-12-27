@@ -18,6 +18,7 @@
     line-height: 1.6;
 }
 
+
 .card-text{
     font-size: 25px;
 }
@@ -57,3 +58,15 @@
         border-color: var(--crimson);
     }
 }
+
+
+.link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto, no aplica el color por defecto de los enlaces */
+  }
+  
+  .link:hover, .link:focus {
+    text-decoration: none; /* Elimina el subrayado también cuando se pasa el cursor */
+    color: inherit; /* Mantiene el color del texto sin cambios */
+  }
+  
