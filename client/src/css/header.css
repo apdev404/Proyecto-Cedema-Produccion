@@ -1,14 +1,16 @@
 
 .header {
+  /* background-image: linear-gradient(var(--cool-gray),var(--antiflash-white)); */
   background-color: var(--antiflash-white);
   
   .nav-link {
     color: var(--space-cadet);
-    font-size: 1.5rem;
-    border-radius: 10px;
+    font-size: 1.1rem;
     &:hover {
       opacity: .8;
       background-color: #2b2d4222;
+      border-bottom: 2px var(--space-cadet) solid;
+      /* margin-bottom: -2px; */
     }
   }
   .disabled {
@@ -18,4 +20,21 @@
 .offcanvas-backdrop {
 background-color: var(--space-cadet);
 }
+/* .offcanvas-header {
+  border-bottom: 1px solid var(--space-cadet);
+} */
+.offcanvas-header-outline {
+  align-self: center;
+  margin: 0;
+  width: 200px;
+  height: 2px;
+  background-color: var(--space-cadet);
+}
 
+.header-link {
+  padding: 20px 10px;
+}
+ .logo-inicio {
+  padding: 10px;
+  border-right: 1px solid var(--space-cadet);
+}
