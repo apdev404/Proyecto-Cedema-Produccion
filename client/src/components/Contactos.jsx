@@ -1,43 +1,15 @@
-import '../css/logo.css'
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
+import '../css/logo.css';
 
-import facebook from '../assets/logoFacebook.png';
-import x from '../assets/logoX.png';
-import whatsapp from '../assets/logoWhatsapp.png';
-import instagram from '../assets/logoInstagram.png';
-import youtube from '../assets/logoYoutube.png';
-import linkedin from '../assets/logoLinkedin.png';
-
-function Logo() {
+function Redes() {
     return (
-        <Container>
-            <Row>
-                <Col>
-                    <Image  src={facebook} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={x} alt="imagen" className='logo-social'/>
-                </Col>
-                {/* 
-                <Col>
-                    <Image  src={linkedin} alt="imagen" className='logo-social'/>
-                </Col>
-                */}
-                <Col>
-                    <Image  src={whatsapp} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={instagram} alt="imagen" className='logo-social'/>
-                </Col>
-                <Col>
-                    <Image  src={youtube} alt="imagen" className='logo-social'/>
-                </Col>
-            </Row>
-        </Container>
+        <div>
+            <ul className='list-social'>
+                <li className='social-elements'><a href='https://es-la.facebook.com/login/device-based/regular/login/'><i className="fa-brands fa-facebook-f"></i></a></li>
+                <li className='social-elements'><a href='https://www.whatsapp.com/'><i className="fa-brands fa-whatsapp"/></a></li>
+                <li className="social-elements"><a href='https://www.youtube.com/'><i className="fa-brands fa-youtube"/></a></li>
+            </ul>
+        </div>  
     );
 }
 
-export default Logo;
+export default Redes;

@@ -1,8 +1,30 @@
-.logo-social {
-    width: 3rem;
-    height: 3rem;
-    margin: 3rem;
+.social-elements{
+    list-style: none;
+    margin: 2rem;
     justify-content: center;
     align-items: center;
+    font-size: 3rem;
 }
+.list-social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.fa-brands{
+    color: var(--space-cadet);
+    transition: color 0.3s ease;
+}
+.fa-facebook-f:hover{
+    color: #0041cf;
+}
+.fa-whatsapp:hover{
+    color: #25D366;
+}
+.fa-youtube:hover{
+    color: #ff0000;
+}
+
 

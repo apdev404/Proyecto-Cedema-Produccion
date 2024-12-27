@@ -2,7 +2,7 @@ import '../css/Home.css';
 import Galery from '../components/Carousel.jsx';
 import CardsAct from '../components/CardsAct.jsx';
 import CardsNews from '../components/CardsNews.jsx';
-import Logo from '../components/Contactos.jsx';
+import Redes from '../components/Contactos.jsx';
 import Button from 'react-bootstrap/Button';
 import Footer from '../components/Footer.jsx';
 
@@ -26,7 +26,7 @@ export const Home = () => {
 
         <section className='section'>
           <h2>Seguinos en nuestras Redes Sociales</h2>
-          <Logo/>
+          <Redes/>
         </section>
       </div>
         
