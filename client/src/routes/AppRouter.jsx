@@ -2,6 +2,8 @@ import { Route, Routes } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Home } from '../pages/Home';
 import { AboutPage } from '../pages/AboutPage';
+import { Formacion } from '../pages/Formacion';
+import { Actividades } from '../pages/Actividades';
 import { ContactPage } from '../pages/ContactPage';
 import { DetailsPage } from '../pages/DetailsPage';
 
@@ -12,8 +14,10 @@ export const AppRouter = () => {
         <Route path="/" element={ <Header /> }>
           <Route index element={ <Home /> }/>
           <Route path="about" element={ <AboutPage /> }/>
+          <Route path="formacion" element={ <Formacion /> }/>
+          <Route path="actividades" element={ <Actividades /> }/>
           <Route path="contact" element={ <ContactPage /> }/>
-          <Route path="details" element={ <DetailsPage /> }/>
+          <Route path="details/:id" element={ <DetailsPage /> }/>
         
         </Route>
       </Routes>

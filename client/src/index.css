@@ -33,6 +33,9 @@ html, body, #root {
   height: 100%;
   animation: aparecer .5s;
 }
+.react-link {
+  text-decoration: none;
+}
 
 /** ANIMACIONES */
 @keyframes aparecer {

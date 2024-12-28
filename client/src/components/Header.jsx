@@ -24,10 +24,10 @@ export const Header = () => {
             <div className="navbar-nav offcanvas-body">
               <Link className="nav-link header-link" aria-current="page" to="/">INICIO</Link>
               <Link className="nav-link header-link" to="/about">NOSOTROS</Link>{/*onClick={(e) => this.setAttribute("data-bs-toggle","offcanvas")} Esto recarga la pagina cada vez que se navega (tipo la pag de china)*/}
-              <Link className="nav-link header-link" aria-disabled="true">FORMACIÓN</Link>
-              <Link className="nav-link header-link" aria-disabled="true">ACTIVIDADES</Link>
+              <Link className="nav-link header-link" aria-disabled="true" to="/formacion">FORMACIÓN</Link>
+              <Link className="nav-link header-link" aria-disabled="true" to="/actividades">ACTIVIDADES</Link>
               <Link className="nav-link header-link" to="/contact">CONTACTO</Link>
-              <Link className="nav-link header-link" aria-disabled="true">REGISTRARSE</Link>
+              <Link className="nav-link header-link disabled" aria-disabled="true">REGISTRARSE</Link>
             </div>
           </div>
         </div>
