@@ -4,27 +4,26 @@ import CardsAct from '../components/CardsAct.jsx';
 import CardsNews from '../components/CardsNews.jsx';
 import Redes from '../components/Contactos.jsx';
 import Button from 'react-bootstrap/Button';
-import Footer from '../components/Footer.jsx';
-
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
     <>
       <div className='container-fluid p-0 col'>
         <Galery />
-        <section className='section container-fluid p-0'>
-          <h2 className='row'>News</h2>
+        <section className='section first-section container-fluid'>
+          <h2 className='section-title row encode-sans-condensed-regular'>NOVEDADES</h2>
           <CardsNews/>
-          <Button className='seeMoreBtn'>Ver todas</Button>
+          <Link className="react-link encode-sans-condensed-bold" to='/formacion'><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
         </section>
 
-        <section className='section container-fluid p-0'>
-          <h2>Actividades</h2>
+        <section className='section container-fluid'>
+          <h2 className='section-title row encode-sans-condensed-regular'>ACTIVIDADES</h2>
           <CardsAct/>
-          <Button variant="primary" className='seeMoreBtn'>Ver todas</Button>
+          <Link className="react-link encode-sans-condensed-regular" to='/actividades'><Button className='seeMoreBtn'>VER TODAS</Button></Link>
         </section >
 
-        <section className='section'>
+        <section className='section container-sm'>
           <h3>No te pierdas de nada</h3>
           <h2>Seguinos en nuestras Redes Sociales</h2>
           <Redes/>

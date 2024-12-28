@@ -1,30 +1,60 @@
 .section{
-    /* margin: 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    padding-top: 2rem;
+}
+
+.first-section {
+  background-color: var(--antiflash-white);
+}
+
+/* TITULO Y ANIMACION DEL HOVER */
+.section-title {
+  color: var(--space-cadet);
+  font-size: 4rem;
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0; /* si quiero que vaya de derecha a izquierda, pongo right: 0; */
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--cool-gray);
+  transition: width .25s ease-out;
+}
+.section-title:hover::before {
+  width: 100%;
 }
 
 .news-container{
-    margin: 2rem 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  margin: 2rem 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 50px;
 }
 
 .seeMoreBtn{
-    display: flex;
-    justify-content: center;
-    width: 6rem;
-    margin-bottom: 2rem;
-    border-radius: 15px;
-    background-color: var(--crimson);
-    border-color: var(--crimson);
-    &:hover{
-        background-color: #8f213bff;
-        border-color: #8f213bff;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  background-color: var(--crimson);
+  border-color: var(--crimson);
+  &:hover{
+      background-color: #8f213bff;
+      border-color: #8f213bff;
+  }
 }
 
 .act-container{
@@ -32,4 +62,5 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    column-gap: 50px;
 }
