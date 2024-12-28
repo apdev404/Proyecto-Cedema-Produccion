@@ -30,7 +30,6 @@ export const Home = () => {
           <Redes/>
         </section>
       </div>
-      <Footer />
     </>
   )
 };

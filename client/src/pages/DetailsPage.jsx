@@ -7,48 +7,40 @@ import example from '../assets/example.png';
 export const DetailsPage = () => {
   return (
     <>
-      <div className='container-fluid p-0 col'>
-          <div className='col banner container-fluid'>
-                <Image src={example} fluid  alt="imagen" className='banner-image container-fluid'/>
+      <section className='container-fluid p-0'>
+         <div className='banner row-md container-fluid p-0'>
+          <Image src={example} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
+        </div>
 
-          </div>
+        <div className='info-container container-sm p-4'>
 
-          <div className='info-container col'>
-
-            <div className='info-top'>
-                <div className='row infoLeft'>
-                  <ul className='infoList'>
-                    <li><h1 className='element'>Titulo</h1></li>
-                    <li><h3 className='element'>Fecha y hora: 99/99/9999 - 19:30hs</h3></li>
-                    <li><h3 className='element'>Modalidad: Virtual/Presencial/Hibrida</h3></li>
-                  </ul>
-                </div>
-
-                <div className='row infoSecund'>
-                      <ul className='infoList infoRight'>
-                        <li className='element right'><h3>Temas:</h3></li>
-                        <li className='element right'><h3>Region:</h3></li>
-                      </ul>
-                </div>  
-              </div>
-              
-
-              <div className='description-container'>
-                      <Image src={example} fluid  alt="imagen" className='description-image element row'/>;
-                      
-                      <h6 className='description-text element'>Desccripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
-                      Desccripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
-                      Desccripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
-                      </h6>
-                      <Button variant="primary" className='seeMoreBtn element left'>INSCRIBIRSE</Button>
-              </div>
-                
-              
+          <div className='info-top row container-sm align-items-center'>
+            <div className='col-md infoLeft'>
+              <ul className='infoList container-fluid m-0 p-0'>
+                <li><h1 className='element row'>Titulo</h1></li>
+                <li><h3 className='element row'>Fecha y hora: 99/99/9999 - 19:30hs</h3></li>
+                <li><h3 className='element row'>Modalidad: Virtual / Presencial / Hibrida</h3></li>
+              </ul>
             </div>
-            
+            <div className='col-md infoSecund'>
+              <ul className='infoList infoRight col container-fluid m-0 p-0'>
+                <li className='element right row'><h3>Temas: Bla Bla</h3></li>
+                <li className='element right row'><h3>Region: China</h3></li>
+              </ul>
+            </div>  
           </div>
-    
-      <Footer className='col container-fluid'/>
+              
+          <div className='description-container row container-sm justify-content-center'>
+            <Image src={example} fluid  alt="imagen" className='description-image row'/>
+            <h6 className='description-text row element'>Descripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
+            Desccripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
+            Desccripcion: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?
+            </h6>
+            <Button variant="primary" className='row seeMoreBtn element left'>INSCRIBIRSE</Button>
+          </div>
+        </div>
+            
+      </section>
     </>
   )
 };
