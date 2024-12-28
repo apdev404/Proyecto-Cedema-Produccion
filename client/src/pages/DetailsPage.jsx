@@ -1,14 +1,33 @@
 import '../css/Details.css';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-import Footer from '../components/Footer.jsx';
 import example from '../assets/example.png';
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useParams } from "react-router-dom";
 
 export const DetailsPage = () => {
+  // const { id } = useParams(); // Captura el id de la URL (idUsuario)
+  // const [detalle, setDetalle] = useState([]);
+
+  //   // SOLICITUD DE DATOS DE USER
+  //   useEffect(() => {
+  //     // Solicitud al servidor Express
+  //     axios
+  //       .get(`http://localhost:3001/details/${id}`)
+  //       .then((response) => {
+  //         setDetalle(response.data[0]); // Guarda el objeto detalle
+  //         // console.log(detalle)
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error al obtener los datos:", error);
+  //       });
+  //   }, []);
+
   return (
     <>
       <section className='container-fluid p-0'>
-         <div className='banner row-md container-fluid p-0'>
+        <div className='banner row-md container-fluid p-0'>
           <Image src={example} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
         </div>
 
