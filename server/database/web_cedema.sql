@@ -59,11 +59,23 @@ CREATE TABLE images (
 
 
 -- --- FUNCIONAMIENTO DE IMAGENES ------------------------
-INSERT INTO courses (tipo, fecha, titulo, descripcion, precio, duracion, formato)
-VALUES ('Curso','2025-2-13','Curso de React', 'Aprende React desde cero', 150.00, '10 horas', 'Virtual');
+INSERT INTO courses (tipo, fecha, titulo, precio, duracion, formato, descripcion)
+VALUES ('Curso','2025-2-13','Curso de React', 150.00, '10 horas', 'Virtual', 
+'Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! 
+Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, 
+repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. 
+Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, 
+assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?');
+
+SELECT * FROM courses WHERE titulo='Curso de React';
+SELECT * FROM images;
 
 INSERT INTO images (entity_type, entity_id, image_path)
-VALUES ('courses', 1, 'assets/images/courses/react-course.jpg');
+VALUES ('courses', 1, '../../public/auriculares-libros.jpg');
+
+INSERT INTO images (entity_type, entity_id, image_path)
+VALUES ('courses', 1, '../../public/craneo.jpg');
 
 SELECT 
     courses.id,
@@ -76,6 +88,9 @@ LEFT JOIN
     images 
 ON 
     images.entity_type = 'courses' AND images.entity_id = courses.id;
+-- LEFT JOIN Si encuentra una imagen que cumple con estas condiciones (del ON), se incluye la ruta de la imagen (image_path) en el resultado.
+-- Si no encuentra una imagen, se incluyen los datos del curso y el campo image_path será NULL.
+-- Se usa el LEFT JOIN porque queremos listar todos los cursos aunque no tengan una imagen relacionada. Si usáramos un INNER JOIN, solo se incluirían los cursos que tienen una imagen asociada.
 
 -- --- INSCRIPCIONES ---------------------------------------
 CREATE TABLE inscripciones_cursos (
