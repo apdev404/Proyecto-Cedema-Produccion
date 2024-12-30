@@ -1,6 +1,7 @@
+import ListLinks from '../components/ListLinks.jsx';
 
 export const Formacion = () => {
   return (
-    <div>Formacion</div>
+    <ListLinks title="FORMACIÓN" />
   )
 }
