@@ -22,7 +22,7 @@
 .social{
     margin: 2px;
     color: var(--space-cadet);
-    transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: color 0.1s ease, transform 0.1s ease, box-shadow 0.1s ease;
     &:hover{
         transform: rotate(-10deg);
     }
@@ -36,7 +36,7 @@
 .fa-youtube:hover{
     color: #ff0000;
 }
-.fa-instagram:hover{
+.fa-instagram-redes:hover{
     color: #c32aa3;
 }
 
