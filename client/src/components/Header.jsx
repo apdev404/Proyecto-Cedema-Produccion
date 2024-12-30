@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "../css/header.css";
 import logo from "../../public/logo-cedema-largo.ico";
 import Footer from './Footer';
+import { ArrowUp } from "./ArrowUp";
 
 export const Header = () => {
 
@@ -35,8 +36,10 @@ export const Header = () => {
       </header>
       <Outlet />
       <Footer />
+      <ArrowUp />
     </>
   )
 };
 // <Outlet /> Espacio vacio donde se renderiza la vista de la url/ruta, pero se mantiene el header.
 // <Footer /> Colocandolo aca, se renderiza en todas las rutas de la pagina. No hace falta ponerlo en los componentes o vistas de otras paginas.
+// <ArrowUp /> Componente de flecha que se encarga del Scroll To Top en todas las paginas.
