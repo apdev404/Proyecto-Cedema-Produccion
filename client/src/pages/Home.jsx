@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 export const Home = () => {
   return (
     <>
-      <div className='container-fluid p-0 col'>
+      <div className='container-fluid p-0 col encode-sans-condensed-regular'>
         <Galery />
         <section className='section first-section container-fluid'>
           <h2 className='section-title row encode-sans-condensed-regular'>NOVEDADES</h2>
