@@ -3,7 +3,7 @@ import '../css/arrowUp.css';
 
 export const ArrowUp = () => {
 
-  const [showButton, setShowButton] = useState(true);
+  const [showButton, setShowButton] = useState(false);
   // Logica de Scroll to top
   const onScroll = () => {
     window.scrollY > 500 ? setShowButton(true) : setShowButton(false);
