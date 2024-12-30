@@ -37,4 +37,8 @@ background-color: var(--space-cadet);
  .logo-inicio {
   padding: 10px;
   border-right: 1px solid var(--space-cadet);
+  transition: filter 0.3s ease;
+}
+.logo-inicio:hover{
+  filter: opacity(50%); 
 }

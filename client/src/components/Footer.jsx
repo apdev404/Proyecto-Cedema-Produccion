@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import '../css/footer.css';
 //import cedemaIcon from '../assets/cedemaIcon.png';
-import example from '../assets/example.png';
+import logo from '../assets/logo.png';
 
 
 const Footer = () => {
     return (
-      <footer className="footer container-fluid text-center">
+      <footer className="footer container-fluid text-center encode-sans-condensed-regular">
         <div className="footer-container row">
             <div className='footer-section-top'>
                 <div className="footer-about elements-top col">
                     <div className='cedemaFooter'>
-                        <h4>CEDEMA <img src={example} alt="CEDEMA" className="cedemaIcon"/></h4>
+                        <h4>CEDEMA <img src={logo} alt="CEDEMA" className="cedemaIcon"/></h4>
                     </div>
                     <p>Somos una empresa comprometida con ofrecer los mejores productos.</p>
                 </div>
