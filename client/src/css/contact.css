@@ -1,0 +1,44 @@
+.contactos {
+  color: var(--space-cadet);
+  background-color: var(--cool-gray);
+  padding: 4rem 0;
+  
+  .redes-contact {
+      color: var(--cool-gray);
+  }
+
+}
+
+.section-form-contacto {
+  padding-bottom: 2rem;
+  .section-title.titulo-contact {
+    transition: 1s ease-out;
+  }
+
+  .form-contact {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--antiflash-white);
+  }
+
+  .form-label {
+    margin-top: 10px;
+  }
+  .form-control {
+    textarea {
+    height: 50px;
+    }
+  }
+  
+  .btn-form-contact {
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section-title.titulo-contact {
+    font-size: 3rem;
+    transition: 1s ease-out;
+  }
+}
