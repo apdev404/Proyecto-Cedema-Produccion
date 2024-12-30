@@ -5,7 +5,7 @@ import '../css/card.css';
 
 function Cards({image, head, body, footer, buttonText}) {
     return (
-        <Card style={{ width: '18rem' }} className='card-container'>
+        <Card style={{ width: '18rem' }} className='card-container encode-sans-condensed-regular'>
           <Link to ='details/:id' className="link">
             <Card.Img variant="top" src={image} alt="imagen" className='card-image'/>
             <Card.ImgOverlay>

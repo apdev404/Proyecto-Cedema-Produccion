@@ -1,6 +1,9 @@
+import ListLinks from '../components/ListLinks.jsx';
 
 export const Actividades = () => {
   return (
-    <div>Actividades</div>
+    <>
+      <ListLinks title="ACTIVIDADES" />
+    </>
   )
 }

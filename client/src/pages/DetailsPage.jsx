@@ -26,7 +26,7 @@ export const DetailsPage = () => {
 
   return (
     <>
-      <section className='container-fluid p-0'>
+      <section className='container-fluid p-0 encode-sans-condensed-regular'>
         <div className='banner row-md container-fluid p-0'>
           <Image src={example} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
         </div>
