@@ -1,47 +1,42 @@
 import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
-import example from "../assets/example.png"; // Imagen de ejemplo mientras no llegan datos reales
 import "../css/listlinks.css";
+import axios from "axios";
 import { Link } from 'react-router-dom';
 
 function ListLinks({title}) {
-  // Estado para manejar la lista de actividades (tarjetas)
-  const [actividades, setActividades] = useState([]);
+  const ruta = title == "FORMACIÓN" ? 'courses' : 'actividades'; // Define si se solicitan cursos o actividades
+  // Esto seria mas facil si tuvieramos un componente por cada bbdd
+
+  // Estado para manejar los datos de las tarjetas
+  // const [actividades, setActividades] = useState([]);
+  const [datos, setDatos] = useState([]);
+  const [uniqueDatos, setUniqueDatos] = useState([]);
 
   // Simulación de fetch a la base de datos (o API)
   useEffect(() => {
-    // Simula datos que provendrían de una API (base de datos)
-    const fetchData = async () => {
-      const data = [
-        {
-          id: 1,
-          image: example,
-          buttonText: "Charlas",
-          fecha: "2024-12-30",
-          titulo: "Título de la actividad 1",
-          modalidad: "Virtual"
-        },
-        {
-          id: 2,
-          image: example,
-          buttonText: "Cursos",
-          fecha: "2024-12-31",
-          titulo: "Título de la actividad 2",
-          modalidad: "Presencial"
-        },
-        {
-          id: 3,
-          image: example,
-          buttonText: "Seminarios",
-          fecha: "2024-12-29",
-          titulo: "Título de la actividad 3",
-          modalidad: "Híbrido"
-        }
-      ];
-      setActividades(data); // Actualiza el estado con los datos simulados
-    };
+    // Solicitud get al server de los cursos y charlas
+    axios
+    .get(`http://localhost:3001/${ruta}`)
+    .then((response) => {
+      console.log(response.data);
+      setDatos(response.data);
 
-    fetchData();
+      // Filtrar duplicados por ID
+      const filtrados = response.data.reduce((acc, current) => {
+        const exists = acc.find(item => item.id === current.id);
+        if (!exists) {
+          acc.push(current);
+        }
+        return acc;
+      }, []);
+      // console.log(filtrados);
+      setUniqueDatos(filtrados);
+      console.log(uniqueDatos);
+    })
+    .catch((error) => {
+      console.error("Error al obtener los datos:", error);
+    });
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
   return (
@@ -128,14 +123,15 @@ function ListLinks({title}) {
 
         {/* Tarjetas */}
         <div className="container-list row col-8">
-          {actividades.map((actividad) => (
+          {uniqueDatos.map((uniqueDato) => (
             <Cards
-              key={actividad.id} // Clave única para cada tarjeta
-              image={actividad.image}
-              buttonText={actividad.buttonText}
-              head={actividad.fecha}
-              body={actividad.titulo}
-              footer={actividad.modalidad}
+              key={uniqueDato.id} // Clave única para cada tarjeta
+              image={uniqueDato.image_path}
+              buttonText={uniqueDato.tipo}
+              head={uniqueDato.fecha.split('T')[0]}
+              body={uniqueDato.titulo}
+              footer={uniqueDato.formato}
+              id={uniqueDato.id}
             />
           ))}
         </div>

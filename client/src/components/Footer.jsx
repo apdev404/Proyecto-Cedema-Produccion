@@ -19,7 +19,7 @@ const Footer = () => {
                     <h4>Enlaces</h4>
                     <ul className="footer-links">
                         <li><Link className="nav-link" to="/home">Inicio</Link></li>
-                        <li><Link className="nav-link" to="/">Formacion</Link></li>
+                        <li><Link className="nav-link" to="/formacion">Formacion</Link></li>
                         <li><Link className="nav-link" to="/about">Nosotros</Link></li>
                         <li><Link className="nav-link" to="/contact">Contacto</Link></li>
                     </ul>
