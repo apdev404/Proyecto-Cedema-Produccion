@@ -11,9 +11,9 @@ import example from '../assets/example.png';
 
 function Nosotros() {
     return (
-        <Container className="container-fluid p-0 m-auto" fluid>
+        <Container fluid className="container-fluid p-0 m-auto">
             <Row className='nosotros-row'>
-                <Col xs={12} md={6} className='img-nosotros' fluid>
+                <Col xs={12} md={6} className='img-nosotros'>
                     <Image src={example}/>
                 </Col>
                 <Col xs={12} md={6} >
@@ -26,8 +26,8 @@ function Nosotros() {
                 </Col>
             </Row>
             <Row>
-                <Col xs={12}>
-                    <div className='container-fluid section-nosotros p-0'>
+                <Col>
+                    <div className='container-fluid section-nosotros p-2'>
                         <h2 className='encode-sans-condensed-light'>Una red de personas que contribuyen al crecimiento de la Organización</h2>
                         <h3 className='encode-sans-condensed-light'>Conoce más sobre ellos</h3>
                         <Link className="react-link encode-sans-condensed-regular" to='/about'><Button className='seeMoreBtn'>VER MÁS</Button></Link>
