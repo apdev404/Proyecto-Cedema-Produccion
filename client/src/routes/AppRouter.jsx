@@ -17,7 +17,7 @@ export const AppRouter = () => {
           <Route path="formacion" element={ <Formacion /> }/>
           <Route path="actividades" element={ <Actividades /> }/>
           <Route path="contact" element={ <ContactPage /> }/>
-          <Route path="details/:id" element={ <DetailsPage /> }/>
+          <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
         
         </Route>
       </Routes>

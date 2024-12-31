@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import "../css/listlinks.css";
 import axios from "axios";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 function ListLinks({title}) {
-  const ruta = title == "FORMACIÓN" ? 'courses' : 'actividades'; // Define si se solicitan cursos o actividades
+  const ruta = title == "FORMACIÓN" ? 'courses' : 'activities'; // Define si se solicitan cursos o actividades
   // Esto seria mas facil si tuvieramos un componente por cada bbdd
 
   // Estado para manejar los datos de las tarjetas
@@ -132,6 +132,7 @@ function ListLinks({title}) {
               body={uniqueDato.titulo}
               footer={uniqueDato.formato}
               id={uniqueDato.id}
+              ruta={ruta}
             />
           ))}
         </div>
