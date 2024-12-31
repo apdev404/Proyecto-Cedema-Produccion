@@ -13,7 +13,7 @@ function ListLinks({title}) {
   const [datos, setDatos] = useState([]);
   const [uniqueDatos, setUniqueDatos] = useState([]);
 
-  // Simulación de fetch a la base de datos (o API)
+  // fetch a la base de datos (o API)
   useEffect(() => {
     // Solicitud get al server de los cursos y charlas
     axios
@@ -127,7 +127,7 @@ function ListLinks({title}) {
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
               image={uniqueDato.image_path}
-              buttonText={uniqueDato.tipo}
+              buttonText={uniqueDato.tipo ? uniqueDato.tipo : uniqueDato.direccion }
               head={uniqueDato.fecha.split('T')[0]}
               body={uniqueDato.titulo}
               footer={uniqueDato.formato}

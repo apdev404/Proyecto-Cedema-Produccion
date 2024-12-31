@@ -1,7 +1,6 @@
 import '../css/Details.css';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
-import example from '../assets/example.png';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
