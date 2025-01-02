@@ -25,12 +25,12 @@ function Nosotros() {
                     </p>
                 </Col>
             </Row>
-            <Row>
-                <Col xs={12}>
-                    <div className='container-fluid section-nosotros p-0'>
-                        <h2 className='encode-sans-condensed-light'>Una red de personas que contribuyen al crecimiento de la Organización</h2>
-                        <h3 className='encode-sans-condensed-light'>Conoce más sobre ellos</h3>
-                        <Link className="react-link encode-sans-condensed-regular" to='/about'><Button className='seeMoreBtn'>VER MÁS</Button></Link>
+            <Row className='container-fluid row'>
+                <Col xs={12} className='container-fluid'>
+                    <div className='container-fluid section-nosotros p-0 col'>
+                        <h2 className='encode-sans-condensed-light row'>Una red de personas que contribuyen al crecimiento de la Organización</h2>
+                        <h3 className='encode-sans-condensed-light row'>Conoce más sobre ellos</h3>
+                        <Link className="react-link encode-sans-condensed-regular row" to='/about'><Button className='seeMoreBtn'>VER MÁS</Button></Link>
                     </div>
                 </Col>
             </Row>
