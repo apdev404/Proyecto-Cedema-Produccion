@@ -13,7 +13,7 @@ function Nosotros() {
     return (
         <Container fluid className="container-fluid p-0 m-auto">
             <Row className='nosotros-row'>
-                <Col xs={12} md={6} className='img-nosotros' >
+                <Col xs={12} md={6} className='img-nosotros'>
                 <div data-aos="fade-right">
                     <Image src={example}/>
                 </div>
