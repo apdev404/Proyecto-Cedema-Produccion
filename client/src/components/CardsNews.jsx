@@ -5,21 +5,20 @@ function CardsNews() {
   return (
     <div className='news-container row'>
       <Cards
-        image={example}
-        buttonText="Charlas"
-        head="Fecha"
-        body="Título"
-        footer="Modalidad"
+      image={example}
+      buttonText="Charlas"
+      head="Fecha"
+      body="Título"
+      footer="Modalidad"
       /> 
       <Cards
-        image={example}
-        buttonText="Charlas"
-        head="Fecha"
-        body="Título"
-        footer="Modalidad"
-      /> 
-    </div>
-    
+      image={example}
+      buttonText="Charlas"
+      head="Fecha"
+      body="Título"
+      footer="Modalidad"
+      />
+      </div>
   );
 }
 
