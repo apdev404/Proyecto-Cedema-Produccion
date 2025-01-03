@@ -59,6 +59,22 @@
     }
 }
 
+.card-personal{
+    text-align: center;
+    position: relative;
+    display: flex;
+    font-size: medium;
+    flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin-bottom: 2rem;
+    border-color: white;
+}
+
+.img-personal{
+    width: 73%;
+    height: 55%;
+}
 
 .link {
     text-decoration: none; /* Elimina el subrayado */

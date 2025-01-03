@@ -1,4 +1,4 @@
-.img-1{
+.img-1, .img-3{
     width:100%;
     height: 100%;
     object-fit: cover !important;
@@ -33,6 +33,32 @@
 
 }
 .text-aboutPage{
-    text-align: left;
+    text-align: center;
     font-size: xx-large;
+}
+.text-title{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
+    color: var(--space-cadet);
+}
+.text-title::before {
+    content: "";
+    position: absolute;
+    left: 0; /* si quiero que vaya de derecha a izquierda, pongo right: 0; */
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--cool-gray);
+    transition: width .25s ease-out;
+}
+.text-title:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .cedema-description {
+        flex-direction: column !important;
+    }
 }
