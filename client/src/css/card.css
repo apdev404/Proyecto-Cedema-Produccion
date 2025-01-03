@@ -68,12 +68,13 @@
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
     margin-bottom: 2rem;
-    border-color: white;
+    
 }
 
 .img-personal{
     width: 73%;
     height: 55%;
+    border-color: black;
 }
 
 .link {

@@ -17,6 +17,7 @@
 
 .aboutPage{
     padding-top: 0%;
+
 }
 .cedema-head{
     margin: 2rem;
@@ -61,4 +62,9 @@
     .cedema-description {
         flex-direction: column !important;
     }
+}
+.img-quienes_acompañan{
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
 }

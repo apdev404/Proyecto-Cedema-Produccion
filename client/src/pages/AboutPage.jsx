@@ -68,6 +68,7 @@ export const AboutPage = () => {
         </Row>
         */}
       </Container>
+      {/* <Image src="/quienes_acompañan.jpg" fluid className='img-quienes_acompañan h-40'/> */}
     </section>
     
   );
