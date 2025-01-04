@@ -126,7 +126,7 @@ function ListLinks({title}) {
           {uniqueDatos.map((uniqueDato) => (
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
-              image={uniqueDato.image_path}
+              image={uniqueDato.image1_path}
               buttonText={uniqueDato.tipo ? uniqueDato.tipo : uniqueDato.direccion }
               head={uniqueDato.fecha.split('T')[0]}
               body={uniqueDato.titulo}

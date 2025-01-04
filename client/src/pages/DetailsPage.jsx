@@ -41,7 +41,7 @@ export const DetailsPage = () => {
             <div className='col-md infoLeft'>
               <ul className='infoList container-fluid m-0 p-0'>
                 <li><h1 className='element row'>{datos.titulo}</h1></li>
-                <li><h3 className='element row'>Fecha y hora: {fechaFormateada}</h3></li>
+                <li><h3 className='element row'>Fecha y hora: {datos.fecha}</h3></li>
                 <li><h3 className='element row'>Modalidad: {datos.formato}</h3></li>
               </ul>
             </div>
@@ -54,7 +54,7 @@ export const DetailsPage = () => {
           </div>
               
           <div className='description-container row container-sm justify-content-center'>
-            <Image src={datos.image_path} fluid  alt="imagen" className='description-image row'/>
+            <Image src={datos.image1_path} fluid  alt="imagen" className='description-image row'/>
             <h6 className='description-text row element'>{datos.descripcion}
             </h6>
             <Button variant="primary" className='row seeMoreBtn element left'>INSCRIBIRSE</Button>
