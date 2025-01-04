@@ -18,7 +18,6 @@
     line-height: 1.6;
 }
 
-
 .card-text{
     font-size: 25px;
 }
@@ -68,13 +67,12 @@
     justify-content: center; /* Centra verticalmente */
     align-items: center; /* Centra horizontalmente */
     margin-bottom: 2rem;
-    
+    gap: 10px; /* Espacio entre las cards */
 }
 
 .img-personal{
     width: 73%;
     height: 55%;
-    border-color: black;
 }
 
 .link {
