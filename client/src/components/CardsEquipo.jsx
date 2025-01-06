@@ -25,9 +25,8 @@ function CardsEquipo() {
   
         // Filtrar duplicados por ID
         const filtrados = response.data.reduce((acc, current) => {
-          const exists = acc.find(item => item.id === current.id);
-          if (!exists) {
-            acc.push(current);
+          if (!acc.some(item => item.id === current.id)) {
+              acc.push(current);
           }
           return acc;
         }, []);
@@ -43,9 +42,8 @@ function CardsEquipo() {
     return (
         <Row>
             {uniqueDatos.map((uniqueDato, index) => (
-                <Col xs={12} md={6}>
+                <Col key={`${uniqueDato.id}-${index}`} xs={12} md={6}>
                 <CardEquipos
-                    key={`${uniqueDato.id}-${index}`} // Clave única para cada tarjeta
                     image={uniqueDato.image1_path}
                     nombre={uniqueDato.nombre}
                     cargo={uniqueDato.cargo}
