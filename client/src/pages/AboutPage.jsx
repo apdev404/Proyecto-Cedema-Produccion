@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import ListSupports from "../components/ListSupports";
 
 import '../css/aboutPage.css';
 import '../css/Home.css'
@@ -74,8 +75,9 @@ export const AboutPage = () => {
           </Col>
         </Row>
         */}
+        
       </Container>
-      <Image src="/quienes_acompañan.jpg" fluid className='h-40 img-quienes_acompañan'/>
+      <ListSupports />
     </section>
   );
 }

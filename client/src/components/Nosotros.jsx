@@ -5,7 +5,6 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../css/nosotros.css';
-
 import example from '../assets/example.png';
 
 
@@ -38,6 +37,8 @@ function Nosotros() {
                     </div>
                 </Col>
             </Row>
+
+            
         </Container>
     );
 }
