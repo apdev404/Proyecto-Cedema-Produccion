@@ -60,10 +60,10 @@ export const AboutPage = () => {
         <hr data-aos="fade-up"/>
 
         {/* EQUIPO */}
+        {/*
         <h1 className='encode-sans-condensed-regular text-title' data-aos="flip-up" >Equipo</h1>
         <CardsPersonas/>
-        
-        {/*
+      
           <Row className="justify-content-md-center">
           <h1 className='encode-sans-condensed-regular' data-aos="flip-up">Nos conforman...</h1>
           <Col xs={6} md={4}>
@@ -76,7 +76,6 @@ export const AboutPage = () => {
         */}
       </Container>
       <Image src="/quienes_acompañan.jpg" fluid className='h-40 img-quienes_acompañan'/>
-      {/*  */}
     </section>
   );
 }
