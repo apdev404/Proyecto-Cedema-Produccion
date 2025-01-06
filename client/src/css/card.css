@@ -67,23 +67,6 @@
   margin-top: 5px;
 }
 
-.card-personal{
-    text-align: center;
-    position: relative;
-    display: flex;
-    font-size: medium;
-    flex-direction: column; /* Asegura que los elementos se alineen verticalmente */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    margin-bottom: 2rem;
-    gap: 10px; /* Espacio entre las cards */
-}
-
-.img-personal{
-    width: 73%;
-    height: 55%;
-}
-
 .link {
     text-decoration: none; /* Elimina el subrayado */
     color: inherit; /* Hereda el color del texto, no aplica el color por defecto de los enlaces */

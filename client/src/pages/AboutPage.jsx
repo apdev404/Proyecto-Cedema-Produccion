@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image';
 
 import '../css/aboutPage.css';
 import '../css/Home.css'
-import CardsPersonas from '../components/CardsPersonas';
+import CardsEquipo from '../components/CardsEquipo';
 
 export const AboutPage = () => {
   return (
@@ -57,25 +57,14 @@ export const AboutPage = () => {
             <Image src="/imgGrupo.jpg" fluid className='img-3' data-aos="fade-right"/>
           </Col>
         </Row>
-        <hr data-aos="fade-up"/>
 
         {/* EQUIPO */}
-        {/*
-        <h1 className='encode-sans-condensed-regular text-title' data-aos="flip-up" >Equipo</h1>
-        <CardsPersonas/>
-      
-          <Row className="justify-content-md-center">
-          <h1 className='encode-sans-condensed-regular' data-aos="flip-up">Nos conforman...</h1>
-          <Col xs={6} md={4}>
-            <Image src='/img-persona1.jpg' fluid className='persona1'></Image>
-          </Col>
-          <Col xs={12} md={8}>
-            <p className='encode-sans-condensed-light text-aboutPage' data-aos="fade-up">Iñaki Agüero Clarembaux</p>
-          </Col>
-        </Row>
-        */}
+        <hr data-aos="flip-up"/>
+        <h1 className='encode-sans-condensed-regular text-title' data-aos="flip-up">Nuestro equipo</h1>
+        <CardsEquipo/>
+
       </Container>
-      <Image src="/quienes_acompañan.jpg" fluid className='h-40 img-quienes_acompañan'/>
+      {/* <Image src="/quienes_acompañan.jpg" fluid className='h-40 img-quienes_acompañan'/> */}
     </section>
   );
 }

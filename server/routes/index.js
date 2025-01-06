@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router(); // Para rutear los pedidos HTTP
-const { courses, courseDetail, activities, activityDetail, news } = require('../models/index.js'); // Importar las funciones con los metodos HTTP
+const { courses, courseDetail, activities, activityDetail, news, equipo } = require('../models/index.js'); // Importar las funciones con los metodos HTTP
 
 // DEFINIMOS RUTAS
 
@@ -14,6 +14,9 @@ router.get('/activities/:id', activityDetail);
 
 // Maneja el GET de las noticias
 router.get('/news', news);
+
+// Maneja el GET del equipo
+router.get('/equipo', equipo);
 
 
 // Lo exporto para utilizarlo en server.js
