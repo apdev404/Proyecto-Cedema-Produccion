@@ -13,26 +13,30 @@ export const Home = () => {
       <div className='container-fluid p-0 col encode-sans-condensed-regular'>
         <Galery />
         <section className='section first-section container-fluid'>
-          <h2 className='section-title row encode-sans-condensed-regular'>NOVEDADES</h2>
-          <CardsNews/>
-          <Link className="react-link encode-sans-condensed-bold" to='/formacion'><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
+          <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">NOVEDADES</h2>
+          <div data-aos="fade-down"> 
+            <CardsNews/>
+          </div>
+          <Link className="react-link encode-sans-condensed-bold" to='/formacion' data-aos="zoom-in"><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
         </section>
 
         <section className='section container-fluid'>
-          <h2 className='section-title row encode-sans-condensed-regular'>ACTIVIDADES</h2>
-          <CardsAct/>
-          <Link className="react-link encode-sans-condensed-regular" to='/actividades'><Button className='seeMoreBtn'>VER TODAS</Button></Link>
+            <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">ACTIVIDADES</h2>
+            <div data-aos="fade-up"> 
+            <CardsAct/>
+            </div>
+            <Link className="react-link encode-sans-condensed-regular" to='/actividades' data-aos="zoom-in"><Button className='seeMoreBtn'>VER TODAS</Button></Link>
         </section >
         
         <section className='section container-fluid'>
-          <h2 className='section-title row encode-sans-condensed-regular'>SOBRE NOSOTROS</h2>
-          <Nosotros/>
+            <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">SOBRE NOSOTROS</h2>
+            <Nosotros/>
         </section>
 
         <section className='section container-fluid'>
-          <h3 className='encode-sans-condensed-semibold'>No te pierdas de nada</h3>
-          <h2 className='encode-sans-condensed-semibold'>Seguinos en nuestras Redes Sociales</h2>
-          <Redes/>
+            <h3 className='encode-sans-condensed-semibold' data-aos="flip-up">No te pierdas de nada</h3>
+            <h2 className='encode-sans-condensed-semibold' data-aos="flip-down">Seguinos en nuestras Redes Sociales</h2>
+            <Redes/>
         </section>
       </div>
     </>
