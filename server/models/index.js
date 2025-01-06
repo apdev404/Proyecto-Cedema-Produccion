@@ -74,4 +74,18 @@ const news = (req, res) => {
   });
 };
 
-module.exports = { courses, courseDetail, activities, activityDetail, news };
+const equipo = (req, res) => {
+  const sqlQuery = "SELECT equipo.id, equipo.nombre, equipo.cargo, equipo.titulo, equipo.edad, equipo.image1_path FROM equipo;"; // Consulta/Sentencia de SQL
+
+  database.query(sqlQuery, (err, results) => {
+    if (err) {
+      res.status(500).json({ error: "Error en la consulta" });
+      console.error("Error en la consulta:", err);
+    } else {
+      res.json(results); // Devuelvo los resultados de la consulta
+    }
+  });
+};
+
+
+module.exports = { courses, courseDetail, activities, activityDetail, news, equipo };

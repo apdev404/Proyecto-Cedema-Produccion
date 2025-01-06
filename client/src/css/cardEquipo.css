@@ -1,0 +1,72 @@
+.card-containerEquipo{
+    border: 1px solid #ddd;
+    overflow: hidden; /* Para evitar que los bordes se desborden */
+    padding-left:0 ;
+    margin: 10px 20px;
+    width: 100%;
+}
+
+.card-containerEquipo .link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.card-containerEquipo .card-titleEquipo {
+    font-size: 1.25rem; /* Tamaño base */
+    font-weight: bold;
+}
+
+.card-containerEquipo .card-subtitleEquipo {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.textEquipo{
+    border-left: 2px solid var(--savoy-blue);
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    .card-containerEquipo .card-titleEquipo {
+        font-size: 1rem; /* Más grande en móviles */
+    }
+
+    .card-containerEquipo .card-subtitleEquipo {
+        font-size: 1.2rem; /* Más grande en móviles */
+    }
+
+    .textEquipo{
+        border-top: 2px solid var(--savoy-blue);
+        border-left: none;
+        padding: 0;
+    }
+
+    .card-containerEquipo .card-imageEquipo {
+        margin: 0;
+        margin-right: 0;
+        border-radius: 0; /* Asegura que la imagen no tenga bordes redondeados */
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    .imgEquipo{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0.4rem;
+    }
+    .card-containerEquipo{
+        padding: 0;
+    }
+
+}
+
+.card-containerEquipo .card-imageEquipo {
+    margin: 0;
+    border-radius: 0; /* Asegura que la imagen no tenga bordes redondeados */
+    object-fit: cover;
+    width: 100%; /* Ajuste de imagen al ancho completo */
+    height: auto; /* Mantén las proporciones de la imagen */
+}
