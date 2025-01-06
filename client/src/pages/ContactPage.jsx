@@ -14,22 +14,22 @@ export const ContactPage = () => {
 
   return (
     <>
-      <section className='section contactos container-fluid'>
-        <h3 className='encode-sans-condensed-semibold'>No te pierdas de nada</h3>
-        <h2 className='encode-sans-condensed-semibold'>Seguinos en nuestras Redes Sociales</h2>
+      <section className='section contactos container-fluid' >
+        <h3 className='encode-sans-condensed-semibold' data-aos="flip-up">No te pierdas de nada</h3>
+        <h2 className='encode-sans-condensed-semibold' data-aos="flip-down">Seguinos en nuestras Redes Sociales</h2>
         <Redes className='redes-contact'/>
       </section>
 
       <section className="section section-form-contacto container-fluid center justify-content-center">
-        <h3 className='section-title titulo-contact  encode-sans-condensed-regular row'>Envianos un mensaje</h3>
+        <h3 className='section-title titulo-contact  encode-sans-condensed-regular row' data-aos="flip-up">Envianos un mensaje</h3>
 
         <div className='row container-lg mt-3 align-items-center justify-content-center'>
 
-          <div className="encode-sans-condensed-semibold col info-left-form">
+          <div className="encode-sans-condensed-semibold col info-left-form" data-aos="fade-right">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique inventore fuga asperiores voluptatibus. Corporis vitae quam praesentium molestias qui tempora maxime laudantium eum ipsa, fugit nam tenetur velit sunt at!
           </div>
 
-          <div className="form-contact container-fluid encode-sans-condensed-semibold col">
+          <div className="form-contact container-fluid encode-sans-condensed-semibold col" data-aos="fade-right" data-aos-delay="40">
           <Form className="container-sm">
             
             <div className="row-sm">

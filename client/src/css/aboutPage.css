@@ -1,0 +1,97 @@
+.img-1{
+    width: 100%;
+    height: 90%;
+    border-radius: 30px;
+    /*clip-path: polygon(50px 0, 100% 0, 100% calc(100% - 90px), calc(100% - 90px) 100%, 0 100%, 0 50px);*/
+    display: block;
+    margin: 0 auto;
+}
+.img-3{
+    width:100%;
+    height: 100%;
+    object-fit: cover !important;
+    overflow: hidden;
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+.img-2{
+    width:100%;
+    height: 100%;
+    object-fit: cover !important;
+    overflow: hidden;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.aboutPage{
+    padding-top: 0%;
+}
+
+.text-head{
+    text-align: center;
+    font-size: 20px;
+    color: var(--space-cadet);
+}
+.cedema-description{
+    margin: 2rem;
+}
+.persona1{
+    width: 40%;
+    height: 80%;
+    justify-content: right;
+}
+.text-aboutPage{
+    text-align: center;
+    font-size: xx-large;
+}
+.text-title{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
+    color: black;
+}
+.text-description{
+    font-size: 18px;
+    color: var(--space-cadet);
+}
+.text-main-title{
+    color: var(--space-cadet);
+    font-size: 4rem;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+.text-title::before, .text-main-title::before{
+    content: "";
+    position: absolute;
+    left: 0; /* si quiero que vaya de derecha a izquierda, pongo right: 0; */
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--cool-gray);
+    transition: width .25s ease-out;
+}
+.text-title:hover::before, .text-main-title:hover::before {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .cedema-description {
+        flex-direction: column !important;
+    }
+    .img-quienes_acompañan{
+        max-width: 100%;
+        max-height: fit-content;
+    }
+}
+.img-quienes_acompañan{
+    margin-top: 30px;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: fit-content;
+    
+    display: block;
+    object-fit: cover;
+}

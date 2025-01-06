@@ -41,7 +41,7 @@ function ListLinks({title}) {
 
   return (
     <div className="container-fluid container-listlinks row">
-      <h1 className="encode-sans-condensed-regular title-list row">
+      <h1 className="encode-sans-condensed-regular title-list row" data-aos="flip-up">
         {title}
       </h1>
       <div className="row container-links">
