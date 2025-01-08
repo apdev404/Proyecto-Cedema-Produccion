@@ -17,7 +17,7 @@ const ListSupports = () => {
     const images = [uai,iape,iri,ulp, eppur, espaz , isf, panfletoPol, ra, tarpan , yd, zeit]
     return (
       <div className='container-supports'>
-        <h2 className='section-title encode-sans-condensed-light support-title'>NOS ACOMPAÑAN:</h2>
+        <h2 className='section-title encode-sans-condensed-light support-title'>NUESTRAS ALIANZAS:</h2>
         <div className='img-container-support'>
             {images.map((image, index) => (
                 <img key={index} src={image} alt={`Imagen ${index + 1}`} className='img-support' />
