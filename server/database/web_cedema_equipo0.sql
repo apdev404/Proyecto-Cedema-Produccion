@@ -39,7 +39,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (_binary 'Kh\Õ\ê\Ì7ï¨´pfU\Ä\ßf','IÃ±aki AgÃ¼ero Clarembaux','Coordinador General','Licenciado en Relaciones Internacionales',24,'/img-persona1.jpg'),(_binary 'YËŽU\Ì@ï¨´pfU\Ä\ßf','Agustina Ortega','Coordinadora de capital humano y comunicaciÃ³n','Licenciada en Recursos Humanos',NULL,'/img-persona2.jpg');
+INSERT INTO `equipo` VALUES (_binary 'Khï¿½ï¿½ï¿½7ï¨´','IÃ±aki AgÃ¼ero Clarembaux','Coordinador General','Licenciado en Relaciones Internacionales',24,'/img-persona1.jpg'),(_binary 'YËŽUï¿½@ï¨´pfU\ï','Agustina Ortega','Coordinadora de capital humano y comunicaciÃ³n','Licenciada en Recursos Humanos',NULL,'/img-persona2.jpg');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-06 13:07:13
+-- Dump completed on 2025-01-08 11:53:59

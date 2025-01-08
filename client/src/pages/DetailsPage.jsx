@@ -10,6 +10,9 @@ export const DetailsPage = () => {
   const [datos, setDatos] = useState(null);
 
   useEffect(() => {
+   console.log("Ruta:", ruta, "ID:", id); // Verifica los valores
+
+
     const fetchDatos = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/${ruta}/${id}`);
