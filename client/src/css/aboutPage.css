@@ -81,17 +81,5 @@
     .cedema-description {
         flex-direction: column !important;
     }
-    .img-quienes_acompañan{
-        max-width: 100%;
-        max-height: fit-content;
-    }
-}
-.img-quienes_acompañan{
-    margin-top: 30px;
-    max-width: 100%;
-    min-width: 100%;
-    max-height: fit-content;
-    
-    display: block;
-    object-fit: cover;
+
 }
