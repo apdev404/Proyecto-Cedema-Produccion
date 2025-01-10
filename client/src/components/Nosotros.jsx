@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import '../css/nosotros.css';
 import example from '../assets/example.png';
 
-
 function Nosotros() {
     return (
         <Container fluid className="container-fluid m-auto">
@@ -34,7 +33,7 @@ function Nosotros() {
                 <Col className='section-nosotros' data-aos="zoom-in">
                     <h2 className='encode-sans-condensed-light'>Una red de personas que contribuyen al crecimiento de la Organización</h2>
                     <h3 className='encode-sans-condensed-light'>Conoce más sobre ellos</h3>
-                    <Link className="react-link encode-sans-condensed-regular" to='/about'><Button className='seeMoreBtn'>VER MÁS</Button></Link>
+                    <Link className="react-link encode-sans-condensed-regular" to='/about' onClick={() => window.scrollTo(0, 0)}><Button className='seeMoreBtn'>VER MÁS</Button></Link>
                 </Col>
             </Row>
         </Container>
