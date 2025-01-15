@@ -4,9 +4,8 @@ import "../css/listlinks.css";
 import axios from "axios";
 // import { Link } from 'react-router-dom';
 
-function ListNews({title}) {
-  const ruta = title == 'news'; // Define si se solicitan cursos o actividades
-  // Esto seria mas facil si tuvieramos un componente por cada bbdd
+function ListNews() {
+  
 
   // Estado para manejar los datos de las tarjetas
   // const [actividades, setActividades] = useState([]);
@@ -42,7 +41,7 @@ function ListNews({title}) {
   return (
     <div className="container-fluid container-listlinks row">
       <h1 className="encode-sans-condensed-regular title-list row">
-        {title}
+        NOTICIAS
       </h1>
       <div className="row container-links">
         <div className="container-filters col-2">
@@ -130,8 +129,10 @@ function ListNews({title}) {
               head={uniqueDato.fecha.split('T')[0]}
               body={uniqueDato.titulo}
               subtitle={uniqueDato.subtitulo}
+              autor={uniqueDato.autor}
+              texto={uniqueDato.texto}
               id={uniqueDato.id}
-              ruta={ruta}
+              ruta='news'
             />
           ))}
         </div>

@@ -107,6 +107,19 @@ const news = (req, res) => {
   });
 };
 
+const lastNews = (req, res) => {
+  const sqlQuery = "SELECT     news.id, news.fecha, news.titulo, news.subtitulo, news.texto, news.autor, news.image1_path FROM news ORDER BY id DESC LIMIT 2;"; // Consulta/Sentencia de SQL
+
+  database.query(sqlQuery, (err, results) => {
+    if (err) {
+      res.status(500).json({ error: "Error en la consulta" });
+      console.error("Error en la consulta:", err);
+    } else {
+      res.json(results); // Devuelvo los resultados de la consulta
+    }
+  });
+};
+
 const newsDetail = (req, res) => {
   const { id } = req.params;
   const sqlQuery = "SELECT     news.id, news.fecha, news.titulo, news.subtitulo, news.texto, news.autor, news.image1_path FROM news WHERE news.id = ?;"; // Consulta/Sentencia de SQL
@@ -138,4 +151,4 @@ const equipo = (req, res) => {
 
 
 
-module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, newsDetail, equipo };
+module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, lastNews, newsDetail, equipo };

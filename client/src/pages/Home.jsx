@@ -2,6 +2,7 @@ import '../css/Home.css';
 import Galery from '../components/Carousel.jsx';
 import CardsAct from '../components/CardsAct.jsx';
 import CardsNews from '../components/CardsNews.jsx';
+import LastNews from '../components/LastNews.jsx';
 import Redes from '../components/Contactos.jsx';
 import Nosotros from '../components/Nosotros.jsx';
 import Button from 'react-bootstrap/Button';
@@ -27,6 +28,15 @@ export const Home = () => {
             </div>
             <Link className="react-link encode-sans-condensed-regular" to='/actividades' data-aos="zoom-in"><Button className='seeMoreBtn'>VER TODAS</Button></Link>
         </section >
+
+        <section className='section first-section container-fluid'>
+          <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">NOTICIAS</h2>
+          <div data-aos="fade-down"> 
+            <LastNews />
+          </div>
+          <Link className="react-link encode-sans-condensed-bold" to='/news' data-aos="zoom-in"><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
+        </section>
+
         
         <section className='section container-fluid'>
             <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">SOBRE NOSOTROS</h2>

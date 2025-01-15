@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cards from './Cards';
-import example from '../assets/example.png';
 
 function CardsNews() {
   const [courses, setCourses] = useState([]);

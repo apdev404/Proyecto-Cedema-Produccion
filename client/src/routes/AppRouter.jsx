@@ -6,6 +6,7 @@ import { Formacion } from '../pages/Formacion';
 import { Actividades } from '../pages/Actividades';
 import { ContactPage } from '../pages/ContactPage';
 import { DetailsPage } from '../pages/DetailsPage';
+import { NewsDetails } from '../pages/NewsDetails';
 import { NewsPage } from '../pages/NewsPage';
 
 export const AppRouter = () => {
@@ -20,6 +21,7 @@ export const AppRouter = () => {
           <Route path="contact" element={ <ContactPage /> }/>
           <Route path="news" element={ <NewsPage /> }/>
           <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
+          <Route path="/news/details/:id" element={ <NewsDetails /> }/>
         
         </Route>
       </Routes>

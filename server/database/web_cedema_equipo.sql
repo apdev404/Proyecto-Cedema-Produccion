@@ -37,7 +37,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (_binary 'Kh\�\�\�7勤pfU\�\�f','Iñaki Agüero Clarembaux','Fundador y Coordinador General','/img/aboutPage/img-persona1.jpg'),(_binary 'YˎU\�@勤pfU\�\�f','Dante Gabriel Sias','Coordinador de Relaciones Institucionales','/img/aboutPage/img-persona2.jpg'),(_binary 'z9o\�\�\�勤pfU\�\�f','Yesenia Motola','Coordinadora de Proyectos','/img/aboutPage/img-persona3.jpg');
+INSERT INTO `equipo` VALUES (_binary 'Kh���7勤','Iñaki Agüero Clarembaux','Fundador y Coordinador General','/img/aboutPage/img-persona1.jpg'),(_binary 'YˎU�@勤pfU\�','Dante Gabriel Sias','Coordinador de Relaciones Institucionales','/img/aboutPage/img-persona2.jpg'),(_binary 'z9o���勤','Yesenia Motola','Coordinadora de Proyectos','/img/aboutPage/img-persona3.jpg');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-06 13:07:13
+-- Dump completed on 2025-01-15 15:22:03
