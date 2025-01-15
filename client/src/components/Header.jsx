@@ -1,6 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import "../css/header.css";
-import logo from "../../public/logo-cedema-largo.ico";
+import logo from "/logo-cedema-largo.ico";
 import Footer from './Footer';
 import { ArrowUp } from "./ArrowUp";
 

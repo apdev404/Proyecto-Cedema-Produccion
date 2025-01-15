@@ -1,17 +1,17 @@
 import '../css/listSupport.css';
 //import cedemaIcon from '../assets/cedemaIcon.png';
-import uai from '../../public/img/supports/uai.png';
-import eppur from '../../public/img/supports/eppur.png';
-import espaz from '../../public/img/supports/espaz.png';
-import iape from '../../public/img/supports/iape.png';
-import iri from '../../public/img/supports/iri.png';
-import isf from '../../public/img/supports/isf.png';
-import panfletoPol from '../../public/img/supports/panfletoPol.png';
-import ra from '../../public/img/supports/ra.png';
-import tarpan from '../../public/img/supports/tarpan.png';
-import ulp from '../../public/img/supports/ulp.png';
-import yd from '../../public/img/supports/yd.png';
-import zeit from '../../public/img/supports/zeit.png';
+import uai from '/img/supports/uai.png';
+import eppur from '/img/supports/eppur.png';
+import espaz from '/img/supports/espaz.png';
+import iape from '/img/supports/iape.png';
+import iri from '/img/supports/iri.png';
+import isf from '/img/supports/isf.png';
+import panfletoPol from '/img/supports/panfletoPol.png';
+import ra from '/img/supports/ra.png';
+import tarpan from '/img/supports/tarpan.png';
+import ulp from '/img/supports/ulp.png';
+import yd from '/img/supports/yd.png';
+import zeit from '/img/supports/zeit.png';
 
 const ListSupports = () => {
     const images = [uai,iape,iri,ulp, eppur, espaz , isf, panfletoPol, ra, tarpan , yd, zeit]
