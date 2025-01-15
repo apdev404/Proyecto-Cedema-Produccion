@@ -26,8 +26,6 @@ CREATE TABLE `equipo` (
   `id` binary(16) NOT NULL DEFAULT (uuid_to_bin(uuid())),
   `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `cargo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `titulo` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `edad` int DEFAULT NULL,
   `image1_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,7 +37,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (_binary 'Kh���7勤','Iñaki Agüero Clarembaux','Coordinador General','Licenciado en Relaciones Internacionales',24,'/img-persona1.jpg'),(_binary 'YˎU�@勤pfU\�','Agustina Ortega','Coordinadora de capital humano y comunicación','Licenciada en Recursos Humanos',NULL,'/img-persona2.jpg');
+INSERT INTO `equipo` VALUES (_binary 'Kh\�\�\�7勤pfU\�\�f','Iñaki Agüero Clarembaux','Fundador y Coordinador General','/img/aboutPage/img-persona1.jpg'),(_binary 'YˎU\�@勤pfU\�\�f','Dante Gabriel Sias','Coordinador de Relaciones Institucionales','/img/aboutPage/img-persona2.jpg'),(_binary 'z9o\�\�\�勤pfU\�\�f','Yesenia Motola','Coordinadora de Proyectos','/img/aboutPage/img-persona3.jpg');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-08 11:53:59
+-- Dump completed on 2025-01-06 13:07:13

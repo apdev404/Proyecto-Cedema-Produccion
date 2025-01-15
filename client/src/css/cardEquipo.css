@@ -44,7 +44,7 @@
         padding: 0;
     }
 
-    .card-containerEquipo .card-imageEquipo {
+    .card-containerEquipo{
         margin: 0;
         margin-right: 0;
         border-radius: 0; /* Asegura que la imagen no tenga bordes redondeados */
@@ -63,8 +63,8 @@
 
 }
 
-.card-containerEquipo .card-imageEquipo {
-    margin: 0;
+.card-containerEquipo{
+    margin: 10px;
     border-radius: 0; /* Asegura que la imagen no tenga bordes redondeados */
     object-fit: cover;
     width: 100%; /* Ajuste de imagen al ancho completo */

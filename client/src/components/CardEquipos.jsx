@@ -20,12 +20,6 @@ function CardEquipos({ image, nombre, cargo, titulo, edad}) {
                         <Card.Text>
                             {cargo}
                         </Card.Text>
-                        <Card.Subtitle className="card-subtitleEquipo mb-2">
-                            {titulo}
-                        </Card.Subtitle>
-                        <Card.Subtitle className="card-subtitleEquipo mb-2">
-                            {edad !== null && edad !== undefined ? `${edad} años` : ''}
-                        </Card.Subtitle>
                     </Card.Body>
                 </div>
             </div>

@@ -122,7 +122,7 @@ const newsDetail = (req, res) => {
 };
 
 const equipo = (req, res) => {
-  const sqlQuery = "SELECT equipo.id, equipo.nombre, equipo.cargo, equipo.titulo, equipo.edad, equipo.image1_path FROM equipo;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT equipo.id, equipo.nombre, equipo.cargo, equipo.image1_path FROM equipo;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {
