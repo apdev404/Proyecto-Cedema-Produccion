@@ -22,7 +22,7 @@ export const Header = () => {
               <img src={logo} width="116" height="49" alt="logo de Cedema" className="offcanvas-title logo"  id="offcanvasNavbarLabel"/>
               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div className="navbar-nav offcanvas-body">
+            <div className="navbar-nav" data-bs-dismiss="offcanvas">
               <Link className="nav-link header-link" aria-current="page" to="/">INICIO</Link>
               <Link className="nav-link header-link" to="/about">NOSOTROS</Link>{/*onClick={(e) => this.setAttribute("data-bs-toggle","offcanvas")} Esto recarga la pagina cada vez que se navega (tipo la pag de china)*/}
               <Link className="nav-link header-link" aria-disabled="true" to="/formacion">FORMACIÓN</Link>
