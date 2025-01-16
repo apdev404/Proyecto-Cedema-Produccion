@@ -14,7 +14,7 @@ export const Home = () => {
         <Galery />
         <section className='section first-section container-fluid'>
           <h2 className='section-title row encode-sans-condensed-regular' data-aos="flip-up">NOVEDADES</h2>
-          <div data-aos="fade-down"> 
+          <div data-aos="fade-down" data-aos-anchor=".section-title"> 
             <CardsNews/>
           </div>
           <Link className="react-link encode-sans-condensed-bold" to='/formacion' data-aos="zoom-in"><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>

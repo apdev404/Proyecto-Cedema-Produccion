@@ -9,15 +9,15 @@ export const Header = () => {
   return (
     <>
       <header>
-      <nav className="navbar navbar-expand-md header p-0">
+      <nav className="navbar navbar-expand-lg header p-0">
         <div className="container-fluid">
           <Link className="navbar-brand logo-inicio" to="/">
             <img src={logo} width="116" height="49" alt="logo de Cedema" className="logo"/>
           </Link>
-          <button className="navbar-toggler boton-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasMd" aria-controls="navbarOffcanvasMd" aria-expanded="false" aria-label="Toggle navigation">
+          <button className="navbar-toggler boton-nav" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="offcanvas offcanvas-end offcanvas-container encode-sans-condensed-regular" tabIndex={-1} id="navbarOffcanvasMd" aria-labelledby="navbarOffcanvasMdLabel">
+          <div className="offcanvas offcanvas-end offcanvas-container encode-sans-condensed-regular" tabIndex={-1} id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
             <div className="offcanvas-header">
               <img src={logo} width="116" height="49" alt="logo de Cedema" className="offcanvas-title logo"  id="offcanvasNavbarLabel"/>
               <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

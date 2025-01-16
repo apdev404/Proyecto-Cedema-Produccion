@@ -8,8 +8,6 @@ import '../css/aboutPage.css';
 import '../css/Home.css'
 import CardsEquipo from '../components/CardsEquipo';
 
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export const AboutPage = () => {
