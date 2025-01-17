@@ -33,15 +33,14 @@
     padding: 10px;
     margin: 10px;
     justify-content: center;
-    
 }
 
 .container-filters{
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
 }
 
 .dropdown-filters{
     width: 10rem;
-    
 }
 
 .btnDropdown{
@@ -50,4 +49,22 @@
     background-color: transparent;
     margin: 1rem;
     border-bottom: 2px solid var(--cool-gray);
+}
+
+@media (max-width: 839px) {
+    .container-links {
+        flex-direction: column;
+    }
+
+    .container-filters {
+        order: -1; /* Filtros arriba */
+        margin-bottom: 1rem; 
+    }
+
+    .container-list {
+        order: 0; /* Tarjetas abajo */
+    }
+    .dropdownButton {
+        width: 100%; 
+    }
 }
