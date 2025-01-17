@@ -45,14 +45,14 @@ function ListLinks({title}) {
         {title}
       </h1>
       <div className="row container-links">
-        <div className="container-filters col-2">
+        <div className="container-filters p-0">
           {/* Filtros */}
           <div
-            className="btn-group-vertical encode-sans-condensed-regular dropdown-filters"
+            className="btn-group encode-sans-condensed-regular dropdown-filters"
             role="group"
-            aria-label="Vertical button group"
+            aria-label="Default button group"
           >
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -74,7 +74,7 @@ function ListLinks({title}) {
                 </li>
               </ul>
             </div>
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -96,7 +96,7 @@ function ListLinks({title}) {
                 </li>
               </ul>
             </div>
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
