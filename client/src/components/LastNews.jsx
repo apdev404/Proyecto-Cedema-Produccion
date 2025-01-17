@@ -25,12 +25,12 @@ function LastNews() {
   };
 
   return (
-    <div className='news-container row'>
+    <div className='news-container newsCard-container row'>
       {news.length === 0 ? (
         // Si la lista está vacía
         <p>Próximamente</p>
       ) : (
-        <>
+        <div className='news-card-container'>
           {news.length >= 1 && (
                 <CardNews 
                 key={news[0].id} // Clave única para cada tarjeta
@@ -58,7 +58,7 @@ function LastNews() {
                 ruta='news'
                 className='news-card'/>
           )}
-        </>
+        </div>
       )}
     </div>
   );

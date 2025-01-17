@@ -13,7 +13,8 @@ const Footer = () => {
                     <div className='cedemaFooter'>
                         <h4>CEDEMA <img src={logo} alt="CEDEMA" className="cedemaIcon"/></h4>
                     </div>
-                    <p>Somos una empresa comprometida con ofrecer los mejores productos.</p>
+                    <p>El Centro de Debate Multidisciplinario Argentino (CEDEMA) es una comunidad de debate, formación y producción de contenido independiente y plural sin ideología política partidaria, conformada por jóvenes estudiantes, graduados e intelectuales de distintas disciplinas y universidades de todo el país y la región latinoamericana.  
+                    </p>
                 </div>
                 <div className="footer-enlaces elements-top col">
                     <h4>Enlaces</h4>
@@ -26,7 +27,7 @@ const Footer = () => {
                 </div>
                 <div className="footer-contact elements-top col">
                     <h4>Contacto:</h4>
-                    <p>Email: </p>
+                    <p>Email: cedemaarg@gmail.com </p>
                     <p>Teléfono: </p>
                 </div>
             </div>

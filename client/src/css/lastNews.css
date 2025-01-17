@@ -1,4 +1,10 @@
-.news-card{
-    width: 50%;
+.newsCard-container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.news-card-container{
+    
 }
 
