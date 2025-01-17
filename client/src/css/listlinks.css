@@ -1,6 +1,8 @@
 .container-listlinks{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 2rem;
 }
@@ -26,6 +28,11 @@
 
 
 .container-links{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-list{
@@ -33,14 +40,17 @@
     padding: 10px;
     margin: 10px;
     justify-content: center;
+    width: 90%;
 }
 
 .container-filters{
     max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
-}
-
-.dropdown-filters{
-    width: 10rem;
+  }
+  
+  .dropdown-filters{
+    /* width: 10rem; */
+    display: flex;
+    justify-content: center;
 }
 
 .btnDropdown{
@@ -52,17 +62,15 @@
 }
 
 @media (max-width: 839px) {
-    .container-links {
-        flex-direction: column;
-    }
-
     .container-filters {
-        order: -1; /* Filtros arriba */
-        margin-bottom: 1rem; 
+      /* order: -1; Filtros arriba */
+      /* margin-bottom: 1rem;  */
+      /* flex-direction: row; */
+      justify-content: center;
     }
 
     .container-list {
-        order: 0; /* Tarjetas abajo */
+        /* order: 0; Tarjetas abajo */
     }
     .dropdownButton {
         width: 100%; 

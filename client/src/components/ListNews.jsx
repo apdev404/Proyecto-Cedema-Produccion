@@ -39,19 +39,19 @@ function ListNews() {
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
   return (
-    <div className="container-fluid container-listlinks row">
+    <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular title-list row">
         NOTICIAS
       </h1>
       <div className="row container-links">
-        <div className="container-filters col-2">
+        <div className="container-filters p-0">
           {/* Filtros */}
           <div
-            className="btn-group-vertical encode-sans-condensed-regular dropdown-filters"
+            className="btn-group encode-sans-condensed-regular dropdown-filters"
             role="group"
-            aria-label="Vertical button group"
+            aria-label="Default button group"
           >
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -73,7 +73,7 @@ function ListNews() {
                 </li>
               </ul>
             </div>
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -95,7 +95,7 @@ function ListNews() {
                 </li>
               </ul>
             </div>
-            <div className="dropdownButton" role="group">
+            <div className="btn-group dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -121,7 +121,7 @@ function ListNews() {
         </div>
 
         {/* Tarjetas */}
-        <div className="container-list row col-8">
+        <div className="container-list">
           {uniqueDatos.map((uniqueDato) => (
             <CardNews
               key={uniqueDato.id} // Clave única para cada tarjeta
