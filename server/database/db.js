@@ -2,7 +2,7 @@ const mysql = require('mysql');
 const database = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "apdev404",
   database: "web_cedema",
 });
 
