@@ -25,7 +25,10 @@ DROP TABLE IF EXISTS `news`;
 CREATE TABLE `news` (
   `id` int NOT NULL AUTO_INCREMENT,
   `fecha` date NOT NULL,
+  `mes` enum('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre') COLLATE utf8mb4_general_ci NOT NULL,
   `titulo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `temas` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `region` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `subtitulo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `texto` text COLLATE utf8mb4_general_ci NOT NULL,
   `autor` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
@@ -40,7 +43,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (1,'2025-01-04','Argentina campeona del mundo','El equipo de Scaloni y Messi le gano a Francia','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/craneo.jpg'),(2,'2025-04-02','La peor PC del mundo fue la mas vendida del año','Se trata de la PC de intel','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/pc.jpg');
+INSERT INTO `news` VALUES (1,'2025-01-04','Enero','Argentina campeona del mundo','Cultura','Argentina','El equipo de Scaloni y Messi le gano a Francia','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/craneo.jpg'),(2,'2025-04-02','Abril','La peor PC del mundo fue la mas vendida del año','Ciencia','Estados Unidos','Se trata de la PC de intel','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/pc.jpg');
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-15 15:22:04
+-- Dump completed on 2025-01-20 18:02:06

@@ -27,6 +27,8 @@ CREATE TABLE `activities` (
   `tipo` varchar(16) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `fecha` date NOT NULL,
   `titulo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `temas` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `region` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `descripcion` text COLLATE utf8mb4_general_ci NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `duracion` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
@@ -47,7 +49,7 @@ CREATE TABLE `activities` (
 
 LOCK TABLES `activities` WRITE;
 /*!40000 ALTER TABLE `activities` DISABLE KEYS */;
-INSERT INTO `activities` VALUES (1,'Visita','2025-09-12','Argentina campeona del mundo','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?',123000.00,'2 dias',NULL,NULL,'Virtual',NULL,'2025-01-04 04:03:08','2025-11-12','../../public/img/craneo.jpg'),(2,'Visita','2025-10-11','Visita a embajada Cubana','Conoce la cultura cubana',10000.00,'2 dias',NULL,NULL,'Presencial',NULL,'2025-01-15 18:11:16','2025-10-12','../../public/img/craneo.jpg'),(3,'Mateada','2025-10-11','Charla sobre actualidad','Conoce la cultura cubana',10000.00,'2 dias',NULL,NULL,'Presencial',NULL,'2025-01-15 18:12:17','2025-10-12','../../public/img/pc.jpg');
+INSERT INTO `activities` VALUES (1,'Visita','2025-09-12','Argentina campeona del mundo','Comercio','Estados Unidos','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?',123000.00,'2 dias',NULL,NULL,'Virtual',NULL,'2025-01-04 04:03:08','2025-11-12','../../public/img/craneo.jpg'),(2,'Visita','2025-10-11','Visita a embajada Cubana','Comercio','Europa','Conoce la cultura cubana',10000.00,'2 dias',NULL,NULL,'Presencial',NULL,'2025-01-15 18:11:16','2025-10-12','../../public/img/craneo.jpg'),(3,'Mateada','2025-10-11','Charla sobre actualidad','Cultura','Yemen','Conoce la cultura cubana',10000.00,'2 dias',NULL,NULL,'Presencial',NULL,'2025-01-15 18:12:17','2025-10-12','../../public/img/pc.jpg');
 /*!40000 ALTER TABLE `activities` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -60,4 +62,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-15 15:22:04
+-- Dump completed on 2025-01-20 18:02:07
