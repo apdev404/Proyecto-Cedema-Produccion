@@ -7,7 +7,7 @@
     padding-top: 2rem;
 }
 
-.first-section {
+.grey-section {
   background-color: var(--antiflash-white);
 }
 
@@ -27,7 +27,7 @@
   bottom: 0;
   width: 0;
   height: 4px;
-  background-color: var(--cool-gray);
+  background-color: var(--yellow);
   transition: width .25s ease-out;
 }
 .section-title:hover::before {
@@ -50,12 +50,6 @@
   height: 3rem;
   margin-bottom: 2rem;
   border-radius: 15px;
-  background-color: var(--crimson);
-  border-color: var(--crimson);
-  &:hover{
-      background-color: #8f213bff;
-      border-color: #8f213bff;
-  }
 }
 
 .act-container{

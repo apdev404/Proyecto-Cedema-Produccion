@@ -45,7 +45,7 @@
 }
 
 .textNews{
-    border-left: 2px solid var(--savoy-blue);
+    border-left: 2px solid var(--yellow);
     height: fit-content;
     transition: .5s ease-out;
 }
@@ -81,7 +81,7 @@
     }
 
     .textNews{
-        border-top: 2px solid var(--savoy-blue);
+        border-top: 2px solid var(--yellow);
         border-left: none;
         padding: 0;
     }

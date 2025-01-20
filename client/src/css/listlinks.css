@@ -1,3 +1,6 @@
+* {
+  transition: .3s ease-out;
+}
 .container-listlinks{
     display: flex;
     flex-direction: column;
@@ -11,19 +14,6 @@
     justify-content: center;
     position: relative;
     width: auto;
-}
-.title-list::before{
-    content: "";
-    position: absolute;
-    left: 0; /* si quiero que vaya de derecha a izquierda, pongo right: 0; */
-    bottom: 0;
-    width: 0;
-    height: 4px;
-    background-color: var(--cool-gray);
-    transition: width .25s ease-out;
-}
-.title-list:hover::before {
-    width: 100%;
 }
 
 
@@ -58,7 +48,7 @@
     border: none;
     background-color: transparent;
     margin: 1rem;
-    border-bottom: 2px solid var(--cool-gray);
+    border-bottom: 2px solid var(--yellow);
 }
 
 @media (max-width: 839px) {

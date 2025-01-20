@@ -1,19 +1,20 @@
 /* Estilo general del footer */
 .footer {
-    background-color: var(--space-cadet); /* Fondo oscuro */
+    background-color: var(--savoy-blue); /* Fondo oscuro */
     color: #fff; /* Texto blanco */
     padding: 20px 10px; /* Espaciado superior e inferior */
      width: 100%; /*Ocupa todo el ancho */
     position: relative; /* Se ajusta al flujo del contenido */
     transition: 1s;
+    justify-content: center;
   }
   
   /* Contenedor principal del footer */
   .footer-container {
-    display: flex; /* Layout en filas */
-    flex-direction: column;
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas en pantallas pequeñas */
-    justify-content: space-between; /* Distribución equitativa */
+    /* display: flex; Layout en filas */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; Permite que los elementos se acomoden en varias filas en pantallas pequeñas */
+    justify-content: center; /* Distribución equitativa */
     /* max-width: 1200px; Ancho máximo para centrado */
     margin: 0 auto; /* Centrar horizontalmente */
     padding: 0 20px; /* Margen interno */
@@ -55,27 +56,14 @@
     font-size: 0.9em;
   } */
   
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column; /* Las secciones se apilan verticalmente */
-      text-align: center; /* Centra el texto */
-    }
-  
-    .footer-section {
-      flex: 1 1 100%; /* Cada sección ocupa el 100% del ancho */
-      margin-bottom: 15px; /* Espaciado reducido */
-    }
-  }
-  
 
 .footer-section-top{
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: column;*/
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     margin-bottom: 2rem;
-    gap: 4rem;
+    /* gap: 4rem; */
 }
 .elements-top{
     display: flex;
@@ -118,3 +106,16 @@
 .cedemaIcon{
     width: 4rem;
 }
+
+/* Responsividad */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column; /* Las secciones se apilan verticalmente */
+      text-align: center; /* Centra el texto */
+    }
+  
+    .footer-section {
+      flex: 1 1 100%; /* Cada sección ocupa el 100% del ancho */
+      margin-bottom: 15px; /* Espaciado reducido */
+    }
+  }
