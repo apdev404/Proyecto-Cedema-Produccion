@@ -2,12 +2,12 @@
 
 
 :root {
---space-cadet: #2b2d42ff;
---savoy-blue: #3b60cdff;
+--space-cadet: #323032ff;
+--savoy-blue: #2e6cb3ff;
 --cool-gray: #8398bcff;
 --antiflash-white: #edf2f4ff;
---red-pantone: #ef233cff;
---crimson: #d80032ff;
+--yellow: #f4ae2dff;
+--crimson: #c13321ff;
 --maroon: #810606ff;
 
   /* color-scheme: light dark; Para cambiar el tema
@@ -57,7 +57,7 @@ html, body, #root {
   background: var(--antiflash-white); /* Color del fondo del track */
 }
 ::-webkit-scrollbar-thumb {
-	background-color: var(--space-cadet); /* Color del scroll */
+	background-color: var(--savoy-blue); /* Color del scroll */
 	border-radius: 10px; /* bordes redondeados */
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -85,6 +85,12 @@ html, body, #root {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+.fieldwork {
+  font-family: fieldwork, sans-serif;
+  font-style: normal;
+  font-weight: 100;
 }
 
 .encode-sans-condensed-thin {

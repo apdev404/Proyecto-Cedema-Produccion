@@ -39,20 +39,26 @@ function ListLinks({title}) {
     });
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
+  // FILTROS
+  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.tipo))];
+  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.formato))];
+  const tipos = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.tipo))];
+  const modalidades = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.formato))];
+
   return (
-    <div className="container-fluid container-listlinks row">
-      <h1 className="encode-sans-condensed-regular title-list row" data-aos="flip-up">
+    <div className="container-fluid container-listlinks">
+      <h1 className="encode-sans-condensed-regular section-title title-list row" data-aos="flip-up">
         {title}
       </h1>
-      <div className="row container-links">
-        <div className="container-filters p-0">
+      <div className="row container container-links">
+        <div className="container-filters container row p-0">
           {/* Filtros */}
           <div
-            className="btn-group encode-sans-condensed-regular dropdown-filters"
+            className="btn-group container row encode-sans-condensed-regular dropdown-filters"
             role="group"
             aria-label="Default button group"
           >
-            <div className="btn-group dropdownButton" role="group">
+            <div className="btn-group col dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -62,19 +68,16 @@ function ListLinks({title}) {
                 REGION
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {regiones.map((region) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {region}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="btn-group dropdownButton" role="group">
+            <div className="btn-group col dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -84,19 +87,35 @@ function ListLinks({title}) {
                 TEMA
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {temas.map((tema) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {tema}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="btn-group dropdownButton" role="group">
+            <div className="btn-group col dropdownButton" role="group">
+              <button
+                type="button"
+                className="btnDropdown btn-primary dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                TIPO
+              </button>
+              <ul className="dropdown-menu">
+                {tipos.map((tipo) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {tipo}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="btn-group col dropdownButton" role="group">
               <button
                 type="button"
                 className="btnDropdown btn-primary dropdown-toggle"
@@ -106,28 +125,25 @@ function ListLinks({title}) {
                 MODALIDAD
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {modalidades.map((modalidad) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {modalidad}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
 
         {/* Tarjetas */}
-        <div className="container-list row col-8">
+        <div className="container-list row row-cols-2">
           {uniqueDatos.map((uniqueDato) => (
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
               image={uniqueDato.image1_path}
-              buttonText={uniqueDato.tipo ? uniqueDato.tipo : uniqueDato.direccion }
+              buttonText={uniqueDato.tipo}
               head={uniqueDato.fecha.split('T')[0]}
               body={uniqueDato.titulo}
               footer={uniqueDato.formato}

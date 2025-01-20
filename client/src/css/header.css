@@ -6,11 +6,11 @@
   .nav-link {
     color: var(--space-cadet);
     font-size: 1.1rem;
+    border: 2px transparent solid;
     &:hover {
       opacity: .8;
-      background-color: #2b2d4222;
-      border-bottom: 2px var(--space-cadet) solid;
-      /* margin-bottom: -2px; */
+      background-color: #2e6cb322;
+      border-bottom: 2px var(--savoy-blue) solid;
     }
   }
   .disabled {
@@ -36,7 +36,7 @@ background-color: var(--space-cadet);
 }
  .logo-inicio {
   padding: 10px;
-  border-right: 1px solid var(--space-cadet);
+  /* border-right: 1px solid var(--space-cadet); */
   transition: filter 0.3s ease;
 }
 .logo-inicio:hover{

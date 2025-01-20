@@ -38,6 +38,11 @@ function ListNews() {
     });
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
+  // FILTROS
+  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.autor))];
+  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.titulo))];
+  const fechas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.fecha.split('T')[0]))];
+
   return (
     <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular title-list row">
@@ -61,16 +66,13 @@ function ListNews() {
                 REGION
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {regiones.map((region) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {region}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="btn-group dropdownButton" role="group">
@@ -83,16 +85,13 @@ function ListNews() {
                 TEMA
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {temas.map((tema) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {tema}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="btn-group dropdownButton" role="group">
@@ -102,19 +101,16 @@ function ListNews() {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                MODALIDAD
+                FECHA
               </button>
               <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Dropdown link
-                  </a>
-                </li>
+              {fechas.map((fecha) => (
+                  <li>
+                    <a className="dropdown-item" href="#">
+                      {fecha}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
