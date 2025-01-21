@@ -6,12 +6,15 @@ import axios from "axios";
 
 function ListLinks({title}) {
   const ruta = title == "FORMACIÓN" ? 'courses' : 'activities'; // Define si se solicitan cursos o actividades
-  // Esto seria mas facil si tuvieramos un componente por cada bbdd
+  // Esto seria mas facil si tuvieramos un componente por cada tabla de la bbdd
 
   // Estado para manejar los datos de las tarjetas
-  // const [actividades, setActividades] = useState([]);
   const [datos, setDatos] = useState([]);
-  const [uniqueDatos, setUniqueDatos] = useState([]);
+  const [datosFiltrados, setDatosFiltrados] = useState([]);
+  const [selectedFiltersRegion, setSelectedFiltersRegion] = useState([]);
+  const [selectedFiltersTema, setSelectedFiltersTema] = useState([]);
+  const [selectedFiltersTipo, setSelectedFiltersTipo] = useState([]);
+  const [selectedFiltersModalidad, setSelectedFiltersModalidad] = useState([]);
 
   // fetch a la base de datos (o API)
   useEffect(() => {
@@ -21,18 +24,7 @@ function ListLinks({title}) {
     .then((response) => {
       console.log(response.data);
       setDatos(response.data);
-
-      // Filtrar duplicados por ID
-      const filtrados = response.data.reduce((acc, current) => {
-        const exists = acc.find(item => item.id === current.id);
-        if (!exists) {
-          acc.push(current);
-        }
-        return acc;
-      }, []);
-      // console.log(filtrados);
-      setUniqueDatos(filtrados);
-      console.log(uniqueDatos);
+      setDatosFiltrados(response.data);
     })
     .catch((error) => {
       console.error("Error al obtener los datos:", error);
@@ -40,10 +32,117 @@ function ListLinks({title}) {
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
   // FILTROS
-  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.region))];
-  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.temas))];
-  const tipos = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.tipo))];
-  const modalidades = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.formato))];
+  const regiones = [...new Set(datos.map((uniqueDato) => uniqueDato.region))];
+  const temas = [...new Set(datos.map((uniqueDato) => uniqueDato.temas))];
+  const tipos = [...new Set(datos.map((uniqueDato) => uniqueDato.tipo))];
+  const modalidades = [...new Set(datos.map((uniqueDato) => uniqueDato.formato))];
+
+  // FUNCIONES DE FILTRADO
+  // Filtro de REGION
+  const handleFilterRegion = (selectedRegion) => {
+    if(selectedFiltersRegion.includes(selectedRegion)) {
+      let filters = selectedFiltersRegion.filter((filtro) => filtro !== selectedRegion); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
+      setSelectedFiltersRegion(filters); // Actualiza los filtros seleccionados.
+    } else {
+      setSelectedFiltersRegion([...selectedFiltersRegion, selectedRegion]); // Si el filtro no estaba, se agrega a la lista.
+    }
+  };
+
+  // Filtro de TEMA
+  const handleFilterTema = (selectedTema) => {
+    if(selectedFiltersTema.includes(selectedTema)) {
+      let filters = selectedFiltersTema.filter((filtro) => filtro !== selectedTema); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
+      setSelectedFiltersTema(filters); // Actualiza los filtros seleccionados.
+      console.log(selectedFiltersTema);
+    } else {
+      setSelectedFiltersTema([...selectedFiltersTema, selectedTema]); // Si el filtro no estaba, se agrega a la lista.
+    }
+  };
+
+  // Filtro de TIPO
+  const handleFilterTipo = (selectedTipo) => {
+    if(selectedFiltersTipo.includes(selectedTipo)) {
+      let filters = selectedFiltersTipo.filter((filtro) => filtro !== selectedTipo); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
+      setSelectedFiltersTipo(filters); // Actualiza los filtros seleccionados.
+      console.log(selectedFiltersTipo);
+    } else {
+      setSelectedFiltersTipo([...selectedFiltersTipo, selectedTipo]); // Si el filtro no estaba, se agrega a la lista.
+    }
+  };
+
+  // Filtro de MODALIDAD
+  const handleFilterModalidad = (selectedModalidad) => {
+    if(selectedFiltersModalidad.includes(selectedModalidad)) {
+      let filters = selectedFiltersModalidad.filter((filtro) => filtro !== selectedModalidad); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
+      setSelectedFiltersModalidad(filters); // Actualiza los filtros seleccionados.
+      console.log(selectedFiltersModalidad);
+    } else {
+      setSelectedFiltersModalidad([...selectedFiltersModalidad, selectedModalidad]); // Si el filtro no estaba, se agrega a la lista.
+    }
+  }
+
+  // FILTRADO DE DATOS QUE SE RENDERIZAN
+    useEffect(() => {
+      let result = datos;
+      result = filterItemsRegion(result);
+      result = filterItemsTema(result);
+      result = filterItemsTipo(result);
+      result = filterItemsModalidad(result);
+      setDatosFiltrados(result);
+    }, [selectedFiltersRegion, selectedFiltersTema, selectedFiltersTipo, selectedFiltersModalidad]); // Depende de los filtros seleccionados
+
+    const filterItemsRegion = (items) => {
+      if (selectedFiltersRegion.length > 0) { // Si hay filtros seleccionados
+        let tempDatos = selectedFiltersRegion.map((filtro) => { // Por cada filtro seleccionado, trae los datos que tengan esa misma categoria
+          let temp = items.filter((item) => item.region === filtro); // Retorna el dato que tiene misma region que el filtro
+          return temp;
+        });
+        console.log(tempDatos);
+        return tempDatos.flat();
+      } else {
+        return items;
+      }
+    };
+
+    const filterItemsTema = (items) => {
+      if (selectedFiltersTema.length > 0) { // Si hay filtros seleccionados
+        let tempDatos = selectedFiltersTema.map((filtro) => { // Por cada filtro seleccionado, trae los datos que tengan esa misma categoria
+          let temp = items.filter((item) => item.temas === filtro); // Retorna el dato que tiene misma region que el filtro
+          return temp;
+        });
+        console.log(tempDatos);
+        return tempDatos.flat();
+      } else {
+        return items;
+      }
+    };
+
+    const filterItemsTipo = (items) => {
+      if (selectedFiltersTipo.length > 0) { // Si hay filtros seleccionados
+        let tempDatos = selectedFiltersTipo.map((filtro) => { // Por cada filtro seleccionado, trae los datos que tengan esa misma categoria
+          let temp = items.filter((item) => item.tipo === filtro); // Retorna el dato que tiene misma region que el filtro
+          return temp;
+        });
+        console.log(tempDatos);
+        return tempDatos.flat();
+      } else {
+        return items;
+      }
+    };
+
+    const filterItemsModalidad = (items) => {
+      if (selectedFiltersModalidad.length > 0) { // Si hay filtros seleccionados
+        let tempDatos = selectedFiltersModalidad.map((filtro) => { // Por cada filtro seleccionado, trae los datos que tengan esa misma categoria
+          let temp = items.filter((item) => item.formato === filtro); // Retorna el dato que tiene misma region que el filtro
+          return temp;
+        });
+        console.log(tempDatos);
+        return tempDatos.flat();
+      } else {
+        return items;
+      }
+    };
+
 
   return (
     <div className="container-fluid container-listlinks">
@@ -68,11 +167,14 @@ function ListLinks({title}) {
                 REGION
               </button>
               <ul className="dropdown-menu">
-              {regiones.map((region) => (
-                  <li>
-                    <a className="dropdown-item" href="#">
+              {regiones.map((region, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() => handleFilterRegion(region)}
+                      className={selectedFiltersRegion?.includes(region) ?"activo dropdown-item" : "dropdown-item"}
+                      href="#">
                       {region}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -87,11 +189,14 @@ function ListLinks({title}) {
                 TEMA
               </button>
               <ul className="dropdown-menu">
-              {temas.map((tema) => (
-                  <li>
-                    <a className="dropdown-item" href="#">
+              {temas.map((tema, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() => handleFilterTema(tema)}
+                      className={selectedFiltersTema?.includes(tema) ?"activo dropdown-item" : "dropdown-item"}
+                      href="#">
                       {tema}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -106,11 +211,14 @@ function ListLinks({title}) {
                 TIPO
               </button>
               <ul className="dropdown-menu">
-                {tipos.map((tipo) => (
-                  <li>
-                    <a className="dropdown-item" href="#">
+                {tipos.map((tipo, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() => handleFilterTipo(tipo)}
+                      className={selectedFiltersTipo?.includes(tipo) ?"activo dropdown-item" : "dropdown-item"}
+                      href="#">
                       {tipo}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -125,11 +233,14 @@ function ListLinks({title}) {
                 MODALIDAD
               </button>
               <ul className="dropdown-menu">
-              {modalidades.map((modalidad) => (
-                  <li>
-                    <a className="dropdown-item" href="#">
+              {modalidades.map((modalidad, index) => (
+                  <li key={index}>
+                    <button
+                      onClick={() => handleFilterModalidad(modalidad)}
+                      className={selectedFiltersModalidad?.includes(modalidad) ?"activo dropdown-item" : "dropdown-item"}
+                      href="#">
                       {modalidad}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -139,7 +250,7 @@ function ListLinks({title}) {
 
         {/* Tarjetas */}
         <div className="container-list row row-cols-2">
-          {uniqueDatos.map((uniqueDato) => (
+          {datosFiltrados.map((uniqueDato) => (
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
               image={uniqueDato.image1_path}

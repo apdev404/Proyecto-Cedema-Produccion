@@ -51,6 +51,14 @@
     border-bottom: 2px solid var(--yellow);
 }
 
+.activo {
+  background-color: var(--yellow);
+  color: var(--space-cadet);
+  &:hover {
+    background-color: antiquewhite;
+  }
+}
+
 @media (max-width: 839px) {
     .container-filters {
       /* order: -1; Filtros arriba */
