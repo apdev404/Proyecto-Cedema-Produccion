@@ -65,8 +65,8 @@ export const DetailsPage = () => {
             </div>
             <div className='col-md infoSecund'>
               <ul className='infoList infoRight col container-fluid m-0 p-0'>
-                <li className='element right row'><h3>Temas: Bla Bla</h3></li>
-                <li className='element right row'><h3>Region: China</h3></li>
+                <li className='element right row'><h3>Temas: {datos.temas}</h3></li>
+                <li className='element right row'><h3>Region: {datos.region}</h3></li>
               </ul>
             </div>  
           </div>

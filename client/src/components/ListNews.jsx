@@ -39,9 +39,9 @@ function ListNews() {
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
   // FILTROS
-  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.autor))];
-  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.titulo))];
-  const fechas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.fecha.split('T')[0]))];
+  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.region))];
+  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.temas))];
+  const fechas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.mes))];
 
   return (
     <div className="container-fluid container-listlinks">

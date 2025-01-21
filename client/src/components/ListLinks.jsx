@@ -40,8 +40,8 @@ function ListLinks({title}) {
   }, []); // Este efecto se ejecuta solo una vez al montar el componente
 
   // FILTROS
-  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.tipo))];
-  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.formato))];
+  const regiones = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.region))];
+  const temas = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.temas))];
   const tipos = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.tipo))];
   const modalidades = [...new Set(uniqueDatos.map((uniqueDato) => uniqueDato.formato))];
 
