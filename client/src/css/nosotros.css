@@ -10,21 +10,31 @@
     box-sizing: border-box;
 }
 .img-nosotros {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+    /* display: flex; */
+    /* justify-content: center;  */
+    /* align-items: center;  */
+    padding: 10px 0;
     height: auto;
+    text-align: center;
 }
 
 .img-nosotros img{
-    object-fit: cover;
-    max-width: 100%; 
-    max-height: 100%;
+    object-fit: cover !important;
+    max-width: 80%; 
+    /* max-height: 90%; */
+    border-bottom-left-radius: 40px;
+    border-top-right-radius: 40px;
 }
 .section-description-cedema{
     margin-right: 10px;
 }
 .text-cedema{
     font-size: 18px;
+}
+.nosotros-row {
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
 }
 

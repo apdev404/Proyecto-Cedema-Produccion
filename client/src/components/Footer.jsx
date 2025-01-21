@@ -42,7 +42,7 @@ const Footer = () => {
             </div>    
         </div>
         
-        <p className="row-sm mt-1">&copy; 2024 CEDEMA. Todos los derechos reservados.</p>
+        <p className="">&copy; 2024 CEDEMA. Todos los derechos reservados.</p>
     </footer>
     )
   };
