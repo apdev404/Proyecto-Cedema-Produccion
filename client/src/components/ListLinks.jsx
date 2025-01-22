@@ -280,7 +280,7 @@ function ListLinks({title}) {
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
               image={uniqueDato.image1_path}
-              buttonText={uniqueDato.tipo}
+              buttonText={[uniqueDato.tipo, uniqueDato.region, uniqueDato.temas]}
               head={uniqueDato.fecha.split('T')[0]}
               body={uniqueDato.titulo}
               footer={uniqueDato.formato}

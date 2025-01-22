@@ -9,7 +9,9 @@ function Cards({image, head, body, footer, buttonText, id, ruta}) {
           <Link to ={`/${ruta}/details/${id}`} className="link">
             <Card.Img variant="top" src={image} alt="imagen" className='card-image'/>
             <Card.ImgOverlay>
-                <Button variant="outline-danger" className='btn btn-filtro'>{buttonText}</Button>
+              {buttonText.map((el, index) => (
+                <Button key={index} variant="outline-danger" className='btn btn-filtro'>{el}</Button>
+              ))}
             </Card.ImgOverlay>
             <Card.Body className='body'>
                 <Card.Title size="sm" className='text-head'>{head}</Card.Title>
