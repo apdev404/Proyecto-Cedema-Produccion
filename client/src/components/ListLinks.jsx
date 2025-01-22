@@ -10,6 +10,7 @@ function ListLinks({title}) {
 
   // Estado para manejar los datos de las tarjetas
   const [datos, setDatos] = useState([]);
+  const [busqueda, setBusqueda] = useState("");
   const [datosFiltrados, setDatosFiltrados] = useState([]);
   const [selectedFiltersRegion, setSelectedFiltersRegion] = useState([]);
   const [selectedFiltersTema, setSelectedFiltersTema] = useState([]);
@@ -81,6 +82,20 @@ function ListLinks({title}) {
     }
   }
 
+  const handleChange =e => {
+    setBusqueda(e.target.value);
+    console.log("Busqueda: "+e.target.value);
+    filterSearch(e.target.value);
+  };
+
+  const filterSearch = (endSearch) => {
+    var searchResult = datos.filter((item)=>{
+      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase())) 
+        return item;
+    })
+    setDatosFiltrados(searchResult);
+  }
+
   // FILTRADO DE DATOS QUE SE RENDERIZAN
     useEffect(() => {
       let result = datos;
@@ -150,6 +165,17 @@ function ListLinks({title}) {
         {title}
       </h1>
       <div className="row container container-links">
+        <div className="row inputSearch-container">
+          <input 
+            className="inputSearch"
+            type="text" 
+            value={busqueda}
+            placeholder="Buscador" 
+            onChange={handleChange}
+          />
+            <i className="searchLogo fa fa-search" aria-hidden="true"></i>
+        </div>
+        
         <div className="container-filters container row p-0">
           {/* Filtros */}
           <div
