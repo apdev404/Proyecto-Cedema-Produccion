@@ -5,7 +5,7 @@ const app = express();
 
 // Función que devuelve los cursos y charlas
 const courses = (req, res) => {
-  const sqlQuery = "SELECT     courses.id, courses.tipo, courses.fecha, courses.titulo, courses.temas, courses.region, courses.descripcion, courses.precio, courses.duracion, courses.link_form, courses.link_drive, courses.formato, courses.direccion, courses.created_at, courses.finishes_at, courses.image1_path FROM courses;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM courses;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -20,7 +20,7 @@ const courses = (req, res) => {
 
 // Función para obtener los últimos dos cursos
 const lastCourses = (req, res) => {
-  const sqlQuery = "SELECT courses.id, courses.tipo, courses.fecha, courses.titulo, courses.descripcion, courses.precio, courses.duracion, courses.link_form, courses.link_drive, courses.formato, courses.direccion, courses.created_at, courses.finishes_at, courses.image1_path FROM courses ORDER BY id DESC LIMIT 2;";
+  const sqlQuery = "SELECT * FROM courses ORDER BY id DESC LIMIT 2;";
   
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -37,7 +37,7 @@ const lastCourses = (req, res) => {
 // Función que devuelve los cursos y charlas
 const courseDetail = (req, res) => {
   const { id } = req.params;
-  const sqlQuery = "SELECT     courses.id, courses.tipo, courses.fecha, courses.titulo, courses.temas, courses.region, courses.descripcion, courses.precio, courses.duracion, courses.link_form, courses.link_drive, courses.formato, courses.direccion, courses.created_at, courses.finishes_at, courses.image1_path FROM courses WHERE courses.id = ?;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM courses WHERE courses.id = ?;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, [id], (err, results) => {
     if (err) {
@@ -51,7 +51,7 @@ const courseDetail = (req, res) => {
 
 // Función que devuelve los cursos y charlas
 const activities = (req, res) => {
-  const sqlQuery = "SELECT     activities.id, activities.tipo, activities.fecha, activities.titulo, activities.temas, activities.region, activities.descripcion, activities.precio, activities.duracion, activities.link_form, activities.link_drive, activities.formato, activities.direccion, activities.created_at, activities.finishes_at, activities.image1_path FROM activities ;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM activities ;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -65,7 +65,7 @@ const activities = (req, res) => {
 
 
 const lastActivities = (req, res) => {
-  const sqlQuery = "SELECT     activities.id, activities.tipo, activities.fecha, activities.titulo, activities.descripcion, activities.precio, activities.duracion, activities.direccion, activities.link_form, activities.formato, activities.direccion, activities.created_at, activities.finishes_at, activities.image1_path FROM activities ORDER BY id DESC LIMIT 2;";
+  const sqlQuery = "SELECT * FROM activities ORDER BY id DESC LIMIT 2;";
   
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -80,7 +80,7 @@ const lastActivities = (req, res) => {
 // Función que devuelve los cursos y charlas
 const activityDetail = (req, res) => {
   const { id } = req.params;
-  const sqlQuery = "SELECT     activities.id, activities.tipo, activities.fecha, activities.titulo, activities.temas, activities.region, activities.descripcion, activities.precio, activities.duracion, activities.link_form, activities.link_drive, activities.formato, activities.direccion, activities.created_at, activities.finishes_at, activities.image1_path FROM activities WHERE activities.id = ?;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM activities WHERE activities.id = ?;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, [id], (err, results) => {
     if (err) {
@@ -95,7 +95,7 @@ const activityDetail = (req, res) => {
 
 
 const news = (req, res) => {
-  const sqlQuery = "SELECT     news.id, news.fecha, news.mes, news.titulo, news.temas, news.region, news.subtitulo, news.texto, news.autor, news.image1_path FROM news;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM news;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -108,7 +108,7 @@ const news = (req, res) => {
 };
 
 const lastNews = (req, res) => {
-  const sqlQuery = "SELECT     news.id, news.fecha, news.titulo, news.subtitulo, news.texto, news.autor, news.image1_path FROM news ORDER BY id DESC LIMIT 2;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT  * FROM news ORDER BY id DESC LIMIT 2;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {
@@ -122,7 +122,7 @@ const lastNews = (req, res) => {
 
 const newsDetail = (req, res) => {
   const { id } = req.params;
-  const sqlQuery = "SELECT     news.id, news.fecha, news.titulo, news.subtitulo, news.texto, news.autor, news.image1_path FROM news WHERE news.id = ?;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM news WHERE news.id = ?;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, [id], (err, results) => {
     if (err) {
@@ -135,7 +135,7 @@ const newsDetail = (req, res) => {
 };
 
 const equipo = (req, res) => {
-  const sqlQuery = "SELECT equipo.id, equipo.nombre, equipo.cargo, equipo.image1_path FROM equipo;"; // Consulta/Sentencia de SQL
+  const sqlQuery = "SELECT * FROM equipo;"; // Consulta/Sentencia de SQL
 
   database.query(sqlQuery, (err, results) => {
     if (err) {

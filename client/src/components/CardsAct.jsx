@@ -42,7 +42,7 @@ function CardsNews() {
             <Cards
               key={activities[0].id} // Clave única para la primera tarjeta
               image={activities[0].image1_path}
-              buttonText={activities[0].tipo ? activities[0].tipo : activities[0].direccion}
+              buttonText={[activities[0].tipo, activities[0].region, activities[0].temas]}
               head={formatFecha(activities[0].fecha)}
               body={capitalizarPrimeraLetra(activities[0].titulo)}
               footer={activities[0].formato}
@@ -55,7 +55,7 @@ function CardsNews() {
             <Cards
               key={activities[1].id} // Clave única para la segunda tarjeta
               image={activities[1].image1_path}
-              buttonText={activities[1].tipo ? activities[1].tipo : activities[1].direccion}
+              buttonText={[activities[1].tipo, activities[1].region, activities[1].temas]}
               head={formatFecha(activities[1].fecha)}
               body={capitalizarPrimeraLetra(activities[1].titulo)}
               footer={activities[1].formato}
