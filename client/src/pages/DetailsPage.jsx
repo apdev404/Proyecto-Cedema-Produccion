@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 export const DetailsPage = () => {
   const { ruta, id } = useParams();
@@ -75,7 +75,7 @@ export const DetailsPage = () => {
             <Image src={datos.image1_path} fluid  alt="imagen" className='description-image row'/>
             <h6 className='description-text row element'>{datos.descripcion}
             </h6>
-            <Button variant="primary" className='row seeMoreBtn element left'>INSCRIBIRSE</Button>
+            <Button variant="primary" className='row seeMoreBtn element left'><Link to ={`/${ruta}/inscripcion/${id}`} className="link" >INSCRIBIRSE</Link></Button>
           </div>
         </div>
             

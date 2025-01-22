@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/ContactPage';
 import { DetailsPage } from '../pages/DetailsPage';
 import { NewsDetails } from '../pages/NewsDetails';
 import { NewsPage } from '../pages/NewsPage';
+import { FormInscripcion } from '../pages/FormInscripcion';
 
 export const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ export const AppRouter = () => {
           <Route path="contact" element={ <ContactPage /> }/>
           <Route path="news" element={ <NewsPage /> }/>
           <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
+          <Route path=":ruta/inscripcion/:id" element={ <FormInscripcion /> }/>
           <Route path="/news/details/:id" element={ <NewsDetails /> }/>
         
         </Route>
