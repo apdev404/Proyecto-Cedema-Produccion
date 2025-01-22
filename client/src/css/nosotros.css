@@ -1,19 +1,19 @@
 .section-nosotros{
     background-color:  var(--antiflash-white);
     height: 250px;
-    width: 100% ;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center; 
     box-sizing: border-box;
+    margin-top: 30px;
+    text-align: center;
 }
 .img-nosotros {
     /* display: flex; */
     /* justify-content: center;  */
     /* align-items: center;  */
-    padding: 10px 0;
     height: auto;
     text-align: center;
 }
@@ -21,20 +21,29 @@
 .img-nosotros img{
     object-fit: cover !important;
     max-width: 80%; 
-    /* max-height: 90%; */
-    border-bottom-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-radius: 10px;
 }
 .section-description-cedema{
-    margin-right: 10px;
+    margin-right: 60px;
+    text-align: left;
 }
 .text-cedema{
-    font-size: 18px;
+    font-size: 22px;
 }
 .nosotros-row {
-  margin: 0;
-  max-width: 100%;
-  width: 100%;
-  justify-content: center;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+}
+@media (max-width: 992px) {
+    .section-description-cedema{
+        text-align: center;
+        margin-right: 50px;
+        margin-left: 50px;
+        padding: 2rem;
+    }
+    .section-nosotros{
+        margin: 0px;
+    }
 }
 

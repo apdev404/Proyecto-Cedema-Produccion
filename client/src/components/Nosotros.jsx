@@ -9,15 +9,15 @@ import example from '/img/aboutPage/imgGrupo2.jpg';
 
 function Nosotros() {
     return (
-        <Container fluid className="m-auto p-0">
+        <Container fluid className="m-auto p-0 ">
             <Row className='nosotros-row'>
-                <Col lg={8} className='img-nosotros'>
-                    <div data-aos="fade-right">
+                <Col lg={7} className='img-nosotros'>
+                    <div data-aos="fade-left">
                         <Image src={example}/>
                     </div>
                 </Col>
-                <Col lg={4}>
-                    <div className='section-description-cedema text-center' data-aos="fade-left">
+                <Col lg={5}>
+                    <div className='section-description-cedema' data-aos="fade-right">
                         <h2 className='encode-sans-condensed-light'>Centro de Debate Multidisplicinar Argentino</h2>
                         <h3 className='encode-sans-condensed-light'>Tu espacio de Comunidad Internacional</h3>
                         <hr/>
