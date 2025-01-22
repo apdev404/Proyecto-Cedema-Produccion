@@ -49,12 +49,17 @@
     margin: 1rem auto;
     padding: 0.8rem 2rem;
     color: var(--white);
-    border: none;
+    /* border: none; */
+    border-color: var(--space-cadet);
     border-radius: 5px;
     cursor: pointer;
     display: block;
     text-align: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: var(--antiflash-white);
+      border-color: var(--crimson);
+    }
   }
 
   .info-left-form {
