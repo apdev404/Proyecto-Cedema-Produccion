@@ -31,6 +31,7 @@ const Footer = () => {
                     <h4 className="row p-0">Contacto:</h4>
                     <p className="row p-0">Email: cedemaarg@gmail.com </p>
                     <p className="row p-0">Teléfono: </p>
+                    <Link className="row p-0 text-white" to="/datos-bancarios">Datos Bancarios</Link>
                 </div>
             </div>
             <div className='footer-redes row p-0'>

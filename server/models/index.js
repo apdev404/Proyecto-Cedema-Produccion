@@ -147,8 +147,29 @@ const equipo = (req, res) => {
   });
 };
 
+// post de inscripcion
+const inscripcion = (req, res) => {
+  const { nombre, email, origen, ocupacion, comentario, tipo, titulo, linkDrive, fecha, precio } = req.body;
+  console.log(req.body);
+
+  // if ( !nombre || !email || !origen || !ocupacion || !comentario || !tipo || !titulo || !fecha || !precio ) {
+  //   res.status(400).json({ error: "Todos los campos son obligatorios" }); // Mensaje de error
+  // }
+
+  const sqlQuery = "INSERT INTO inscripciones (nombre, email, origen, ocupacion, comentario, curso_tipo, curso_titulo, link_drive, curso_fecha, precio) values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"; // Consulta/Sentencia de SQL
+
+  database.query(sqlQuery, [nombre, email, origen, ocupacion, comentario, tipo, titulo, linkDrive, fecha, precio], (err, results) => {
+    if (err) {
+      res.status(500).json({ error: "Error al insertar los datos" });
+      console.error("Error en la consulta:", err);
+    } else {
+      res.json({
+        message: "Pre-inscripcion realizada.",
+      }); // Devuelvo un mensaje de éxito
+    }
+  });
+};
 
 
 
-
-module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, lastNews, newsDetail, equipo };
+module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, lastNews, newsDetail, equipo, inscripcion };
