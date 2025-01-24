@@ -15,6 +15,7 @@ export const ContactPage = () => {
   return (
     <>
       <section className='section contactos container-fluid' >
+      <img src="/img/tierra-wallpaper.jpg" alt="Imagen de fondo" className="tierra-fondo" />
         <h3 className='encode-sans-condensed-semibold' data-aos="flip-up">No te pierdas de nada</h3>
         <h2 className='encode-sans-condensed-semibold' data-aos="flip-down">Seguinos en nuestras Redes Sociales</h2>
         <Redes className='redes-contact'/>
@@ -26,7 +27,7 @@ export const ContactPage = () => {
         <div className='row container-lg mt-3 align-items-center justify-content-center'>
 
           <div className="encode-sans-condensed-semibold col info-left-form" data-aos="fade-right">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique inventore fuga asperiores voluptatibus. Corporis vitae quam praesentium molestias qui tempora maxime laudantium eum ipsa, fugit nam tenetur velit sunt at!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique inventore fuga asperiores voluptatibus. Amo a shrek Corporis vitae quam praesentium molestias qui tempora maxime laudantium eum ipsa, fugit nam tenetur velit sunt at!
           </div>
 
           <div className="form-contact container-fluid encode-sans-condensed-semibold col" data-aos="fade-right" data-aos-delay="40">
@@ -93,7 +94,7 @@ export const ContactPage = () => {
         </div>
 
       </section>
-      <i className="fa-solid fa-envelope mail-fondo"></i>
+      {/* <i className="fa-solid fa-envelope mail-fondo"></i> */}
     </>
   )
 };
