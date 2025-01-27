@@ -7,9 +7,12 @@ import Redes from '../components/Contactos.jsx';
 import Nosotros from '../components/Nosotros.jsx';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const Home = () => {
   const scrollUp = () => window.scrollTo(0, 0);
+
+  useEffect(() => window.scrollTo(0, 0),[]);
 
   return (
     <>
