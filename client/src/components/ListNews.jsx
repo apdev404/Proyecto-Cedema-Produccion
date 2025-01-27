@@ -22,7 +22,7 @@ function ListNews() {
     axios
     .get(`http://localhost:3001/news`)
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setDatos(response.data);
       setDatosFiltrados(response.data);
     })
@@ -52,7 +52,7 @@ function ListNews() {
     if(selectedFiltersTema.includes(selectedTema)) {
       let filters = selectedFiltersTema.filter((filtro) => filtro !== selectedTema); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersTema(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersTema);
+      // console.log(selectedFiltersTema);
     } else {
       setSelectedFiltersTema([...selectedFiltersTema, selectedTema]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -63,7 +63,7 @@ function ListNews() {
     if(selectedFiltersFecha.includes(selectedFecha)) {
       let filters = selectedFiltersFecha.filter((filtro) => filtro !== selectedFecha); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersFecha(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersFecha);
+      // console.log(selectedFiltersFecha);
     } else {
       setSelectedFiltersFecha([...selectedFiltersFecha, selectedFecha]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -72,7 +72,7 @@ function ListNews() {
 
   const handleChange =e => {
     setBusqueda(e.target.value);
-    console.log("Busqueda: "+e.target.value);
+    // console.log("Busqueda: "+e.target.value);
     filterSearch(e.target.value);
   };
 
@@ -99,7 +99,7 @@ function ListNews() {
         let temp = items.filter((item) => item.region === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
@@ -112,7 +112,7 @@ function ListNews() {
         let temp = items.filter((item) => item.temas === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
@@ -125,7 +125,7 @@ function ListNews() {
         let temp = items.filter((item) => item.mes === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
