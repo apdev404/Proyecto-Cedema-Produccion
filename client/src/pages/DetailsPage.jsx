@@ -75,7 +75,7 @@ export const DetailsPage = () => {
             <Image src={datos.image1_path} fluid  alt="imagen" className='description-image row'/>
             <h6 className='description-text row element'>{datos.descripcion}
             </h6>
-            <Button variant="primary" className='row seeMoreBtn element left'><Link to ={`/${ruta}/inscripcion/${id}`} className="link" >INSCRIBIRSE</Link></Button>
+            <Button variant="primary" className='row seeMoreBtn element left'><Link to ={`/${ruta}/inscripcion/${id}`} className="link" onClick={() => window.scrollTo(0, 0)}>INSCRIBIRSE</Link></Button>
           </div>
         </div>
             

@@ -5,6 +5,9 @@ import logo from '../assets/logo.png';
 
 
 const Footer = () => {
+
+  const scrollUp = () => window.scrollTo(0, 0);
+
     return (
       <footer className="footer container-fluid text-center encode-sans-condensed-regular">
         <div className="footer-container container-fluid row">
@@ -19,19 +22,19 @@ const Footer = () => {
                 <div className="footer-enlaces elements-top col-md">
                     <h4 className="row p-0">Enlaces</h4>
                     <ul className="footer-links row p-0">
-                        <li><Link className="nav-link" to="/">Inicio</Link></li>
-                        <li><Link className="nav-link" to="/about">Nosotros</Link></li>
-                        <li><Link className="nav-link" to="/formacion">Formacion</Link></li>
-                        <li><Link className="nav-link" to="/actividades">Actividades</Link></li>
-                        <li><Link className="nav-link" to="/news">Noticias</Link></li>
-                        <li><Link className="nav-link" to="/contact">Contacto</Link></li>
+                        <li><Link className="nav-link" to="/" onClick={scrollUp}>Inicio</Link></li>
+                        <li><Link className="nav-link" to="/about" onClick={scrollUp}>Nosotros</Link></li>
+                        <li><Link className="nav-link" to="/formacion" onClick={scrollUp}>Formacion</Link></li>
+                        <li><Link className="nav-link" to="/actividades" onClick={scrollUp}>Actividades</Link></li>
+                        <li><Link className="nav-link" to="/news" onClick={scrollUp}>Noticias</Link></li>
+                        <li><Link className="nav-link" to="/contact" onClick={scrollUp}>Contacto</Link></li>
                     </ul>
                 </div>
                 <div className="footer-contact elements-top col-md">
                     <h4 className="row p-0">Contacto:</h4>
                     <p className="row p-0">Email: cedemaarg@gmail.com </p>
                     <p className="row p-0">Teléfono: </p>
-                    <Link className="row p-0 text-white" to="/datos-bancarios">Datos Bancarios</Link>
+                    <Link className="row p-0 text-white" to="/datos-bancarios" onClick={scrollUp}>Datos Bancarios</Link>
                 </div>
             </div>
             <div className='footer-redes row p-0'>
