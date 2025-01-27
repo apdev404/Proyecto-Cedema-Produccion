@@ -1,5 +1,5 @@
 .section-nosotros{
-    background-color:  var(--antiflash-white);
+    background-color: var(--antiflash-white);
     height: 250px;
     width: 100%;
     display: flex;
@@ -47,3 +47,14 @@
     }
 }
 
+
+@media screen and (max-width: 430px) {
+  .section-description-cedema{
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+  }
+  .section-nosotros h2{
+    padding: .5rem;
+  }
+}

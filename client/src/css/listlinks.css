@@ -1,6 +1,4 @@
-* {
-  transition: .3s ease-out;
-}
+
 .container-listlinks{
     display: flex;
     flex-direction: column;
