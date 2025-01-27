@@ -286,6 +286,7 @@ function ListLinks({title}) {
               footer={uniqueDato.formato}
               id={uniqueDato.id}
               ruta={ruta}
+              width={'20rem'}
             />
           ))}
         </div>
