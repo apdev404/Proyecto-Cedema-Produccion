@@ -5,12 +5,12 @@ import '../css/card.css'
 import Row from "react-bootstrap/esm/Row";
 import Col from 'react-bootstrap/Col';
 
-function CardRedaccion({portada,perfil, titulo, descripcion, fecha, autor}) {
+function CardRedaccion({portada,perfil, titulo, descripcion, fecha, autor, id, ruta}) {
     return (
-        <Card style={{ width: '70%' }} className="card-redaccion">
+        <Card style={{ width: '75%' }} className="card-redaccion">
             <Row>  
                 {/* Cuerpo */}
-                <Col xs={7}>
+                <Col lg={8} md={8} xs={12}>
                 <Row>
                     <Col className="container-autor">
                         <div className="image-container-perfil"> 
@@ -27,7 +27,7 @@ function CardRedaccion({portada,perfil, titulo, descripcion, fecha, autor}) {
                         
                     </Card.Body>
                 </Col>
-                <Col xs={5}>
+                <Col lg={4} md={4} xs={12} className="col-portada">
                     {/* Imagen */}
                     <div className="portada-container row">
                         <Card.Text className="encode-sans-condensed-light fecha-redaccion col">{fecha}</Card.Text>

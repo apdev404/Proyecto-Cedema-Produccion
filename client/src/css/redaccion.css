@@ -1,8 +1,5 @@
-.titulo-redaccion{
-    text-align: center;
-    display: flex;
-    padding-top: 5rem;
-    margin-left: 0;
+.main-title{
+    margin-bottom: 2rem !important;
 }
 .aside-text {
     font-size: 40px;
@@ -33,4 +30,39 @@
     margin-top: 0;
     font-size: 30px;
     color: var(--yellow);
+}
+.inputSearch-container{
+    padding-bottom: 1rem;
+}
+@media (max-width: 992px) {
+    .aside-text-p, .aside-text {
+        text-align: center;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .card-aside{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        position: relative;
+        margin: 0 auto;
+        width: 100% !important;
+    }
+    .sticky-column {
+        display: flex;
+        flex-direction: column; /* Asegura que el contenido interno esté en columna */
+        justify-content: center; /* Centra verticalmente el contenido interno */
+    }
+    .main-title{
+        margin-bottom: 0.2rem !important;
+    }
+    .img-redaccion {
+        width: 70%;
+        height: auto;
+        margin: 0 auto; /* Centra horizontalmente */
+        display: block; /* Asegura que la imagen sea un bloque y no un elemento inline */
+    }
+    .deco{
+        color: white;
+    }
 }

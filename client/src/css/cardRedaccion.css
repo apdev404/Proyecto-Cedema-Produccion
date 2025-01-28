@@ -1,17 +1,19 @@
-.card-redaccion{
+.card-redaccion{ 
     border: none;
     margin: 2rem;
     display: flex;
     align-items: center;
     margin-top: 0;
 }
+.col-portada{
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+}
 .portada-container {
-    display: flex; 
     width: 100%;
     height: auto; 
     object-fit: cover;
-    justify-content: flex-end;
-    align-items: flex-end;
 }
 .body-redaccion{
     text-align: left;
@@ -36,13 +38,12 @@
     height: auto;
     overflow: hidden;
     border-radius: 0;
-
 }
 .perfil-image {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    border-radius: 5%;
+    border-radius: 8%;
 }
 .blockquote-footer {
     margin: 0;
@@ -64,4 +65,48 @@
 }
 .hr-redaccion{
     margin-top: 2rem;
+    color: var(--savoy-blue);
+}
+@media (max-width: 992px) {
+    .card-redaccion{
+        margin-top: 2rem;
+        margin-right: 0;
+    }
+}
+@media (max-width: 780px) {
+    .card-redaccion {
+        flex-direction: column; /* Cambia la dirección de las columnas a columna */
+        width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+        margin: 1rem auto; /* Centra la tarjeta horizontalmente */
+    }
+
+    .col-portada {
+        order: 2; /* Mueve la portada al segundo lugar */
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem; /* Espaciado adicional debajo del cuerpo */
+    }
+
+    .body-redaccion {
+        order: 1; /* Mantiene el cuerpo al principio */
+        text-align: center; /* Centra el contenido del cuerpo */
+    }
+
+    .portada-container {
+        width: 70%; /* Asegura que la portada ocupe todo el ancho disponible */
+        height: auto;
+        text-align: center; /* Centra el contenido dentro del contenedor */
+    }
+
+    .fecha-redaccion {
+        text-align: center; /* Centra la fecha */
+        margin-bottom: 0.5rem;
+    }
+    .hr-redaccion{
+        order: 3;
+    }
+    .perfil-image{
+        width: 70%;
+        height: auto;
+    }
 }
