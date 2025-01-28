@@ -16,29 +16,37 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `equipo`
+-- Table structure for table `inscripciones`
 --
 
-DROP TABLE IF EXISTS `equipo`;
+DROP TABLE IF EXISTS `inscripciones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `equipo` (
+CREATE TABLE `inscripciones` (
   `id` binary(16) NOT NULL DEFAULT (uuid_to_bin(uuid())),
-  `nombre` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `cargo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `image1_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `nombre` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `origen` varchar(255) NOT NULL,
+  `ocupacion` varchar(255) NOT NULL,
+  `comentario` varchar(255) NOT NULL,
+  `curso_tipo` varchar(50) NOT NULL,
+  `curso_titulo` varchar(255) NOT NULL,
+  `link_drive` text,
+  `curso_fecha` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `precio` int NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `email_valido` CHECK (regexp_like(`email`,_utf8mb4'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$'))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `equipo`
+-- Dumping data for table `inscripciones`
 --
 
-LOCK TABLES `equipo` WRITE;
-/*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (_binary 'Kh���7勤','Iñaki Agüero Clarembaux','Fundador y Coordinador General','/img/aboutPage/img-persona1.jpg'),(_binary 'YˎU�@勤pfU\�','Dante Gabriel Sias','Coordinador de Relaciones Institucionales','/img/aboutPage/img-persona2.jpg'),(_binary 'z9o���勤','Yesenia Motola','Coordinadora de Proyectos','/img/aboutPage/img-persona3.jpg');
-/*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
+LOCK TABLES `inscripciones` WRITE;
+/*!40000 ALTER TABLE `inscripciones` DISABLE KEYS */;
+/*!40000 ALTER TABLE `inscripciones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
