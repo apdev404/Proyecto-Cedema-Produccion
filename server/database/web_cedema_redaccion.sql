@@ -40,7 +40,7 @@ CREATE TABLE `redaccion` (
 
 LOCK TABLES `redaccion` WRITE;
 /*!40000 ALTER TABLE `redaccion` DISABLE KEYS */;
-INSERT INTO `redaccion` VALUES (_binary '`Çº\ï¿½\ï¿½\ï¿½ï¿½\n\0\'\0\0','../../public/img/craneo.jpg','../../public/img/craneo.jpg','Titulo','Descripcion corta','Autor','27/01/2025'),(_binary 'xL\ï¿½\ï¿½\ï¿½\ï¿½ï¿½\n\0\'\0\0','../../public/img/pc.jpg','../../public/img/pc.jpg','Titulo','Descripcion corta','Autor','27/01/2025'),(_binary 'ï¿½<\ï¿½Q\ï¿½\ï¿½ï¿½\n\0\'\0\0','../../public/img/auriculares-libros.jpg','../../public/img/auriculares-libros.jpg','Titulo','Descripcion corta','Autor','27/01/2025');
+INSERT INTO `redaccion` VALUES (_binary '`Çº\Þ\Ý\ï¹ÿ\n\0\'\0\0','../../public/img/craneo.jpg','../../public/img/craneo.jpg','Youâ€™re Using ChatGPT Wrong! Hereâ€™s How to Be Ahead of 99% of ChatGPT Users','Master ChatGPT by learning prompt engineering.','Autor','27/01/2025'),(_binary 'xL\Ã\Ä\Ý\ï¹ÿ\n\0\'\0\0','../../public/img/pc.jpg','../../public/img/pc.jpg','I Have to Admit: I was Wrong About Trump-Voting Christians. :(','Pussy tight,pussy clean, pussy fresh','Colo Ezequiel Cernadas Bianchi','27/01/2025'),(_binary '¥<\ÖQ\Ý\ï¹ÿ\n\0\'\0\0','../../public/img/auriculares-libros.jpg','../../public/img/auriculares-libros.jpg','Titulo','Descripcion corta','Autor','27/01/2025');
 /*!40000 ALTER TABLE `redaccion` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-27 22:22:39
+-- Dump completed on 2025-01-28 17:26:16
