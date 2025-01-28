@@ -1,7 +1,7 @@
 // En CardsNews.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Cards from './Cards';
+import Cards2 from './Cards2';
 import example from '../assets/example.png';
 
 function CardsNews() {
@@ -39,7 +39,7 @@ function CardsNews() {
       ) : (
         <>
           {activities.length >= 1 && (
-            <Cards
+            <Cards2
               key={activities[0].id} // Clave única para la primera tarjeta
               image={activities[0].image1_path}
               buttonText={[activities[0].tipo, activities[0].region, activities[0].temas]}
@@ -47,12 +47,13 @@ function CardsNews() {
               body={capitalizarPrimeraLetra(activities[0].titulo)}
               footer={activities[0].formato}
               id={activities[0].id}
+              width={'25rem'}
               ruta='activities'
             />
           )}
   
           {activities.length >= 2 && (
-            <Cards
+            <Cards2
               key={activities[1].id} // Clave única para la segunda tarjeta
               image={activities[1].image1_path}
               buttonText={[activities[1].tipo, activities[1].region, activities[1].temas]}
@@ -60,6 +61,7 @@ function CardsNews() {
               body={capitalizarPrimeraLetra(activities[1].titulo)}
               footer={activities[1].formato}
               id={activities[1].id}
+              width={'25rem'}
               ruta='activities'
             />
           )}

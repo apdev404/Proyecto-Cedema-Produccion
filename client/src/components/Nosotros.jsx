@@ -12,12 +12,12 @@ function Nosotros() {
         <Container fluid className="m-auto p-0 ">
             <Row className='nosotros-row'>
                 <Col lg={7} className='img-nosotros'>
-                    <div data-aos="fade-left">
+                    <div data-aos="zoom-in">
                         <Image src={example}/>
                     </div>
                 </Col>
                 <Col lg={5}>
-                    <div className='section-description-cedema' data-aos="fade-right">
+                     <div className='section-description-cedema'data-aos="fade-right" > 
                         <h2 className='encode-sans-condensed-light'>Centro de Debate Multidisplicinar Argentino</h2>
                         <h3 className='encode-sans-condensed-light'>Tu espacio de Comunidad Internacional</h3>
                         <hr/>

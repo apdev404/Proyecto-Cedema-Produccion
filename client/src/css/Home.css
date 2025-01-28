@@ -61,11 +61,19 @@
     column-gap: 50px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   .news-container {
   margin: 2rem 0;
   }
   .section-title {
     padding: 10px 0;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .section-title {
+    padding: 10px 0;
+    font-size: 2.5rem;
   }
 }

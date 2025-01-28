@@ -20,7 +20,7 @@ function CardsEquipo() {
       axios
       .get(`http://localhost:3001/equipo`)
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         setDatos(response.data);
   
         // Filtrar duplicados por ID
@@ -32,7 +32,7 @@ function CardsEquipo() {
         }, []);
         // console.log(filtrados);
         setUniqueDatos(filtrados);
-        console.log(uniqueDatos);
+        // console.log(uniqueDatos);
       })
       .catch((error) => {
         console.error("Error al obtener los datos:", error);

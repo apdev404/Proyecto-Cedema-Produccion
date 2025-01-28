@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Cards from "../components/Cards";
+import Cards from "./Cards";
+import Cards2 from "./Cards2";
 import "../css/listlinks.css";
 import axios from "axios";
 // import { Link } from 'react-router-dom';
@@ -23,7 +24,7 @@ function ListLinks({title}) {
     axios
     .get(`http://localhost:3001/${ruta}`)
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setDatos(response.data);
       setDatosFiltrados(response.data);
     })
@@ -54,7 +55,7 @@ function ListLinks({title}) {
     if(selectedFiltersTema.includes(selectedTema)) {
       let filters = selectedFiltersTema.filter((filtro) => filtro !== selectedTema); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersTema(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersTema);
+      // console.log(selectedFiltersTema);
     } else {
       setSelectedFiltersTema([...selectedFiltersTema, selectedTema]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -65,7 +66,7 @@ function ListLinks({title}) {
     if(selectedFiltersTipo.includes(selectedTipo)) {
       let filters = selectedFiltersTipo.filter((filtro) => filtro !== selectedTipo); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersTipo(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersTipo);
+      // console.log(selectedFiltersTipo);
     } else {
       setSelectedFiltersTipo([...selectedFiltersTipo, selectedTipo]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -76,7 +77,7 @@ function ListLinks({title}) {
     if(selectedFiltersModalidad.includes(selectedModalidad)) {
       let filters = selectedFiltersModalidad.filter((filtro) => filtro !== selectedModalidad); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersModalidad(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersModalidad);
+      // console.log(selectedFiltersModalidad);
     } else {
       setSelectedFiltersModalidad([...selectedFiltersModalidad, selectedModalidad]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -84,7 +85,7 @@ function ListLinks({title}) {
 
   const handleChange =e => {
     setBusqueda(e.target.value);
-    console.log("Busqueda: "+e.target.value);
+    // console.log("Busqueda: "+e.target.value);
     filterSearch(e.target.value);
   };
 
@@ -112,7 +113,7 @@ function ListLinks({title}) {
           let temp = items.filter((item) => item.region === filtro); // Retorna el dato que tiene misma region que el filtro
           return temp;
         });
-        console.log(tempDatos);
+        // console.log(tempDatos);
         return tempDatos.flat();
       } else {
         return items;
@@ -125,7 +126,7 @@ function ListLinks({title}) {
           let temp = items.filter((item) => item.temas === filtro); // Retorna el dato que tiene misma region que el filtro
           return temp;
         });
-        console.log(tempDatos);
+        // console.log(tempDatos);
         return tempDatos.flat();
       } else {
         return items;
@@ -138,7 +139,7 @@ function ListLinks({title}) {
           let temp = items.filter((item) => item.tipo === filtro); // Retorna el dato que tiene misma region que el filtro
           return temp;
         });
-        console.log(tempDatos);
+        // console.log(tempDatos);
         return tempDatos.flat();
       } else {
         return items;
@@ -151,7 +152,7 @@ function ListLinks({title}) {
           let temp = items.filter((item) => item.formato === filtro); // Retorna el dato que tiene misma region que el filtro
           return temp;
         });
-        console.log(tempDatos);
+        // console.log(tempDatos);
         return tempDatos.flat();
       } else {
         return items;
@@ -275,7 +276,9 @@ function ListLinks({title}) {
         </div>
 
         {/* Tarjetas */}
-        <div className="container-list row row-cols-2">
+        {/* Si el titulo es FORMACION, se renderizan las tarjetas de cursos (Cards), sino se renderizan las de Actiidades (Cards2) */}
+        {title == "FORMACIÓN" ?
+        (<div className="container-list row row-cols-2">
           {datosFiltrados.map((uniqueDato) => (
             <Cards
               key={uniqueDato.id} // Clave única para cada tarjeta
@@ -286,9 +289,27 @@ function ListLinks({title}) {
               footer={uniqueDato.formato}
               id={uniqueDato.id}
               ruta={ruta}
+              width={'20rem'}
             />
           ))}
-        </div>
+        </div>)
+        :
+        (<div className="container-list row row-cols-2">
+          {datosFiltrados.map((uniqueDato) => (
+            <Cards2
+              key={uniqueDato.id} // Clave única para cada tarjeta
+              image={uniqueDato.image1_path}
+              buttonText={[uniqueDato.tipo, uniqueDato.region, uniqueDato.temas]}
+              head={uniqueDato.fecha.split('T')[0]}
+              body={uniqueDato.titulo}
+              footer={uniqueDato.formato}
+              id={uniqueDato.id}
+              ruta={ruta}
+              width={'20rem'}
+            />
+          ))}
+        </div>)
+      }
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ import zeit from '/img/supports/zeit.png';
 const ListSupports = () => {
     const images = [uai,iape,iri,ulp, eppur, espaz , isf, panfletoPol, ra, tarpan , yd, zeit]
     return (
-      <div className='container-supports'>
+      <div className='container-supports text-center'>
         <h2 className='section-title encode-sans-condensed-light support-title'>NUESTRAS ALIANZAS:</h2>
         <div className='img-container-support'>
             {images.map((image, index) => (

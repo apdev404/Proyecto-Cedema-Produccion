@@ -2,7 +2,6 @@
   display: none;
   transform: translateX(-120px);
   animation: slideLeft 1s ease-out;
-  transition: 1s ease-out;
 }
 
 .showButton {
@@ -11,11 +10,10 @@
   right: -100px; /* quiero que aparezca desde la derecha */
   bottom: 50px; /* posicion desde abajo para arriba */
   font-size: 5rem;
-  color: var(--savoy-blue);
+  color: var(--yellow);
   cursor: pointer;
   transform: translateX(-120px);
   animation: slideLeft 1s ease-out;
-  transition: 1s ease-out;
 }
 
 /* ANIMACION DE APARICION y SALIDA */
