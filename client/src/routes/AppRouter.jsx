@@ -10,6 +10,7 @@ import { NewsDetails } from '../pages/NewsDetails';
 import { NewsPage } from '../pages/NewsPage';
 import { FormInscripcion } from '../pages/FormInscripcion';
 import { DatosBancarios } from '../pages/DatosBancarios';
+import { Redaccion } from '../pages/Redaccion';
 
 export const AppRouter = () => {
   return (
@@ -26,6 +27,7 @@ export const AppRouter = () => {
           <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
           <Route path=":ruta/inscripcion/:id" element={ <FormInscripcion /> }/>
           <Route path="/news/details/:id" element={ <NewsDetails /> }/>
+          <Route path="redaccion" element={ <Redaccion /> }/>
         
         </Route>
       </Routes>

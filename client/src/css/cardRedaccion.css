@@ -1,0 +1,67 @@
+.card-redaccion{
+    border: none;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.portada-container {
+    display: flex; 
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.body-redaccion{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.container-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    margin-bottom: 0;
+}
+.description-redaccion{
+    font-size: 22px;
+}
+.title-redaccion{
+    font-size: 28px;
+    padding-top: 1rem;
+}
+.image-container-perfil{
+    width: 20%; 
+    height: auto;
+    overflow: hidden;
+    border-radius: 0;
+
+}
+.perfil-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5%;
+}
+.blockquote-footer {
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    align-items: flex-end;
+}
+.redaccion-container{
+    display: flex;
+    flex-direction: column; /* Apilar las cards verticalmente */
+    align-items: center; /* Alinear las cards al centro (opcional) */
+    gap: 1rem; /* Espaciado entre las cards */
+}
+.fecha-redaccion{
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 0;
+    color:  gray;
+}
+.hr-redaccion{
+    margin-top: 2rem;
+}

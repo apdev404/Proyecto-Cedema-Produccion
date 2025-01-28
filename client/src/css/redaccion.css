@@ -1,0 +1,36 @@
+.titulo-redaccion{
+    text-align: center;
+    display: flex;
+    padding-top: 5rem;
+    margin-left: 0;
+}
+.aside-text {
+    font-size: 40px;
+    text-align: left;
+    margin: 0; 
+}
+.aside-text-p{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.card-aside {
+    display: flex;
+    justify-content: top; 
+    align-items: center;    
+    border: none;
+    height: 100%;
+    margin-right: 2rem;
+    margin-top: 0;
+    padding-top: 0;
+}
+.sticky-column {
+    position: sticky;
+    top: 1rem;
+    bottom: 1rem;
+    width: 100%; 
+}
+.deco{
+    margin-top: 0;
+    font-size: 30px;
+    color: var(--yellow);
+}

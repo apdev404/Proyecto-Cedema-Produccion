@@ -170,6 +170,17 @@ const inscripcion = (req, res) => {
   });
 };
 
+const redaccion = (req, res) => {
+  const sqlQuery = "SELECT * FROM redaccion;"; // Consulta/Sentencia de SQL
 
+  database.query(sqlQuery, (err, results) => {
+    if (err) {
+      res.status(500).json({ error: "Error en la consulta" });
+      console.error("Error en la consulta:", err);
+    } else {
+      res.json(results); // Devuelvo los resultados de la consulta
+    }
+  });
+};
 
-module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, lastNews, newsDetail, equipo, inscripcion };
+module.exports = { courses, lastCourses, courseDetail, activities, lastActivities, activityDetail, news, lastNews, newsDetail, equipo, inscripcion, redaccion };
