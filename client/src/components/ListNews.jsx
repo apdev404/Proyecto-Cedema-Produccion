@@ -78,7 +78,7 @@ function ListNews() {
 
   const filterSearch = (endSearch) => {
     var searchResult = datos.filter((item)=>{
-      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase())) 
+      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.region.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.temas.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.mes.toString().toLowerCase().includes(endSearch.toLowerCase())) 
         return item;
     })
     setDatosFiltrados(searchResult);

@@ -91,7 +91,7 @@ function ListLinks({title}) {
 
   const filterSearch = (endSearch) => {
     var searchResult = datos.filter((item)=>{
-      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase())) 
+      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.region.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.temas.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.tipo.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.formato.toString().toLowerCase().includes(endSearch.toLowerCase())) 
         return item;
     })
     setDatosFiltrados(searchResult);
