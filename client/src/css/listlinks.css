@@ -1,6 +1,9 @@
+
 .container-listlinks{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 2rem;
 }
@@ -10,22 +13,14 @@
     position: relative;
     width: auto;
 }
-.title-list::before{
-    content: "";
-    position: absolute;
-    left: 0; /* si quiero que vaya de derecha a izquierda, pongo right: 0; */
-    bottom: 0;
-    width: 0;
-    height: 4px;
-    background-color: var(--cool-gray);
-    transition: width .25s ease-out;
-}
-.title-list:hover::before {
-    width: 100%;
-}
 
 
 .container-links{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-list{
@@ -33,15 +28,60 @@
     padding: 10px;
     margin: 10px;
     justify-content: center;
-    
+    width: 90%;
+}
+
+.inputSearch-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  position: relative;
+}
+
+.searchLogo{
+ width: 1rem;
+ position: absolute;
+ right: 2rem;
+}
+
+.inputSearch{
+  outline: none; /* Elimina el borde azul o el borde de enfoque predeterminado */
+  border: none;  /* Elimina cualquier borde predeterminado */
+  background: none; /* Elimina el fondo */
+  height: 2rem;
+  width: 100%;
+  margin: 1rem; 
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid var(--yellow);
+  transition: all 0.5s ease;
+  &:hover, &:focus {
+    border: 1px solid var(--yellow) !important; 
+  }
+}
+
+.inputSearch:active, .inputSearch:focus{
+  border: 1px solid var(--savoy-blue);
 }
 
 .container-filters{
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  }
+  
+.btn-group.dropdownButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.dropdown-filters{
-    width: 10rem;
-    
+  .dropdown-filters{
+    /* width: 10rem; */
+    display: flex;
+    justify-content: center;
 }
 
 .btnDropdown{
@@ -49,5 +89,29 @@
     border: none;
     background-color: transparent;
     margin: 1rem;
-    border-bottom: 2px solid var(--cool-gray);
+    border-bottom: 2px solid var(--yellow);
+}
+
+.activo {
+  background-color: var(--yellow);
+  color: var(--space-cadet);
+  &:hover {
+    background-color: antiquewhite;
+  }
+}
+
+@media (max-width: 839px) {
+    .container-filters {
+      /* order: -1; Filtros arriba */
+      /* margin-bottom: 1rem;  */
+      /* flex-direction: row; */
+      justify-content: center;
+    }
+
+    .container-list {
+        /* order: 0; Tarjetas abajo */
+    }
+    .dropdownButton {
+        width: 100%; 
+    }
 }

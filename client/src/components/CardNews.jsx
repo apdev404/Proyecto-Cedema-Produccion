@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import Card from 'react-bootstrap/Card';
 import '../css/cardNews.css';
 
-function CardNews({ image, head, body, subtitle, id, ruta }) {
+function CardNews({ image, head, body, subtitle, id }) {
     return (
-        <Card style={{ width: '90%' }} className="card-containerNews encode-sans-condensed-regular">
-            <Link to={`/${ruta}/details/${id}`} className="link">
+        <Card style={{ width: '100%' }} className="card-containerNews encode-sans-condensed-regular">
+            <Link to={`/news/details/${id}`} className="link">
                 <div className="row g-0 align-items-center">
                     {/* Imagen */}
                     <div className="col-12 col-md-4 imgNews">

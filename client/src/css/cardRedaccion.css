@@ -1,0 +1,112 @@
+.card-redaccion{ 
+    border: none;
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+.col-portada{
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+}
+.portada-container {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+}
+.body-redaccion{
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.container-autor {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; 
+    margin-bottom: 0;
+}
+.description-redaccion{
+    font-size: 22px;
+}
+.title-redaccion{
+    font-size: 28px;
+    padding-top: 1rem;
+}
+.image-container-perfil{
+    width: 20%; 
+    height: auto;
+    overflow: hidden;
+    border-radius: 0;
+}
+.perfil-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8%;
+}
+.blockquote-footer {
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    align-items: flex-end;
+}
+.redaccion-container{
+    display: flex;
+    flex-direction: column; /* Apilar las cards verticalmente */
+    align-items: center; /* Alinear las cards al centro (opcional) */
+    gap: 1rem; /* Espaciado entre las cards */
+}
+.fecha-redaccion{
+    font-size: 18px;
+    text-align: right;
+    margin-bottom: 0;
+    color:  gray;
+}
+.hr-redaccion{
+    margin-top: 2rem;
+    color: var(--savoy-blue);
+}
+@media (max-width: 992px) {
+    .card-redaccion{
+        margin-top: 2rem;
+        margin-right: 0;
+    }
+}
+@media (max-width: 780px) {
+    .card-redaccion {
+        flex-direction: column; /* Cambia la dirección de las columnas a columna */
+        width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+        margin: 1rem auto; /* Centra la tarjeta horizontalmente */
+    }
+
+    .col-portada {
+        order: 2; /* Mueve la portada al segundo lugar */
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem; /* Espaciado adicional debajo del cuerpo */
+    }
+
+    .body-redaccion {
+        order: 1; /* Mantiene el cuerpo al principio */
+        text-align: center; /* Centra el contenido del cuerpo */
+    }
+
+    .portada-container {
+        width: 70%; /* Asegura que la portada ocupe todo el ancho disponible */
+        height: auto;
+        text-align: center; /* Centra el contenido dentro del contenedor */
+    }
+
+    .fecha-redaccion {
+        text-align: center; /* Centra la fecha */
+        margin-bottom: 0.5rem;
+    }
+    .hr-redaccion{
+        order: 3;
+    }
+    .perfil-image{
+        width: 70%;
+        height: auto;
+    }
+}

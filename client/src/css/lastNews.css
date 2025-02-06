@@ -1,0 +1,12 @@
+.newsCard-container{
+  display: flex;
+  justify-content: center;
+}
+
+.news-card-container{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

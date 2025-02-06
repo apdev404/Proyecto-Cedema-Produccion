@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Cards from './Cards';
-import example from '../assets/example.png';
 
 function CardsNews() {
   const [courses, setCourses] = useState([]);
@@ -38,21 +37,23 @@ function CardsNews() {
           <Cards
              key={courses[0].id} // Clave única para cada tarjeta
              image={courses[0].image1_path}
-             buttonText={courses[0].tipo ? courses[0].tipo : courses[0].direccion }
+             buttonText={[courses[0].tipo,courses[0].region,courses[0].temas]}
              head={formatFecha(courses[0].fecha)}
              body={capitalizarPrimeraLetra(courses[0].titulo)}
              footer={courses[0].formato}
              id={courses[0].id}
+             width={'25rem'}
              ruta='courses'
           />
           <Cards
               key={courses[1].id} // Clave única para cada tarjeta
               image={courses[1].image1_path}
-              buttonText={courses[1].tipo ? courses[1].tipo : courses[1].direccion }
+              buttonText={[courses[1].tipo,courses[1].region,courses[1].temas]}
               head={formatFecha(courses[1].fecha)}
               body={capitalizarPrimeraLetra(courses[1].titulo)}
               footer={courses[1].formato}
               id={courses[1].id}
+              width={'25rem'}
               ruta='courses'
           />
         </>

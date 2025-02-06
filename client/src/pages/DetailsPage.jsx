@@ -3,7 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { GoToArrow } from '../components/GoToArrow';
 
 export const DetailsPage = () => {
   const { ruta, id } = useParams();
@@ -53,20 +54,23 @@ export const DetailsPage = () => {
         <div className='banner row-md container-fluid p-0'>
           <Image src={datos.image1_path} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
         </div>
+        <GoToArrow page={ruta}/>
         <div className='info-container container-sm p-4'>
-
           <div className='info-top row container-sm align-items-center'>
             <div className='col-md infoLeft'>
               <ul className='infoList container-fluid m-0 p-0'>
                 <li><h1 className='element row'>{capitalizarPrimeraLetra(datos.titulo)}</h1></li>
-                <li><h3 className='element row'>Fecha y hora: {formatFecha(datos.fecha)}</h3></li>
-                <li><h3 className='element row'>Modalidad: {datos.formato}</h3></li>
+                <li><h3 className='element row'>Fecha de inicio: {formatFecha(datos.fecha)}</h3></li>
+                <li><h3 className='element row'>Fecha de finalización: {formatFecha(datos.finishes_at)}</h3></li>
+                <li><h3 className='element row'>Precio: ${datos.precio}</h3></li>
               </ul>
             </div>
             <div className='col-md infoSecund'>
               <ul className='infoList infoRight col container-fluid m-0 p-0'>
-                <li className='element right row'><h3>Temas: Bla Bla</h3></li>
-                <li className='element right row'><h3>Region: China</h3></li>
+                <li className='element right row'><h3>Temas: {datos.temas}</h3></li>
+                <li className='element right row'><h3>Region: {datos.region}</h3></li>
+                <li className='element right row'><h3>Asincrónico: {datos.asincronico}</h3></li>
+                <li className='element right row'><h3>Modalidad: {datos.formato}</h3></li>
               </ul>
             </div>  
           </div>
@@ -75,7 +79,7 @@ export const DetailsPage = () => {
             <Image src={datos.image1_path} fluid  alt="imagen" className='description-image row'/>
             <h6 className='description-text row element'>{datos.descripcion}
             </h6>
-            <Button variant="primary" className='row seeMoreBtn element left'>INSCRIBIRSE</Button>
+            <Button variant="primary" className='row seeMoreBtn element left'><Link to ={`/${ruta}/inscripcion/${id}`} className="link" onClick={() => window.scrollTo(0, 0)}>INSCRIBIRSE</Link></Button>
           </div>
         </div>
             

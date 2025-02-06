@@ -45,15 +45,15 @@
 
 .btn{
     padding: 5px 10px;
-    color: #616161;
-    border-color: #616161;
+    color: var(--space-cadet);
+    border-color: var(--space-cadet);
     background-color: white;
     font-size: 15px;
     text-align: center;
     border-radius: 15px;
     position: relative;
     pointer-events: auto;
-    &:hover{
+    &:hover, &:hover:active {
         background-color: var(--crimson);
         border-color: var(--crimson);
     }
@@ -61,6 +61,7 @@
 
 .btn-filtro {
   margin-top: 5px;
+  margin-right: 2px;
 }
 
 .card-personal{
@@ -90,3 +91,9 @@
     color: inherit; /* Mantiene el color del texto sin cambios */
   }
   
+  @media screen and (max-width: 430px) {
+    .card-container {
+    margin: 10px 0;
+    width: 18rem !important;
+    }
+  }

@@ -5,19 +5,19 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import '../css/nosotros.css';
-import example from '../assets/example.png';
+import example from '/img/aboutPage/imgGrupo2.jpg';
 
 function Nosotros() {
     return (
-        <Container fluid className="container-fluid m-auto">
+        <Container fluid className="m-auto p-0 ">
             <Row className='nosotros-row'>
-                <Col sm={8} className='img-nosotros'>
-                    <div data-aos="fade-right">
+                <Col lg={7} className='img-nosotros'>
+                    <div data-aos="zoom-in">
                         <Image src={example}/>
                     </div>
                 </Col>
-                <Col sm={4}>
-                    <div className='section-description-cedema' data-aos="fade-left">
+                <Col lg={5}>
+                     <div className='section-description-cedema'data-aos="fade-right" > 
                         <h2 className='encode-sans-condensed-light'>Centro de Debate Multidisplicinar Argentino</h2>
                         <h3 className='encode-sans-condensed-light'>Tu espacio de Comunidad Internacional</h3>
                         <hr/>
@@ -30,7 +30,7 @@ function Nosotros() {
                     </div>
                 </Col >
 
-                <Col className='section-nosotros' data-aos="zoom-in">
+                <Col className='section-nosotros p-0' data-aos="zoom-in">
                     <h2 className='encode-sans-condensed-light'>Una red de personas que contribuyen al crecimiento de la Organización</h2>
                     <h3 className='encode-sans-condensed-light'>Conoce más sobre ellos</h3>
                     <Link className="react-link encode-sans-condensed-regular" to='/about' onClick={() => window.scrollTo(0, 0)}><Button className='seeMoreBtn'>VER MÁS</Button></Link>
