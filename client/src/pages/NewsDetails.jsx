@@ -1,4 +1,4 @@
-import '../css/Details.css';
+import '../css/DetailsNews.css';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from "react";
@@ -55,24 +55,20 @@ export const NewsDetails = () => {
         <div className='banner row-md container-fluid p-0'>
           <Image src={datos.image1_path} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
         </div>
-        <div className='info-container container-sm p-4'>
-
-          <div className='info-top row container-sm align-items-center'>
-            <div className='col-md infoLeft'>
+        
+        <div className='info-container container-sm p-4 noticia-container'>
+          <div className='info-top-news row container-sm align-items-center'>
               <ul className='infoList container-fluid m-0 p-0'>
-                <li><h3 className='element row'>Fecha: {formatFecha(datos.fecha)}</h3></li>
-                <li><h1 className='element row'>{capitalizarPrimeraLetra(datos.titulo)}</h1></li>
-                <li><h4 className='element row'>{datos.subtitulo}</h4></li>
-              </ul>
-            </div>
-            <div className='col-md infoSecund'>
-              
-            </div>  
+                <li><h3 className='element row elemento-infotop fecha'>Fecha: {formatFecha(datos.fecha)}</h3></li>
+                <li><h3 className='element row elemento-infotop volanta'>aca va la volnta Lorem ipsum dolor sit amet {capitalizarPrimeraLetra(datos.volanta)}</h3></li>
+                <li><h1 className='element row elemento-infotop titulo'>{capitalizarPrimeraLetra(datos.titulo)}</h1></li>
+                <li><h3 className='element row elemento-infotop copete'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab incidunt aperiam quae nesciunt dicta quaerat maxime amet explicabo quis, qui ducimus, placeat reiciendis cumque. Distinctio in eaque aut ea dolorem.{capitalizarPrimeraLetra(datos.copete)}</h3></li>
+              </ul>  
           </div>
               
           <div className='description-container row container-sm justify-content-center'>
             <Image src={datos.image1_path} fluid  alt="imagen" className='description-image row'/>
-            <h6 className='description-text row element'>{datos.texto}
+            <h6 className='news description-text row element'>{datos.texto}
             </h6>
             <h6>
               Autor: {datos.autor}

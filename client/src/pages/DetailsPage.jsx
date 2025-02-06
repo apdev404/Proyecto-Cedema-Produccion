@@ -59,14 +59,17 @@ export const DetailsPage = () => {
             <div className='col-md infoLeft'>
               <ul className='infoList container-fluid m-0 p-0'>
                 <li><h1 className='element row'>{capitalizarPrimeraLetra(datos.titulo)}</h1></li>
-                <li><h3 className='element row'>Fecha y hora: {formatFecha(datos.fecha)}</h3></li>
-                <li><h3 className='element row'>Modalidad: {datos.formato}</h3></li>
+                <li><h3 className='element row'>Fecha de inicio: {formatFecha(datos.fecha)}</h3></li>
+                <li><h3 className='element row'>Fecha de finalización: {formatFecha(datos.finishes_at)}</h3></li>
+                <li><h3 className='element row'>Precio: ${datos.precio}</h3></li>
               </ul>
             </div>
             <div className='col-md infoSecund'>
               <ul className='infoList infoRight col container-fluid m-0 p-0'>
                 <li className='element right row'><h3>Temas: {datos.temas}</h3></li>
                 <li className='element right row'><h3>Region: {datos.region}</h3></li>
+                <li className='element right row'><h3>Asincrónico: {datos.asincronico}</h3></li>
+                <li className='element right row'><h3>Modalidad: {datos.formato}</h3></li>
               </ul>
             </div>  
           </div>

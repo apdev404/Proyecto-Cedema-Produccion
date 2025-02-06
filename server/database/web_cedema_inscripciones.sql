@@ -46,6 +46,7 @@ CREATE TABLE `inscripciones` (
 
 LOCK TABLES `inscripciones` WRITE;
 /*!40000 ALTER TABLE `inscripciones` DISABLE KEYS */;
+INSERT INTO `inscripciones` VALUES (_binary 'ê2{\⁄\›5ÔïÑûN∞\œ','Sofia Correa','aepomponio@estudiantes.unsam.edu.ar','sdsdsd','sdsds','ssdsd','Visita','Argentina campeona del mundo',NULL,'2025-09-12','2025-01-28 05:05:59',123000);
 /*!40000 ALTER TABLE `inscripciones` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-28  2:01:42
+-- Dump completed on 2025-02-06 11:41:38

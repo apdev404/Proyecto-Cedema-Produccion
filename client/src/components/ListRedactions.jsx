@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import CardNews from "../components/CardNews";
+import CardRedaction from "./CardRedaction";
 import "../css/listlinks.css";
 import axios from "axios";
 // import { Link } from 'react-router-dom';
 
-function ListNews() {
+function ListRedactions() {
   
 
   // Estado para manejar los datos de las tarjetas
@@ -135,7 +135,7 @@ function ListNews() {
   return (
     <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular title-list row">
-        NOVEDADES
+        REDACCIONES
       </h1>
       <div className="row container-links">
       <div className="row inputSearch-container">
@@ -227,7 +227,7 @@ function ListNews() {
         {/* Tarjetas */}
         <div className="container-list">
           {datosFiltrados.map((uniqueDato) => (
-            <CardNews
+            <CardRedaction
               key={uniqueDato.id} // Clave única para cada tarjeta
               image={uniqueDato.image1_path}
               head={uniqueDato.fecha.split('T')[0]}
@@ -245,4 +245,4 @@ function ListNews() {
   );
 }
 
-export default ListNews;
+export default ListRedactions;

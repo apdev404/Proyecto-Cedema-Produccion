@@ -8,6 +8,7 @@ import { ContactPage } from '../pages/ContactPage';
 import { DetailsPage } from '../pages/DetailsPage';
 import { NewsDetails } from '../pages/NewsDetails';
 import { NewsPage } from '../pages/NewsPage';
+import { RedactionsPage } from '../pages/RedactionsPage';
 import { FormInscripcion } from '../pages/FormInscripcion';
 import { DatosBancarios } from '../pages/DatosBancarios';
 
@@ -22,6 +23,7 @@ export const AppRouter = () => {
           <Route path="actividades" element={ <Actividades /> }/>
           <Route path="contact" element={ <ContactPage /> }/>
           <Route path="news" element={ <NewsPage /> }/>
+          <Route path="redacciones" element={ <RedactionsPage /> }/>
           <Route path="datos-bancarios" element={ <DatosBancarios /> }/>
           <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
           <Route path=":ruta/inscripcion/:id" element={ <FormInscripcion /> }/>
