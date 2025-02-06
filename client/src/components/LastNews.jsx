@@ -41,6 +41,7 @@ function LastNews() {
                 autor={news[0].autor}
                 texto={news[0].texto}
                 id={news[0].id}
+                width={'25rem'}
                 ruta='news'
                 className='news-card' />
           )}
@@ -55,6 +56,7 @@ function LastNews() {
                 autor={news[1].autor}
                 texto={news[1].texto}
                 id={news[1].id}
+                width={'25rem'}
                 ruta='news'
                 className='news-card'/>
           )}

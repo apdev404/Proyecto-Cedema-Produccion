@@ -5,7 +5,7 @@
     padding: 20px 10px; /* Espaciado superior e inferior */
      width: 100%; /*Ocupa todo el ancho */
     position: relative; /* Se ajusta al flujo del contenido */
-    transition: 1s;
+    /* transition: 1s; */
     justify-content: center;
   }
   

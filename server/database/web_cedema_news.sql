@@ -27,12 +27,16 @@ CREATE TABLE `news` (
   `fecha` date NOT NULL,
   `mes` enum('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre') COLLATE utf8mb4_general_ci NOT NULL,
   `titulo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `volanta` text COLLATE utf8mb4_general_ci,
+  `copete` text COLLATE utf8mb4_general_ci,
   `temas` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `region` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `subtitulo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `texto` text COLLATE utf8mb4_general_ci NOT NULL,
   `autor` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `image1_path` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `epigrafeImage1` text COLLATE utf8mb4_general_ci,
+  `image2_path` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `epigrafeImage2` text COLLATE utf8mb4_general_ci,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -43,7 +47,7 @@ CREATE TABLE `news` (
 
 LOCK TABLES `news` WRITE;
 /*!40000 ALTER TABLE `news` DISABLE KEYS */;
-INSERT INTO `news` VALUES (1,'2025-01-04','Enero','Argentina campeona del mundo','Cultura','Argentina','El equipo de Scaloni y Messi le gano a Francia','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/craneo.jpg'),(2,'2025-04-02','Abril','La peor PC del mundo fue la mas vendida del año','Ciencia','Estados Unidos','Se trata de la PC de intel','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/pc.jpg');
+INSERT INTO `news` VALUES (1,'2025-01-04','Enero','Argentina campeona del mundo',NULL,NULL,'Cultura','Argentina','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/craneo.jpg',NULL,NULL,NULL),(2,'2025-04-02','Abril','La peor PC del mundo fue la mas vendida del año',NULL,NULL,'Ciencia','Estados Unidos','Descripcion del curso: lorLorem ipsum dolor sit amet, consectetur adipisicing elit. \n Voluptate ratione debitis maiores natus inventore nisi iusto atque officiis, ad non deserunt dolore aut quia laboriosam obcaecati! \n Velit quibusdam quam pariatur.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, \n repellat impedit corrupti mollitia ipsam similique tempore? Mollitia repudiandae doloribus, delectus nostrum blanditiis saepe. \n Ab consectetur omnis voluptatem quisquam soluta!lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus impedit porro, \n assumenda quaerat ea quo blanditiis, quas debitis suscipit magnam dolor incidunt? Modi libero sapiente hic temporibus molestias iste ipsa?','Agustin Pomponio','../../public/img/pc.jpg',NULL,NULL,NULL);
 /*!40000 ALTER TABLE `news` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +60,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-01-20 18:02:06
+-- Dump completed on 2025-02-06 11:41:38

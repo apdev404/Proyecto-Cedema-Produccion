@@ -28,17 +28,53 @@
     bottom: 0;
     background: linear-gradient(70deg, rgba(244, 174, 45, 0.3)50%, transparent 50%);
   }
- .carousel-text{
-  position: absolute;
-  font-size: 3rem;
-  left: 10%;
+ 
+ 
+
+  .carousel-text-container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 2rem;
+    color: var(--antiflash-white);
+  }
+  
+  .carousel-text{
+  font-size: 50px;
   top: 20%;
+  text-align: justify;
+  margin-left: 25%;
+
+ }
+
+ .carousel-subtext{
+  width: 75%;
+  font-size: 25px;
+  text-align: justify;
+  margin-left: 25%;
  }
 
  @media (max-width: 768px) {
-    .carousel-text{
-      font-size: 2rem;
+    .carousel-text-container{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
+
+    .carousel-text{
+      margin-left:0 ;
+      font-size: 24px;
+    }
+
+    .carousel-subtext{
+      margin-left:0 ;
+      font-size: 14px;
+    }
+
+    
+
+
     .carousel-caption{
       background: transparent;
     }

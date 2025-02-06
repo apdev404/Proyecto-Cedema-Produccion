@@ -7,8 +7,13 @@ import Redes from '../components/Contactos.jsx';
 import Nosotros from '../components/Nosotros.jsx';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 export const Home = () => {
+  const scrollUp = () => window.scrollTo(0, 0);
+
+  useEffect(() => window.scrollTo(0, 0),[]);
+
   return (
     <>
       <div className='container-fluid p-0 col encode-sans-condensed-regular'>
@@ -19,7 +24,7 @@ export const Home = () => {
           <div data-aos="fade-down"> 
             <LastNews />
           </div>
-          <Link className="react-link encode-sans-condensed-bold" to='/news' data-aos="zoom-in"><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
+          <Link className="react-link encode-sans-condensed-bold" to='/news' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
         </section>     
 
         <section className='section container-fluid'>
@@ -27,7 +32,7 @@ export const Home = () => {
           <div data-aos="fade-down" data-aos-anchor=".section-title"> 
             <CardsNews/>
           </div>
-          <Link className="react-link encode-sans-condensed-bold" to='/formacion' data-aos="zoom-in"><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
+          <Link className="react-link encode-sans-condensed-bold" to='/courses' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
         </section>
 
         <section className='section grey-section container-fluid'>
@@ -35,7 +40,7 @@ export const Home = () => {
             <div data-aos="fade-up"> 
             <CardsAct/>
             </div>
-            <Link className="react-link encode-sans-condensed-regular" to='/actividades' data-aos="zoom-in"><Button className='seeMoreBtn'>VER TODAS</Button></Link>
+            <Link className="react-link encode-sans-condensed-regular" to='/activities' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn'>VER TODAS</Button></Link>
         </section >
         
         <section className='section container-fluid'>

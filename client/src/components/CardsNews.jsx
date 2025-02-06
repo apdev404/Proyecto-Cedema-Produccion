@@ -42,6 +42,7 @@ function CardsNews() {
              body={capitalizarPrimeraLetra(courses[0].titulo)}
              footer={courses[0].formato}
              id={courses[0].id}
+             width={'25rem'}
              ruta='courses'
           />
           <Cards
@@ -52,6 +53,7 @@ function CardsNews() {
               body={capitalizarPrimeraLetra(courses[1].titulo)}
               footer={courses[1].formato}
               id={courses[1].id}
+              width={'25rem'}
               ruta='courses'
           />
         </>

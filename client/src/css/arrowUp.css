@@ -2,7 +2,6 @@
   display: none;
   transform: translateX(-120px);
   animation: slideLeft 1s ease-out;
-  transition: 1s ease-out;
 }
 
 .showButton {
@@ -15,7 +14,6 @@
   cursor: pointer;
   transform: translateX(-120px);
   animation: slideLeft 1s ease-out;
-  transition: 1s ease-out;
 }
 
 /* ANIMACION DE APARICION y SALIDA */

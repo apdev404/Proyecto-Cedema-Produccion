@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import CardNews from "../components/CardNews";
 import "../css/listlinks.css";
 import axios from "axios";
+import { GoToArrow } from '../components/GoToArrow';
+
 // import { Link } from 'react-router-dom';
 
 function ListNews() {
@@ -22,7 +24,7 @@ function ListNews() {
     axios
     .get(`http://localhost:3001/news`)
     .then((response) => {
-      console.log(response.data);
+      // console.log(response.data);
       setDatos(response.data);
       setDatosFiltrados(response.data);
     })
@@ -52,7 +54,7 @@ function ListNews() {
     if(selectedFiltersTema.includes(selectedTema)) {
       let filters = selectedFiltersTema.filter((filtro) => filtro !== selectedTema); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersTema(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersTema);
+      // console.log(selectedFiltersTema);
     } else {
       setSelectedFiltersTema([...selectedFiltersTema, selectedTema]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -63,7 +65,7 @@ function ListNews() {
     if(selectedFiltersFecha.includes(selectedFecha)) {
       let filters = selectedFiltersFecha.filter((filtro) => filtro !== selectedFecha); // Se fija si el filtro ya esta seleccionado y lo saca de la lista de filtros seleccionados
       setSelectedFiltersFecha(filters); // Actualiza los filtros seleccionados.
-      console.log(selectedFiltersFecha);
+      // console.log(selectedFiltersFecha);
     } else {
       setSelectedFiltersFecha([...selectedFiltersFecha, selectedFecha]); // Si el filtro no estaba, se agrega a la lista.
     }
@@ -72,13 +74,13 @@ function ListNews() {
 
   const handleChange =e => {
     setBusqueda(e.target.value);
-    console.log("Busqueda: "+e.target.value);
+    // console.log("Busqueda: "+e.target.value);
     filterSearch(e.target.value);
   };
 
   const filterSearch = (endSearch) => {
     var searchResult = datos.filter((item)=>{
-      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase())) 
+      if(item.titulo.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.region.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.temas.toString().toLowerCase().includes(endSearch.toLowerCase()) || item.mes.toString().toLowerCase().includes(endSearch.toLowerCase())) 
         return item;
     })
     setDatosFiltrados(searchResult);
@@ -99,7 +101,7 @@ function ListNews() {
         let temp = items.filter((item) => item.region === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
@@ -112,7 +114,7 @@ function ListNews() {
         let temp = items.filter((item) => item.temas === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
@@ -125,7 +127,7 @@ function ListNews() {
         let temp = items.filter((item) => item.mes === filtro); // Retorna el dato que tiene misma region que el filtro
         return temp;
       });
-      console.log(tempDatos);
+      // console.log(tempDatos);
       return tempDatos.flat();
     } else {
       return items;
@@ -133,9 +135,11 @@ function ListNews() {
   };
 
   return (
+    <>
+    <GoToArrow page={""}/>
     <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular title-list row">
-        NOTICIAS
+        NOVEDADES
       </h1>
       <div className="row container-links">
       <div className="row inputSearch-container">
@@ -242,6 +246,7 @@ function ListNews() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

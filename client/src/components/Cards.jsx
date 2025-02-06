@@ -3,9 +3,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import '../css/card.css';
 
-function Cards({image, head, body, footer, buttonText, id, ruta}) {
+function Cards({image, head, body, footer, buttonText, id, ruta, width}) {
     return (
-        <Card style={{ width: '18rem' }} className='card-container encode-sans-condensed-regular col-3'>
+        <Card style={{ width: `${width}` }} className='card-container encode-sans-condensed-regular col-3'>
           <Link to ={`/${ruta}/details/${id}`} className="link">
             <Card.Img variant="top" src={image} alt="imagen" className='card-image'/>
             <Card.ImgOverlay>

@@ -54,6 +54,9 @@
 .text-description{
     font-size: 18px;
     color: var(--space-cadet);
+    li::marker {
+      color: var(--savoy-blue);
+    }
 }
 .text-main-title{
     color: var(--space-cadet);
@@ -70,7 +73,7 @@
     bottom: 0;
     width: 0;
     height: 4px;
-    background-color: var(--cool-gray);
+    background-color: var(--savoy-blue);
     transition: width .25s ease-out;
 }
 .text-title:hover::before, .text-main-title:hover::before {

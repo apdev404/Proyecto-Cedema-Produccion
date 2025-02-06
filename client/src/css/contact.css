@@ -9,7 +9,6 @@
   }
   * {
     color: var(--antiflash-white);
-    transition: 0.3s ease-out;
   }
 
 }
@@ -17,7 +16,7 @@
 .section-form-contacto {
   padding-bottom: 2rem;
   .section-title.titulo-contact {
-    transition: 1s ease-out;
+    /* transition: 1s ease-out; */
   }
 
   .form-contact {
@@ -55,7 +54,7 @@
     cursor: pointer;
     display: block;
     text-align: center;
-    transition: 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     &:hover {
       color: var(--antiflash-white);
       border-color: var(--crimson);
@@ -84,7 +83,7 @@
 @media screen and (max-width: 768px) {
   .section-title.titulo-contact {
     font-size: 3rem;
-    transition: 1s ease-out;
+    /* transition: 1s ease-out; */
   }
 }
 

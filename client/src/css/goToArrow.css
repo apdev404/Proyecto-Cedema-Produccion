@@ -1,0 +1,55 @@
+.backHidden {
+  display: none;
+  transform: translateX(20px);
+  animation: slideLeft 1s ease-out;
+}
+
+.showBackButton {
+  /* POSICION */
+  /* position: fixed; */
+  left: -20px; /* quiero que aparezca desde la derecha */
+  /* bottom: 50px; posicion desde abajo para arriba */
+  font-size: 5rem;
+  color: var(--yellow);
+  cursor: pointer;
+  padding: 0 20px;
+  transform: translateX(0px);
+  animation: slideLeft 1s ease-out;
+}
+
+.arrowleft-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-decoration: none;
+  color: black;
+  width: fit-content;
+  /* justify-content: center; */
+}
+
+/* ANIMACION DE APARICION y SALIDA */
+@keyframes slideLeft {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 768px) {
+  .showBackButton {
+    /* font-size: 3rem; */
+    transition: 1s ease-out;
+  }
+}

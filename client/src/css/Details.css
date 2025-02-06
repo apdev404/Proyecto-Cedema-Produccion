@@ -77,7 +77,7 @@
     border-radius: 12px; /*  Bordes redondeados */
     overflow: hidden; /* Asegura que nada salga fuera del contenedor */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
 .description-image:hover {
