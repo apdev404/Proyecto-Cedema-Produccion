@@ -32,7 +32,7 @@ export const Home = () => {
           <div data-aos="fade-down" data-aos-anchor=".section-title"> 
             <CardsNews/>
           </div>
-          <Link className="react-link encode-sans-condensed-bold" to='/formacion' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
+          <Link className="react-link encode-sans-condensed-bold" to='/courses' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn' size='lg'>VER TODAS</Button></Link>
         </section>
 
         <section className='section grey-section container-fluid'>
@@ -40,7 +40,7 @@ export const Home = () => {
             <div data-aos="fade-up"> 
             <CardsAct/>
             </div>
-            <Link className="react-link encode-sans-condensed-regular" to='/actividades' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn'>VER TODAS</Button></Link>
+            <Link className="react-link encode-sans-condensed-regular" to='/activities' data-aos="zoom-in" onClick={scrollUp}><Button className='seeMoreBtn'>VER TODAS</Button></Link>
         </section >
         
         <section className='section container-fluid'>

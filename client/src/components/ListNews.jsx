@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import CardNews from "../components/CardNews";
 import "../css/listlinks.css";
 import axios from "axios";
+import { GoToArrow } from '../components/GoToArrow';
+
 // import { Link } from 'react-router-dom';
 
 function ListNews() {
@@ -133,6 +135,8 @@ function ListNews() {
   };
 
   return (
+    <>
+    <GoToArrow page={""}/>
     <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular title-list row">
         NOVEDADES
@@ -242,6 +246,7 @@ function ListNews() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

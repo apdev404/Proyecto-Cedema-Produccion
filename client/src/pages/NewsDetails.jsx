@@ -4,6 +4,7 @@ import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { GoToArrow } from '../components/GoToArrow';
 
 export const NewsDetails = () => {
   const { id } = useParams();
@@ -55,7 +56,7 @@ export const NewsDetails = () => {
         <div className='banner row-md container-fluid p-0'>
           <Image src={datos.image1_path} fluid  alt="imagen" className='banner-image container-fluid p-0'/>
         </div>
-        
+        <GoToArrow page={ruta}/>
         <div className='info-container container-sm p-4 noticia-container'>
           <div className='info-top-news row container-sm align-items-center'>
               <ul className='infoList container-fluid m-0 p-0'>

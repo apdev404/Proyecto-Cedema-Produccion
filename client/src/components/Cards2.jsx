@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import '../css/card2.css';
 
 function Cards2({image, head, body, footer, buttonText, id, ruta, width}) {
+  // console.log(buttonText);
     return (
         <Card style={{ width: `${width}` }} className='card-container encode-sans-condensed-regular col-3 card-act-container'>
           <Link to ={`/${ruta}/details/${id}`} className="link">

@@ -3,11 +3,14 @@ import Cards from "./Cards";
 import Cards2 from "./Cards2";
 import "../css/listlinks.css";
 import axios from "axios";
+import { GoToArrow } from '../components/GoToArrow';
 // import { Link } from 'react-router-dom';
 
-function ListLinks({title}) {
-  const ruta = title == "FORMACIÓN" ? 'courses' : 'activities'; // Define si se solicitan cursos o actividades
+function ListLinks({title, ruta}) {
+  // const ruta = title == "FORMACIÓN" ? 'courses' : 'activities'; 
+  // Define si se solicitan cursos o actividades
   // Esto seria mas facil si tuvieramos un componente por cada tabla de la bbdd
+  console.log(ruta);
 
   // Estado para manejar los datos de las tarjetas
   const [datos, setDatos] = useState([]);
@@ -161,6 +164,8 @@ function ListLinks({title}) {
 
 
   return (
+    <>
+    <GoToArrow page={""}/>
     <div className="container-fluid container-listlinks">
       <h1 className="encode-sans-condensed-regular section-title title-list row" data-aos="flip-up">
         {title}
@@ -312,6 +317,7 @@ function ListLinks({title}) {
       }
       </div>
     </div>
+    </>
   );
 }
 

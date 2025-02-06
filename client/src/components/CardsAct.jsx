@@ -12,6 +12,7 @@ function CardsNews() {
     axios.get('http://localhost:3001/api/last-activities')
       .then((response) => {
         setActivities(response.data); // Actualiza el estado con los cursos obtenidos
+        // console.log(activities);
       })
       .catch((error) => {
         console.error('Error al obtener los cursos:', error);
