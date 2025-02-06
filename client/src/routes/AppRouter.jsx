@@ -23,7 +23,6 @@ export const AppRouter = () => {
           <Route path="activities" element={ <Actividades /> }/>
           <Route path="contact" element={ <ContactPage /> }/>
           <Route path="news" element={ <NewsPage /> }/>
-          <Route path="redacciones" element={ <RedactionsPage /> }/>
           <Route path="datos-bancarios" element={ <DatosBancarios /> }/>
           <Route path=":ruta/details/:id" element={ <DetailsPage /> }/>
           <Route path=":ruta/inscripcion/:id" element={ <FormInscripcion /> }/>
