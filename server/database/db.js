@@ -1,18 +1,21 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
+require('dotenv').config();
+
 const database = mysql.createConnection({
-  host: "autorack.proxy.rlwy.net",
-  user: "root",
-  password: "tXqEBOZcdfZRmBCprojmLMSFiDnVXvIa",
-  database: "web_cedema_database",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT // Railway a veces usa puertos distintos
 });
 
 database.connect((error) => {
   if (error) {
-    console.log("Error al conectar con la base de datos: " + error);
+    console.error("❌ Error al conectar con la base de datos:", error);
     return;
   }
-  console.log("Conectado a la base de datos");
-})
+  console.log("✅ Conectado a la base de datos en Railway");
+});
 
 module.exports = database;
 
