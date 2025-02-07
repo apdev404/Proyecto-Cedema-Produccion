@@ -1,16 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Home } from '../pages/Home';
-import { AboutPage } from '../pages/AboutPage';
-import { Formacion } from '../pages/Formacion';
-import { Actividades } from '../pages/Actividades';
-import { ContactPage } from '../pages/ContactPage';
-import { DetailsPage } from '../pages/DetailsPage';
-import { NewsDetails } from '../pages/NewsDetails';
-import { NewsPage } from '../pages/NewsPage';
-import { FormInscripcion } from '../pages/FormInscripcion';
-import { DatosBancarios } from '../pages/DatosBancarios';
-import { Redaccion } from '../pages/Redaccion';
+import { AboutPage } from '../pages/AboutPage.jsx';
+import { Formacion } from '../pages/Formacion.jsx';
+import { Actividades } from '../pages/Actividades.jsx';
+import { ContactPage } from '../pages/ContactPage.jsx';
+import { DetailsPage } from '../pages/DetailsPage.jsx';
+import { NewsDetails } from '../pages/NewsDetails.jsx';
+import { NewsPage } from '../pages/NewsPage.jsx';
+import { FormInscripcion } from '../pages/FormInscripcion.jsx';
+import { DatosBancarios } from '../pages/DatosBancarios.jsx';
+import { Redaccion } from '../pages/Redaccion.jsx';
 
 export const AppRouter = () => {
   return (

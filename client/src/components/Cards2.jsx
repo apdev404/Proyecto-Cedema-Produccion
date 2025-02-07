@@ -22,7 +22,7 @@ function Cards2({image, head, body, footer, buttonText, id, ruta, width}) {
               ))}
             </Card.ImgOverlay>
 
-            <Card.Img variant="top" src={image} alt="imagen" className='card-image-act'/>
+            <Card.Img variant="top"  src={image ? image : "../../img/imageNotFound.jpg"} alt="imagen" className='card-image-act'/>
 
             <Card.Footer className="text-gray">{footer}</Card.Footer>
 

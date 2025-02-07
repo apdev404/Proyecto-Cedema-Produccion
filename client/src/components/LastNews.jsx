@@ -1,7 +1,7 @@
 // En CardsNews.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import CardNews from './CardNews';
+import CardNews from './CardNews.jsx';
 import '../css/lastNews.css';
 
 

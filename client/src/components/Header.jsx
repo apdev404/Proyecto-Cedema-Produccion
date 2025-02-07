@@ -1,8 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import "../css/header.css";
 import logo from "/logo-cedema-largo.ico";
-import Footer from './Footer';
-import { ArrowUp } from "./ArrowUp";
+import Footer from './Footer.jsx';
+import { ArrowUp } from "./ArrowUp.jsx";
 
 export const Header = () => {
 

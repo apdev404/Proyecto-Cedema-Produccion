@@ -1,7 +1,7 @@
 // En CardsNews.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Cards2 from './Cards2';
+import Cards2 from './Cards2.jsx';
 import example from '../assets/example.png';
 
 function CardsNews() {

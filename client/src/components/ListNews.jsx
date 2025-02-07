@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import CardNews from "../components/CardNews";
+import CardNews from "../components/CardNews.jsx";
 import "../css/listlinks.css";
 import axios from "axios";
-import { GoToArrow } from '../components/GoToArrow';
+import { GoToArrow } from '../components/GoToArrow.jsx';
 
 // import { Link } from 'react-router-dom';
 

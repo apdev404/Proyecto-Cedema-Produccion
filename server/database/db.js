@@ -15,3 +15,10 @@ database.connect((error) => {
 })
 
 module.exports = database;
+
+
+/* --------------CREDENCIALES DATABASE DE PRODUCCION------------------
+
+mysql://root:tXqEBOZcdfZRmBCprojmLMSFiDnVXvIa@autorack.proxy.rlwy.net:19571/railway
+
+ */

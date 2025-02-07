@@ -1,7 +1,7 @@
 // En CardsNews.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Cards from './Cards';
+import Cards from './Cards.jsx';
 
 function CardsNews() {
   const [courses, setCourses] = useState([]);

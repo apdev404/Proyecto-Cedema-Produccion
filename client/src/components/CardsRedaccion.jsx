@@ -1,4 +1,4 @@
-import CardRedaccion from './CardRedaccion';
+import CardRedaccion from './CardRedaccion.jsx';
 import '../css/cardRedaccion.css';
 import { useEffect, useState } from "react";
 import axios from "axios";

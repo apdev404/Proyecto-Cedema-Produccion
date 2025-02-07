@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Cards from "./Cards";
-import Cards2 from "./Cards2";
+import Cards from "./Cards.jsx";
+import Cards2 from "./Cards2.jsx";
 import "../css/listlinks.css";
 import axios from "axios";
-import { GoToArrow } from '../components/GoToArrow';
+import { GoToArrow } from '../components/GoToArrow.jsx';
 // import { Link } from 'react-router-dom';
 
 function ListLinks({title, ruta}) {

@@ -20,7 +20,11 @@
 }
 
 .card-text{
-    font-size: 25px;
+    font-size: 22px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;  /* Número de líneas permitidas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .card-img-overlay {
@@ -41,6 +45,7 @@
     color: #616161;
     border-color: #616161;
     font-size: 13px;
+    
 }
 
 .btn{

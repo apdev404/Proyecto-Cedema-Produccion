@@ -3,6 +3,7 @@ import Redes from '../components/Contactos.jsx';
 import '../css/contact.css';
 import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
+import tierraWallpaper from '../assets/tierraWallpaper.jpg'
 
 export const ContactPage = () => {
   const [nombre, setNombre] = useState("");
@@ -15,7 +16,7 @@ export const ContactPage = () => {
   return (
     <>
       <section className='section contactos container-fluid' >
-      <img src="/img/tierra-wallpaper.jpg" alt="Imagen de fondo" className="tierra-fondo" />
+      <img src={tierraWallpaper} alt="Imagen de fondo" className="tierra-fondo" />
         <h3 className='encode-sans-condensed-semibold' data-aos="flip-up">No te pierdas de nada</h3>
         <h2 className='encode-sans-condensed-semibold' data-aos="flip-down">Seguinos en nuestras Redes Sociales</h2>
         <Redes className='redes-contact'/>

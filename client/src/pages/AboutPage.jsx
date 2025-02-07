@@ -2,11 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import ListSupports from "../components/ListSupports";
+import ListSupports from "../components/ListSupports.jsx";
 
 import '../css/aboutPage.css';
 import '../css/Home.css'
-import CardsEquipo from '../components/CardsEquipo';
+import CardsEquipo from '../components/CardsEquipo.jsx';
 
 import { useEffect } from "react";
 

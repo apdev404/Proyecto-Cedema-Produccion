@@ -10,7 +10,7 @@ function CardNews({ image, head, body, subtitle, id }) {
                     {/* Imagen */}
                     <div className="col-12 col-md-4 imgNews">
                         <Card.Img 
-                            src={image} 
+                            src={image ? image : "../../img/imageNotFound.jpg"}
                             alt="imagen" 
                             className="img-fluid card-imageNews" 
                         />

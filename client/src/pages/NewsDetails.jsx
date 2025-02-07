@@ -4,7 +4,7 @@ import Image from 'react-bootstrap/Image';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { GoToArrow } from '../components/GoToArrow';
+import { GoToArrow } from '../components/GoToArrow.jsx';
 
 export const NewsDetails = () => {
   const { id } = useParams();
