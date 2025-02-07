@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 const database = mysql.createConnection({
-  host: "localhost",
+  host: "mysql.railway.internal",
   user: "root",
-  password: "apdev404",
-  database: "web_cedema",
+  password: "tXqEBOZcdfZRmBCprojmLMSFiDnVXvIa",
+  database: "web_cedema_database",
 });
 
 database.connect((error) => {
@@ -21,4 +21,9 @@ module.exports = database;
 
 mysql://root:tXqEBOZcdfZRmBCprojmLMSFiDnVXvIa@autorack.proxy.rlwy.net:19571/railway
 
+
+USER: root
+PASSWORD: tXqEBOZcdfZRmBCprojmLMSFiDnVXvIa
+HOST: autorack.proxy.rlwy.net
+PORT: 19571
  */
