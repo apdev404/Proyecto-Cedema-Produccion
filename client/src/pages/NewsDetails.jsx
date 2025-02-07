@@ -18,7 +18,7 @@ export const NewsDetails = () => {
 
     const fetchDatos = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/${ruta}/${id}`);
+        const response = await axios.get(`https://proyecto-cedema-produccion-production.up.railway.app/${ruta}/${id}`);
         console.log("Datos recibidos:", response.data);
         const detalle = Array.isArray(response.data) ? response.data[0] : response.data; // Toma el primer elemento si es un array
         setDatos(detalle);

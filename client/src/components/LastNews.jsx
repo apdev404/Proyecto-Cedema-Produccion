@@ -10,7 +10,7 @@ function LastNews() {
 
   useEffect(() => {
     // Mantén la URL como está
-    axios.get('http://localhost:3001/api/last-news')
+    axios.get('https://proyecto-cedema-produccion-production.up.railway.app/api/last-news')
       .then((response) => {
         setNews(response.data); // Actualiza el estado con los cursos obtenidos
       })

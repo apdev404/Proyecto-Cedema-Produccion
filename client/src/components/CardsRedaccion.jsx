@@ -18,7 +18,7 @@ function CardsRedaccion() {
     useEffect(() => {
       // Solicitud get al server de los cursos y charlas
       axios
-      .get(`http://localhost:3001/redaccion`)
+      .get(`https://proyecto-cedema-produccion-production.up.railway.app/redaccion`)
       .then((response) => {
         console.log(response.data);
         setDatos(response.data);

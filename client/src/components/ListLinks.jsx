@@ -25,7 +25,7 @@ function ListLinks({title, ruta}) {
   useEffect(() => {
     // Solicitud get al server de los cursos y charlas
     axios
-    .get(`http://localhost:3001/${ruta}`)
+    .get(`https://proyecto-cedema-produccion-production.up.railway.app/${ruta}`)
     .then((response) => {
       // console.log(response.data);
       setDatos(response.data);

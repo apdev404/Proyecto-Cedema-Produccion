@@ -8,7 +8,7 @@ function CardsNews() {
 
   useEffect(() => {
     // Mantén la URL como está
-    axios.get('http://localhost:3001/api/last-courses')
+    axios.get('https://proyecto-cedema-produccion-production.up.railway.app/api/last-courses')
       .then((response) => {
         setCourses(response.data); // Actualiza el estado con los cursos obtenidos
       })

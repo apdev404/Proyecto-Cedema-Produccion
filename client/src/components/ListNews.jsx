@@ -22,7 +22,7 @@ function ListNews() {
   useEffect(() => {
     // Solicitud get al server de los cursos y charlas
     axios
-    .get(`http://localhost:3001/news`)
+    .get(`https://proyecto-cedema-produccion-production.up.railway.app/news`)
     .then((response) => {
       // console.log(response.data);
       setDatos(response.data);

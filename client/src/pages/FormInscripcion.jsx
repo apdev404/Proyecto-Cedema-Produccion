@@ -14,7 +14,7 @@ export const FormInscripcion = () => {
   useEffect(() => {
     const fetchDatos = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/${ruta}/${id}`);
+        const response = await axios.get(`https://proyecto-cedema-produccion-production.up.railway.app/${ruta}/${id}`);
         setDatos(response.data[0]);
       } catch (error) {
         console.error("Error al obtener los detalles:", error);
@@ -53,7 +53,7 @@ export const FormInscripcion = () => {
     if(validarFormulario()){ // Si los campos estan validados
       // Realiza la solicitud POST para la inscripción
       axios
-      .post("http://localhost:3001/inscripcion", { 
+      .post("https://proyecto-cedema-produccion-production.up.railway.app/inscripcion", { 
         nombre, 
         email, 
         origen, 
@@ -70,7 +70,7 @@ export const FormInscripcion = () => {
       .then(async (response) => {
         // Enviar correo de confirmación
         try {
-          const emailResponse = await axios.post('http://localhost:3001/send-email', {
+          const emailResponse = await axios.post('https://proyecto-cedema-produccion-production.up.railway.app/send-email', {
             nombre,
             email,
             curso: titulo,  // Aquí puedes pasar otros detalles que quieras incluir en el email
